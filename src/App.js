@@ -1,11 +1,21 @@
 import React from 'react';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import theme from './styles/theme';
+import Layout from './components/Layout';
+import Home from './components/pages/Home';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      Zach McCoy Portfolio
-    </div>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </Layout>
+      </ThemeProvider>
+    </BrowserRouter>
   );
-}
-
-export default App;
+};

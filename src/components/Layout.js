@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AppBar, IconButton, LinearProgress, Toolbar, Typography } from '@mui/material';
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -7,15 +7,23 @@ export default function Layout({ children }) {
   return (
     <main style={styles.root}>
       <AppBar position='static'>
-        <Toolbar>
-          <Typography variant='h3'><sup>Zach</sup><sub>McCoy</sub></Typography>
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <Typography
+            variant='h3'
+            sx={styles.title}
+          >
+            <sup>Zach</sup>
+            <sub>McCoy</sub>
+          </Typography>
 
-          <IconButton>
-            <FontAwesomeIcon icon={faGithub}/>
-          </IconButton>
-          <IconButton>
-            <FontAwesomeIcon icon={faLinkedin}/>
-          </IconButton>
+          <div>
+            <IconButton>
+              <FontAwesomeIcon icon={faGithub} />
+            </IconButton>
+            <IconButton>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <section style={styles.content}>
@@ -44,5 +52,14 @@ const styles = {
     paddingBottom: 10,
     display: 'flex',
     justifyContent: 'center'
+  },
+  title: {
+    '& sup': {
+      color: 'primary.light'
+    },
+    '& sub': {
+      color: 'primary.main'
+    }
   }
+
 };

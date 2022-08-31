@@ -38,6 +38,28 @@ const theme = createTheme(
       h6: {
         fontFamily: 'Aboreto',
       },
+      subtitle1: {
+        fontFamily: 'Nunito',
+        fontSize: '1.1rem',
+      },
+      subtitle2: {
+        fontFamily: 'Nunito',
+      },
+      body1: {
+        fontFamily: 'Nunito',
+      },
+      button: {
+        fontFamily: 'Nunito',
+      },
+      body2: {
+        fontFamily: 'Nunito',
+      },
+      overline: {
+        fontFamily: 'Nunito',
+      },
+      caption: {
+        fontFamily: 'Nunito',
+      },
     },
   }
 );

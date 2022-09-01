@@ -7,7 +7,7 @@ function TechItem({ technology }) {
   return (
     <div style={{ margin: 5}}>
       <Tooltip
-        title={technology.projects?.toString()}
+        title={technology.projects?.toString() || ''}
         placement='top'
       >
         <Container
@@ -40,12 +40,12 @@ export default function TechStack() {
     <Grid container spacing={2}>
       {
         techList.map(category => (
-          <Grid item xs={12}>
+          <Grid key={category.title} item xs={12}>
             <Typography variant='h5' gutterBottom >{category.title}</Typography>
             <Container sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
               {
                 category.stack.map(technology => (
-                  <TechItem technology={technology} />
+                  <TechItem key={technology.name} technology={technology} />
                 ))
               }
             </Container>

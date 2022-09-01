@@ -43,7 +43,7 @@ export default function DevProjects() {
     <List>
       {
         devProjects.map(project => (
-          <ProjectItem project={project} />
+          <ProjectItem key={project.name} project={project} />
         ))
       }
     </List>

@@ -40,7 +40,7 @@ export default function DevExperience() {
     <List>
       {
         devExperiences.map(experience => (
-          <DevExperienceItem experience={experience} />
+          <DevExperienceItem key={experience.name} experience={experience} />
         ))
       }
     </List>

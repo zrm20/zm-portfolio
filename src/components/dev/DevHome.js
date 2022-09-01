@@ -4,6 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ZachBio from './ZachBio';
 import Education from '../atoms/Education';
 import TechStack from './TechStack';
+import DevExperience from './DevExperience';
 
 export default function DevHome() {
   return (
@@ -57,7 +58,7 @@ export default function DevHome() {
               <Typography variant='h3'>Experience</Typography>
             </AccordionSummary>
             <AccordionDetails>
-            {/* TODO */}
+              <DevExperience />
             </AccordionDetails>
           </Accordion>
         </Grid>

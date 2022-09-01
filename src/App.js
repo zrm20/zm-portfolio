@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import theme from './styles/theme';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import DevHome from './components/dev/DevHome';
-import AudioHome from './components/audio/AudioHome';
+import DevRouter from './components/dev/DevRouter';
+import AudioRouter from './components/audio/AudioRouter';
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
         <Layout>
           <Routes>
             <Route exact path='/' element={<Home />} />
-            <Route path='/dev/*' element={<DevHome />} />
-            <Route path='/audio/*' element={<AudioHome />} />
+            <Route path='/dev/*' element={<DevRouter />} />
+            <Route path='/audio/*' element={<AudioRouter />} />
             <Route path='/*' element={<Home />} />
           </Routes>
         </Layout>

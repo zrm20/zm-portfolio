@@ -5,6 +5,7 @@ import ZachBio from './ZachBio';
 import Education from '../atoms/Education';
 import TechStack from './TechStack';
 import DevExperience from './DevExperience';
+import DevProjects from './DevProjects';
 
 export default function DevHome() {
   return (
@@ -71,7 +72,7 @@ export default function DevHome() {
               <Typography variant='h3'>Projects</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {/* TODO */}
+              <DevProjects />
             </AccordionDetails>
           </Accordion>
         </Grid>

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Grid, Tooltip, Typography, Container } from '@mui/material';
 import 'devicon';
-import { useTheme } from '@emotion/react';
 import techList from '../../assets/data/techStack';
 
-function TechItem({ technology, palette }) {
+function TechItem({ technology }) {
   return (
     <div style={{ margin: 5}}>
       <Tooltip
@@ -37,8 +36,6 @@ function TechItem({ technology, palette }) {
 }
 
 export default function TechStack() {
-  const { palette } = useTheme();
-
   return (
     <Grid container spacing={2}>
       {
@@ -48,7 +45,7 @@ export default function TechStack() {
             <Container sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
               {
                 category.stack.map(technology => (
-                  <TechItem technology={technology} palette={palette} />
+                  <TechItem technology={technology} />
                 ))
               }
             </Container>

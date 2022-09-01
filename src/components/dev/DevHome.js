@@ -2,7 +2,6 @@ import React from 'react';
 import { Typography, Grid, Container, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ZachBio from './ZachBio';
-import PortraitIcon from '@mui/icons-material/Portrait';
 import Education from '../atoms/Education';
 import TechStack from './TechStack';
 

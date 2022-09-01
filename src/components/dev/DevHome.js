@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Grid, Container, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ZachBio from './ZachBio';
@@ -8,6 +8,8 @@ import DevExperience from './DevExperience';
 import DevProjects from './DevProjects';
 
 export default function DevHome() {
+  useEffect(() => {document.title = 'ZM Software'}, []);
+
   return (
     <Container align='center'>
       <Typography variant='h1' sx={{ m: 2 }}>Software Development</Typography>

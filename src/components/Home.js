@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, Typography, Link } from '@mui/material';
 import { Container } from '@mui/system';
 import headshot from '../assets/images/headshot.jpeg';
@@ -7,6 +7,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const codeImgUrl = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80';
 export default function Home() {
+  useEffect(() => {document.title = 'Zach McCoy'}, [])
 
   return (
     <Container align='center'>

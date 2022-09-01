@@ -17,10 +17,10 @@ export default function Layout({ children }) {
           </Typography>
 
           <div>
-            <IconButton>
+            <IconButton component='a' href='https://github.com/zrm20' target='_blank'>
               <FontAwesomeIcon icon={faGithub} />
             </IconButton>
-            <IconButton>
+            <IconButton component='a' href='https://www.linkedin.com/in/zachmccoy/' target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
             </IconButton>
           </div>

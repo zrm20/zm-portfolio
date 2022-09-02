@@ -65,6 +65,7 @@ export default function AudioHome() {
         {
           sectionList.map(section => (
             <Section
+              key={section.name}
               section={section}
               sectionParam={sectionParam}
               handleChangeSection={handleChangeSection}

@@ -7,9 +7,6 @@ const audioServices =
     name: 'Stage Management'
   },
   {
-    name: 'Monitor Mixing'
-  },
-  {
     name: 'FOH Mixing'
   },
   {

@@ -7,7 +7,7 @@ import TechStack from './TechStack';
 import DevExperience from './DevExperience';
 import DevProjects from './DevProjects';
 import Bio from '../atoms/Bio';
-import { useSearchParams, URLSearchParamsInit } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 export default function DevHome() {
   const [searchParams, setSearchParams] = useSearchParams();

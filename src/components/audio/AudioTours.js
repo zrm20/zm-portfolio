@@ -1,4 +1,4 @@
-import { Divider, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
+import { Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 import React from 'react';
 import tours from '../../assets/data/tours';
 

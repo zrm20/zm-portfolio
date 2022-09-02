@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function Section({ section, sectionParam, handleChangeSection }) {
   return (
     <Grid item xs={12} md={section.name === sectionParam ? 12 : 6} >
-      <Accordion expanded={section.name === sectionParam} onClick={() => handleChangeSection(section.name)} >
+      <Accordion expanded={section.name === sectionParam} onChange={() => handleChangeSection(section.name)} >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
         >

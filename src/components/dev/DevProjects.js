@@ -4,10 +4,10 @@ import devProjects from '../../assets/data/devProjects';
 import { Link as RouterLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-function ProjectItem({ project }) {
+function ProjectItem({ project, index }) {
   return (
     <>
-      <ListItem button component={RouterLink} to='/' /* TODO ADD LINK*/ >
+      <ListItem button component={RouterLink} to={`/dev/project/${index}`} /* TODO ADD LINK*/ >
         <ListItemAvatar>
         <Avatar
             src={project.image ? project.image : ''}
@@ -42,8 +42,8 @@ export default function DevProjects() {
   return (
     <List>
       {
-        devProjects.map(project => (
-          <ProjectItem key={project.name} project={project} />
+        devProjects.map((project, i) => (
+          <ProjectItem key={project.name} project={project} index={i} />
         ))
       }
     </List>

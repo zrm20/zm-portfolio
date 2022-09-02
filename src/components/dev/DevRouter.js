@@ -5,7 +5,9 @@ import DevHome from './DevHome';
 export default function DevRouter() {
   return (
     <Routes>
-      <Route path='/' element={<DevHome />} />
+      <Route exact path='/' element={<DevHome />} />
+      <Route exact path='/project/:index' element={<div>Hello</div>} />
+      <Route path='/*' element={<DevHome />} />
     </Routes>
   )
 };

@@ -48,8 +48,8 @@ export default function Layout({ children }) {
           </Typography>
 
           <div style={styles.intLinks}>
-            <Button color='secondary' onClick={handleOpenSoftwareMenu}>Software</Button>
-            <Button color='secondary' onClick={handleOpenAudioMenu}>Audio</Button>
+            <Button sx={{ color: 'primary.contrastText'}} onClick={handleOpenSoftwareMenu}>Software</Button>
+            <Button sx={{ color: 'primary.contrastText'}} onClick={handleOpenAudioMenu}>Audio</Button>
 
             <Menu
               anchorEl={anchorSoftwareNav}
@@ -177,7 +177,8 @@ const styles = {
   },
   intLinks: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
+    flex: 1
   },
   extLinks: {
     display: 'flex',

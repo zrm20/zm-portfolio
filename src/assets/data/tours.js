@@ -49,7 +49,7 @@ const tours =
     image: ''
   },
   {
-    artist: 'Justin Moore (direct support Brantley Gilbert)',
+    artist: 'Justin Moore (direct support for Brantley Gilbert)',
     name: 'Take it Outside',
     time: '2016',
     venues: 'Arenas and Sheds',
@@ -61,7 +61,7 @@ const tours =
     image: ''
   },
   {
-    artist: 'Justin Moore (direct support Brad Paisley)',
+    artist: 'Justin Moore (direct support for Brad Paisley)',
     name: "Crushin' It",
     time: '2015-16',
     description: '',

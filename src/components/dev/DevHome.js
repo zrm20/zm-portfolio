@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { Typography, Grid, Container, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ZachBio from './ZachBio';
+import devBio from '../../assets/data/devBio';
 import Education from '../atoms/Education';
 import TechStack from './TechStack';
 import DevExperience from './DevExperience';
 import DevProjects from './DevProjects';
+import Bio from '../atoms/Bio';
 
 export default function DevHome() {
   useEffect(() => {document.title = 'ZM Software'}, []);
@@ -35,7 +36,7 @@ export default function DevHome() {
               <Typography variant='h3'>About Me</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <ZachBio />
+              <Bio text={devBio}/>
             </AccordionDetails>
           </Accordion>
         </Grid>

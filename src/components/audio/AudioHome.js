@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Container, Typography, Grid, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import audio3 from '../../assets/images/audio3.JPG';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Bio from '../atoms/Bio';
+import audioBio from '../../assets/data/audioBio';
 
 export default function AudioHome() {
   useEffect(() => {document.title = 'ZM Audio'}, []);
@@ -31,7 +33,7 @@ export default function AudioHome() {
               <Typography variant='h3'>About Me</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {/* TODO */}
+              <Bio text={audioBio} />
             </AccordionDetails>
           </Accordion>
         </Grid>

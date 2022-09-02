@@ -7,9 +7,21 @@ import TechStack from './TechStack';
 import DevExperience from './DevExperience';
 import DevProjects from './DevProjects';
 import Bio from '../atoms/Bio';
+import { useSearchParams, URLSearchParamsInit } from 'react-router-dom';
 
 export default function DevHome() {
-  useEffect(() => {document.title = 'ZM Software'}, []);
+  const [searchParams, setSearchParams] = useSearchParams();
+  useEffect(() => { document.title = 'ZM Software' }, []);
+  const section = searchParams.get('section');
+
+  function handleChangeSection(sectionName) {
+    if(sectionName===section) {
+      setSearchParams('');
+    } else {
+      setSearchParams({section: sectionName})
+    };
+  };
+
 
   return (
     <Container align='center'>
@@ -29,20 +41,20 @@ export default function DevHome() {
         </Grid>
 
         <Grid item xs={12}>
-          <Accordion>
+          <Accordion expanded={section === 'about'} onClick={() => handleChangeSection('about')} >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >
               <Typography variant='h3'>About Me</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Bio text={devBio}/>
+              <Bio text={devBio} />
             </AccordionDetails>
           </Accordion>
         </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Accordion>
+
+        <Grid item xs={12} md={section === 'education' ? 12 : 6}>
+          <Accordion expanded={section === 'education'} onClick={() => handleChangeSection('education')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >
@@ -53,9 +65,9 @@ export default function DevHome() {
             </AccordionDetails>
           </Accordion>
         </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Accordion>
+
+        <Grid item xs={12} md={section === 'experience' ? 12 : 6}>
+          <Accordion expanded={section === 'experience'} onClick={() => handleChangeSection('experience')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >
@@ -67,8 +79,8 @@ export default function DevHome() {
           </Accordion>
         </Grid>
 
-        <Grid item xs={12} md={6}>
-          <Accordion>
+        <Grid item xs={12} md={section === 'projects' ? 12 : 6}>
+          <Accordion expanded={section === 'projects'} onClick={() => handleChangeSection('projects')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >
@@ -80,8 +92,8 @@ export default function DevHome() {
           </Accordion>
         </Grid>
 
-        <Grid item xs={12} md={6}>
-          <Accordion>
+        <Grid item xs={12} md={section === 'stack' ? 12 : 6}>
+          <Accordion expanded={section === 'stack'} onClick={() => handleChangeSection('stack')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
             >

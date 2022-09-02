@@ -75,7 +75,7 @@ export default function AudioHome() {
               <Typography variant='h3'>Services</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <AudioServices />>
+              <AudioServices />
             </AccordionDetails>
           </Accordion>
         </Grid>

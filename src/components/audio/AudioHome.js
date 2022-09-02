@@ -6,6 +6,7 @@ import Bio from '../atoms/Bio';
 import audioBio from '../../assets/data/audioBio';
 import Education from '../atoms/Education';
 import AudioTours from './AudioTours';
+import AudioServices from './AudioServices';
 
 export default function AudioHome() {
   useEffect(() => {document.title = 'ZM Audio'}, []);
@@ -74,24 +75,10 @@ export default function AudioHome() {
               <Typography variant='h3'>Services</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {/* TODO */}
+              <AudioServices />>
             </AccordionDetails>
           </Accordion>
         </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Skills</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {/* TODO */}
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-
       </Grid>
     </Container>
   )

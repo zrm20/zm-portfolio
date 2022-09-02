@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Typography, Grid, Container, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Typography, Grid, Container } from '@mui/material';
 import devBio from '../../assets/data/devBio';
 import Education from '../atoms/Education';
 import TechStack from './TechStack';
@@ -8,20 +7,48 @@ import DevExperience from './DevExperience';
 import DevProjects from './DevProjects';
 import Bio from '../atoms/Bio';
 import { useSearchParams } from 'react-router-dom';
+import Section from '../atoms/Section';
+
+const sectionList = [
+  {
+    name: 'about',
+    label: 'About Me',
+    component: () => <Bio text={devBio} />
+  },
+  {
+    name: 'education',
+    label: 'Education',
+    component: () => <Education />
+  },
+  {
+    name: 'experience',
+    label: 'Experience',
+    component: () => <DevExperience />
+  },
+  {
+    name: 'projects',
+    label: 'Projects',
+    component: () => <DevProjects />
+  },
+  {
+    name: 'stack',
+    label: 'Tech Stack',
+    component: () => <TechStack />
+  }
+];
 
 export default function DevHome() {
   const [searchParams, setSearchParams] = useSearchParams();
   useEffect(() => { document.title = 'ZM Software' }, []);
-  const section = searchParams.get('section');
+  const sectionParam = searchParams.get('section');
 
   function handleChangeSection(sectionName) {
-    if(sectionName===section) {
+    if (sectionName === sectionParam) {
       setSearchParams('');
     } else {
-      setSearchParams({section: sectionName})
+      setSearchParams({ section: sectionName })
     };
   };
-
 
   return (
     <Container align='center'>
@@ -40,72 +67,16 @@ export default function DevHome() {
           />
         </Grid>
 
-        <Grid item xs={12}>
-          <Accordion expanded={section === 'about'} onClick={() => handleChangeSection('about')} >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>About Me</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Bio text={devBio} />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-
-        <Grid item xs={12} md={section === 'education' ? 12 : 6}>
-          <Accordion expanded={section === 'education'} onClick={() => handleChangeSection('education')}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Education</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Education />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-
-        <Grid item xs={12} md={section === 'experience' ? 12 : 6}>
-          <Accordion expanded={section === 'experience'} onClick={() => handleChangeSection('experience')}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Experience</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <DevExperience />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-
-        <Grid item xs={12} md={section === 'projects' ? 12 : 6}>
-          <Accordion expanded={section === 'projects'} onClick={() => handleChangeSection('projects')}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Projects</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <DevProjects />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-
-        <Grid item xs={12} md={section === 'stack' ? 12 : 6}>
-          <Accordion expanded={section === 'stack'} onClick={() => handleChangeSection('stack')}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Tech Stack</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <TechStack />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-
+        {
+          sectionList.map(section => (
+            <Section
+              section={section}
+              sectionParam={sectionParam}
+              handleChangeSection={handleChangeSection}
+            />
+          ))
+        }
       </Grid>
     </Container>
   )
-}
+};

@@ -1,15 +1,49 @@
 import React, { useEffect } from 'react';
-import { Container, Typography, Grid, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Container, Typography, Grid } from '@mui/material';
 import audio3 from '../../assets/images/audio3.JPG';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Bio from '../atoms/Bio';
 import audioBio from '../../assets/data/audioBio';
 import Education from '../atoms/Education';
 import AudioTours from './AudioTours';
 import AudioServices from './AudioServices';
+import { useSearchParams } from 'react-router-dom';
+import Section from '../atoms/Section';
+
+const sectionList = [
+  {
+    name: 'about',
+    label: 'About Me',
+    component: () => <Bio text={audioBio} />
+  },
+  {
+    name: 'education',
+    label: 'Education',
+    component: () => <Education />
+  },
+  {
+    name: 'tours',
+    label: 'Tours',
+    component: () => <AudioTours />
+  },
+  {
+    name: 'services',
+    label: 'Services',
+    component: () => <AudioServices />
+  },
+];
 
 export default function AudioHome() {
+  const [searchParams, setSearchParams] = useSearchParams();
   useEffect(() => {document.title = 'ZM Audio'}, []);
+  const sectionParam = searchParams.get('section');
+
+  function handleChangeSection(sectionName) {
+    if(sectionName===sectionParam) {
+      setSearchParams('');
+    } else {
+      setSearchParams({section: sectionName})
+    };
+  };
 
   return (
     <Container align='center'>
@@ -28,57 +62,15 @@ export default function AudioHome() {
           />
         </Grid>
 
-        <Grid item xs={12}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>About Me</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Bio text={audioBio} />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Education</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Education />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Tours</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <AudioTours />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-        
-        <Grid item xs={12} md={6}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <Typography variant='h3'>Services</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <AudioServices />
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
+        {
+          sectionList.map(section => (
+            <Section
+              section={section}
+              sectionParam={sectionParam}
+              handleChangeSection={handleChangeSection}
+            />
+          ))
+        }
       </Grid>
     </Container>
   )

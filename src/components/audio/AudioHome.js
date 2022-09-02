@@ -4,6 +4,8 @@ import audio3 from '../../assets/images/audio3.JPG';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Bio from '../atoms/Bio';
 import audioBio from '../../assets/data/audioBio';
+import Education from '../atoms/Education';
+import AudioTours from './AudioTours';
 
 export default function AudioHome() {
   useEffect(() => {document.title = 'ZM Audio'}, []);
@@ -46,7 +48,7 @@ export default function AudioHome() {
               <Typography variant='h3'>Education</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {/* TODO */}
+              <Education />
             </AccordionDetails>
           </Accordion>
         </Grid>
@@ -59,7 +61,7 @@ export default function AudioHome() {
               <Typography variant='h3'>Tours</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {/* TODO */}
+              <AudioTours />
             </AccordionDetails>
           </Accordion>
         </Grid>

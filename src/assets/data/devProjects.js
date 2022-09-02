@@ -44,7 +44,7 @@ const devProjects =
   },
   {
     name: 'Nomi Travel',
-    subtitle: 'Web app for service signup and account management',
+    subtitle: 'Web app for service signup and account management.',
     description: '',
     stack: [
       'React',
@@ -56,8 +56,8 @@ const devProjects =
     image: nomiLogo
   },
   {
-    name: 'Nomi Internal App',
-    subtitle: 'Web app for database management operations',
+    name: 'Nomi Travel - Internal App',
+    subtitle: 'Web app for database management operations.',
     description: '',
     stack: [
       'React',

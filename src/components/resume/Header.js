@@ -1,4 +1,4 @@
-import { Avatar, Container, Grid, IconButton, List, ListItem, Typography } from '@mui/material'
+import { Avatar, Container, Grid, IconButton, Typography } from '@mui/material'
 import React from 'react';
 import headshot from '../../assets/images/headshot.jpeg';
 import LocationOnIcon from '@mui/icons-material/LocationOn';

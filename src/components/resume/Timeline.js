@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import { Timeline as MuiTimeline, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from '@mui/lab';
 
 export default function Timeline() {
   return (

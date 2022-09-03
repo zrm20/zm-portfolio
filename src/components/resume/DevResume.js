@@ -51,6 +51,7 @@ const DevResume = React.forwardRef((props, ref) => {
           <Grid
             item
             xs={forPrint ? 6 : 12}
+            md={6}
             sx={styles.personalSkills}
           >
             <PersonalSkills forPrint={forPrint} />
@@ -59,6 +60,7 @@ const DevResume = React.forwardRef((props, ref) => {
           <Grid
             item
             xs={forPrint ? 6 : 12}
+            md={6}
             sx={styles.devSkills}
           >
             <DeveloperSkills forPrint={forPrint} />
@@ -67,6 +69,7 @@ const DevResume = React.forwardRef((props, ref) => {
           <Grid
             item
             xs={forPrint ? 4 : 12}
+            md={4}
             sx={styles.softwareSkills}
           >
             <SoftwareSkills forPrint={forPrint} />
@@ -75,6 +78,7 @@ const DevResume = React.forwardRef((props, ref) => {
           <Grid
             item
             xs={forPrint ? 4 : 12}
+            md={4}
             sx={styles.websites}
           >
             <Websites forPrint={forPrint} />
@@ -83,6 +87,7 @@ const DevResume = React.forwardRef((props, ref) => {
           <Grid
             item
             xs={forPrint ? 4 : 12}
+            md={4}
             sx={styles.personalInterests}
           >
             <PersonalInterests forPrint={forPrint} />

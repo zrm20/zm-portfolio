@@ -4,7 +4,7 @@ import React from 'react'
 export default function Websites() {
   return (
     <Container sx={styles.root}>
-      <Typography variant='h6' align='center' >
+      <Typography variant='h6' >
         Websites
       </Typography>
     </Container>

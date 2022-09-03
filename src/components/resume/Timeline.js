@@ -5,7 +5,7 @@ import { Timeline as MuiTimeline, TimelineItem, TimelineSeparator, TimelineDot, 
 export default function Timeline() {
   return (
     <Container sx={styles.root}>
-      <Typography variant='h6' align='center'>
+      <Typography variant='h6'>
         History
       </Typography>
 

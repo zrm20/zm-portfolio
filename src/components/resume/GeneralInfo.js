@@ -4,7 +4,7 @@ import React from 'react'
 export default function GeneralInfo({ attributes = [] }) {
   return (
     <Container >
-      <Typography variant='h6' align='center'>General Info</Typography>
+      <Typography variant='h6'>General Info</Typography>
       <div>
         {
 

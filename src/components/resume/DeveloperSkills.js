@@ -4,7 +4,7 @@ import React from 'react'
 export default function DeveloperSkills() {
   return (
     <Container sx={styles.root}>
-      <Typography variant='h6' align='right'>
+      <Typography variant='h6'>
         Developer Skills
       </Typography>
     </Container>

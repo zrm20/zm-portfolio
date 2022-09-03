@@ -5,33 +5,50 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-export default function Header() {
+export default function Header({ forPrint = false }) {
+  const styles = useStyles(forPrint)
+
   return (
     <Container sx={styles.root}>
       <Grid container sx={styles.container}>
-        <Grid item sx={styles.headshot}>
+        <Grid
+          item
+          sx={styles.headshot}
+          xs={forPrint ? 2 : 12}
+          md={2}
+        >
           <Avatar
             src={headshot}
             alt="Zach McCoy"
             sx={{ width: 100, height: 100 }}
           />
         </Grid>
-        <Grid item sx={{ flex: 1, ml: 3 }}>
-          <Typography variant='h4'>Zach McCoy</Typography>
-          <Typography variant='h6'
-            sx={{ fontSize: '.9rem' }}
-          >
+
+        <Grid
+          item
+          sx={styles.textContainer}
+          xs={forPrint ? 7 : 12}
+          md={7}
+        >
+          <Typography variant='h4'>
+            Zach McCoy
+          </Typography>
+          <Typography variant='h6'>
             Bachelor of Science in Audio Engineering
           </Typography>
-          <Typography color='textSecondary' sx={{ fontSize: '.8rem' }}>
+          <Typography color='textSecondary'>
             “A self-driven, lifelong learner with a well-rounded tool-kit of technical and personal skills. Always striving for growth and self-improvement.”
           </Typography>
         </Grid>
-        <Grid item sx={styles.contact}>
+
+        <Grid
+          item
+          sx={styles.contactInfo}
+          xs={forPrint ? 3 : 12}
+          md={3}
+        >
           <div>
-            <Typography>
-              Nashville, TN
-            </Typography>
+            <Typography>Nashville, TN</Typography>
             <IconButton size='small' disabled>
               <LocationOnIcon />
             </IconButton>
@@ -58,18 +75,14 @@ export default function Header() {
   )
 };
 
-const styles = {
+const useStyles = (forPrint) => ({
   root: {
     height: '100%',
     width: '100%',
     display: 'flex',
-    display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  container: {
-
   },
   headshot: {
     display: 'flex',
@@ -77,10 +90,43 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  contact: {
+  textContainer: {
+    textAlign: {
+      xs: forPrint ? 'left' : 'center',
+      md: 'left'
+    },
+    flex: 1,
+    '& h4': {
+      ml: {
+        xs: forPrint ? 1 : 0,
+        md: 1
+      },
+      mb: forPrint ? 0 : 1
+    },
+    '& h6': {
+      ml: {
+        xs: forPrint ? 1 : 0,
+        md: 1
+      },
+      fontSize: '.8rem',
+      mb: forPrint ? 0 : 1
+    },
+    '& p': {
+      ml: {
+        xs: forPrint ? 1 : 0,
+        md: 1
+      },
+      fontSize:'.7rem',
+      mb: forPrint ? 0 : 1
+    }
+  },
+  contactInfo: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-end',
+    alignItems: {
+      xs: forPrint ? 'flex-end' : 'center',
+      md: 'flex-end'
+    },
     justifyContent: 'space-evenly',
     '& div': {
       display: 'flex',
@@ -89,4 +135,4 @@ const styles = {
       justifyContent: 'center',
     }
   }
-}
+});

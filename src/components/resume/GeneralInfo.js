@@ -1,16 +1,16 @@
-import { Container } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import React from 'react'
 
-export default function GeneralInfo() {
+export default function GeneralInfo({ attributes = [] }) {
   return (
-    <Container sx={styles.root}>
-      GeneralInfo
+    <Container >
+      <Typography variant='h6' align='center'>General Info</Typography>
+      <div>
+        {
+
+        }
+      </div>
     </Container>
   )
 };
 
-const styles = {
-  root: {
-    border: '1px solid green'
-  }
-}

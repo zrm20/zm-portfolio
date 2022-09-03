@@ -1,16 +1,26 @@
-import { Container } from '@mui/material'
-import React from 'react'
+import React from 'react';
+import { Container, Typography } from '@mui/material';
+import { Timeline as MuiTimeline, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from '@mui/lab';
 
 export default function Timeline() {
   return (
     <Container sx={styles.root}>
-      Timeline
+      <Typography variant='h6' align='center'>
+        History
+      </Typography>
+
+      
     </Container>
   )
 };
 
 const styles = {
   root: {
-    border: '1px solid blue'
+  },
+  timeline: {
+    rotate: '-90deg',
+    '& .MuiTypography-root': {
+      
+    }
   }
 }

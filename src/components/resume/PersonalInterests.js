@@ -1,16 +1,17 @@
-import { Container } from '@mui/material'
+import { Container , Typography} from '@mui/material'
 import React from 'react'
 
 export default function PersonalInterests() {
   return (
     <Container sx={styles.root}>
-      PersonalInterests
+      <Typography variant='h6'>
+        Personal Interests
+      </Typography>
     </Container>
   )
 };
 
 const styles = {
   root: {
-    border: '1px solid '
   }
 }

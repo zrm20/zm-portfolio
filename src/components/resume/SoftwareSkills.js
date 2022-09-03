@@ -1,16 +1,17 @@
-import { Container } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import React from 'react'
 
 export default function SoftwareSkills() {
   return (
     <Container sx={styles.root}>
-      SoftwareSkills
+      <Typography variant='h6'>
+        Software Skills
+      </Typography>
     </Container>
   )
 };
 
 const styles = {
   root: {
-    border: '1px solid cyan'
   }
 }

@@ -11,7 +11,7 @@ export default function PersonalInterests({ forPrint = false }) {
       <Typography variant='h6' gutterBottom>
         Personal Interests
       </Typography>
-      <Grid container sx={styles.container} spacing={1}>
+      <Grid container sx={styles.container} spacing={forPrint ? 0 : 1}>
         {
           personalInterests.map(hobby => (
             <Grid
@@ -51,8 +51,8 @@ const useStyles = (forPrint) => ({
    alignItems: 'center',
    justifyContent: 'center',
    '& .MuiAvatar-root': {
-      width: 65,
-      height: 65
+      width: 60,
+      height: 60
    },
    '& svg': {
     fontSize: '2rem'

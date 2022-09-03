@@ -109,8 +109,8 @@ const useStyles = (forPrint) => ({
     textAlign: 'center',
   },
   container: {
-    height: '97%',
-    width: '97%',
+    height: '94%',
+    width: '94%',
     overflow: 'scroll',
     margin: 'auto'
   },

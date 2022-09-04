@@ -137,4 +137,13 @@ const techStack =
     }
   ];
 
-  export default techStack;
+let secondaryStack = [];
+
+for (let i = 1; i < techStack.length; i++) {
+  secondaryStack = [...secondaryStack, ...techStack[i].stack];
+};
+
+export const otherStack =  secondaryStack;
+export const primaryStack = techStack[0].stack;
+export default techStack;
+

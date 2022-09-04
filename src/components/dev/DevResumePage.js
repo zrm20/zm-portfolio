@@ -12,7 +12,16 @@ export default function DevResumePage() {
   const printResumeRef = useRef();
 
   return (
-    <Backdrop open >
+    <div style={{
+       width: '100%', 
+       height: '100%', 
+       overflowY: 'scroll',
+       display: 'flex',
+       flexDirection: 'column',
+       alignItems: 'center',
+       justifyContent: 'center',
+       
+      }}>
       <Fab
         sx={{
           position: 'fixed',
@@ -47,6 +56,6 @@ export default function DevResumePage() {
           <DevResume forPrint ref={printResumeRef} />
         </div>
       </ThemeProvider>
-    </Backdrop>
+    </div>
   )
 }

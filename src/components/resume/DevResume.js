@@ -14,7 +14,7 @@ const DevResume = React.forwardRef((props, ref) => {
   const styles = useStyles(forPrint);
 
   return (
-    <div ref={ref} id='dev-resume'>
+    <div ref={ref}>
       <Paper
         sx={styles.paper}
         elevation={forPrint ? 0 : 3}
@@ -101,7 +101,7 @@ const DevResume = React.forwardRef((props, ref) => {
 const useStyles = (forPrint) => ({
   paper: {
     width: forPrint ? '8.5in' : '93vw',
-    height: forPrint ? '11in' : '93vh',
+    height: forPrint ? '11in' : null,
     maxWidth: '8.5in',
     display: 'flex',
     flexDirection: 'column',
@@ -109,10 +109,8 @@ const useStyles = (forPrint) => ({
     textAlign: 'center',
   },
   container: {
-    height: '94%',
-    width: '94%',
-    overflow: 'scroll',
-    margin: 'auto'
+    mt: 2,
+    mb: 2
   },
   header: {
     height: forPrint ? '12%' : null

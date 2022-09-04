@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Backdrop, Fab } from '@mui/material';
+import { Fab } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import resumeTheme from '../../styles/resumeTheme';
 import ReactToPrint from 'react-to-print';

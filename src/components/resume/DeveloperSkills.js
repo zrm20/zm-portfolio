@@ -8,10 +8,10 @@ export default function DeveloperSkills({ forPrint = false }) {
       <Typography variant='h6'>
         Developer Skills
       </Typography>
-      <Grid container gutterBottom>
+      <Grid container>
         {
           primaryStack.map(el => (
-            <Grid item xs={forPrint ? 3 : 6} md={3} >
+            <Grid item xs={forPrint ? 3 : 6} md={3} mb={1}>
               <Container
                 sx={{
                   display: 'flex',
@@ -33,7 +33,7 @@ export default function DeveloperSkills({ forPrint = false }) {
         }
       </Grid>
 
-      <Divider sx={{ m: 1 }} />
+      <Divider sx={{ mb: 1 }} />
       
       <Grid 
         container

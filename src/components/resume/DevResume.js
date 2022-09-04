@@ -77,8 +77,8 @@ const DevResume = React.forwardRef((props, ref) => {
 
           <Grid
             item
-            xs={forPrint ? 4 : 12}
-            md={4}
+            xs={forPrint ? 3 : 12}
+            md={3}
             sx={styles.websites}
           >
             <Websites forPrint={forPrint} />
@@ -110,7 +110,8 @@ const useStyles = (forPrint) => ({
   },
   container: {
     mt: 2,
-    mb: 2
+    mb: 2,
+    justifyContent: 'space-evenly'
   },
   header: {
     height: forPrint ? '12%' : null

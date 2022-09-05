@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Grid, Divider } from '@mui/material';
 import { primaryStack, otherStack } from '../../assets/data/techStack';
+import { v4 as uuid } from 'uuid';
 
 export default function DeveloperSkills({ forPrint = false }) {
   return (
@@ -11,7 +12,7 @@ export default function DeveloperSkills({ forPrint = false }) {
       <Grid container>
         {
           primaryStack.map(el => (
-            <Grid item xs={forPrint ? 3 : 6} md={3} mb={1}>
+            <Grid item xs={forPrint ? 3 : 6} sm={3} mb={1} key={uuid()} >
               <Container
                 sx={{
                   display: 'flex',
@@ -44,7 +45,7 @@ export default function DeveloperSkills({ forPrint = false }) {
       >
         {
           otherStack.map(skill => (
-            <Grid item>
+            <Grid item key={uuid()}>
               <i className={skill.icon}></i>
               <Typography variant='body2' sx={{ fontSize: '.6rem' }}>{skill.name}</Typography>
 

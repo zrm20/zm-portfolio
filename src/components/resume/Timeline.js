@@ -69,7 +69,7 @@ const topEvents = [
   }
 ]
 
-export default function Timeline({ numOfYears = 10, multiple = 1 }) {
+export default function Timeline({ numOfYears = 10, multiple = 1, forPrint }) {
   const today = new Date(Date.now());
   const currentYear = today.getFullYear();
 
@@ -169,7 +169,7 @@ export default function Timeline({ numOfYears = 10, multiple = 1 }) {
         sx={{
           width: '100%',
           overflowX: {
-            xs: 'scroll',
+            xs: forPrint ? 'hidden' : 'scroll',
             md: 'hidden'
           }
         }}

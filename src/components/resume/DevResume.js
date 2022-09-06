@@ -110,32 +110,31 @@ const useStyles = (forPrint) => ({
   container: {
     mt: 2,
     mb: 2,
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   header: {
-    height: forPrint ? '12%' : null
+    mb: 1
   },
   genInfo: {
-    height: forPrint ? '13%' : null
+    mb: 1
   },
   timeline: {
-    height: forPrint ? '25%' : null
+    mb: 1
   },
   personalSkills: {
-    height: forPrint ? '25%' : null
+    mb: 1
   },
   devSkills: {
-    height: forPrint ? '25%' : null
+    mb: 1
   },
   softwareSkills: {
-    height: forPrint ? '25%' : null
+    mb: 1
   },
   websites: {
-    height: forPrint ? '25%' : null,
-    
+    mb: 1
   },
   personalInterests: {
-    height: forPrint ? '25%' : null
+    mb: 1
   },
 });
 

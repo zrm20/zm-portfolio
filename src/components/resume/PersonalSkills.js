@@ -4,7 +4,7 @@ import { useTheme, } from '@emotion/react';
 import Chart from 'react-apexcharts';
 
 
-export default function PersonalSkills() {
+export default function PersonalSkills({ forPrint }) {
   const { palette } = useTheme();
  
   const chartOptions = {
@@ -12,12 +12,14 @@ export default function PersonalSkills() {
       id: "radar",
       toolbar: {
         show: false
-      }
+      },
     },
     xaxis: {
       categories: ['Problem Solving', 'Analytical', 'Growth', 'Efficient', 'Compartmental', 'Creative']
     },
-    
+    title: {
+      text: ''
+    },
     colors: [palette.primary.main],
     tooltip: {
       y: {
@@ -41,14 +43,14 @@ export default function PersonalSkills() {
       </Typography>
       <Container sx={{ 
         height: 200, 
-        width: 335,
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }}>
         <Chart
           type='radar'
-          width={400}
+          width={forPrint ? 300 : 400}
           options={chartOptions}
           series={chartSeries}
         />

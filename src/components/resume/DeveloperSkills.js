@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 export default function DeveloperSkills({ forPrint = false }) {
   return (
     <Container>
-      <Typography variant='h6'>
+      <Typography variant='h6' gutterBottom>
         Developer Skills
       </Typography>
       <Grid container>

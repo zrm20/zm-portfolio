@@ -19,7 +19,7 @@ const DevResume = React.forwardRef((props, ref) => {
         sx={styles.paper}
         elevation={forPrint ? 0 : 3}
       >
-        <Grid 
+        <Grid
           container
           sx={styles.container}
         >

@@ -51,11 +51,11 @@ const useStyles = (forPrint) => ({
    alignItems: 'center',
    justifyContent: 'center',
    '& .MuiAvatar-root': {
-      width: 60,
-      height: 60
+      width: 50,
+      height: 50
    },
    '& svg': {
-    fontSize: '2rem'
+    fontSize: '1.75rem'
    }
   }
 });

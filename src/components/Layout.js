@@ -48,6 +48,7 @@ export default function Layout({ children }) {
           </Typography>
 
           <div style={styles.intLinks}>
+            <Button sx={{ color: 'primary.contrastText'}} component={RouterLink} to={'/dev/resume'} >Resume</Button>
             <Button sx={{ color: 'primary.contrastText'}} onClick={handleOpenSoftwareMenu}>Software</Button>
             <Button sx={{ color: 'primary.contrastText'}} onClick={handleOpenAudioMenu}>Audio</Button>
 

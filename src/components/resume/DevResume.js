@@ -20,8 +20,7 @@ const DevResume = React.forwardRef((props, ref) => {
         elevation={forPrint ? 0 : 3}
       >
         <Grid 
-          container 
-          spacing={forPrint ? 0 : 2}
+          container
           sx={styles.container}
         >
           <Grid
@@ -77,8 +76,8 @@ const DevResume = React.forwardRef((props, ref) => {
 
           <Grid
             item
-            xs={forPrint ? 3 : 12}
-            md={3}
+            xs={forPrint ? 4 : 12}
+            md={4}
             sx={styles.websites}
           >
             <Websites forPrint={forPrint} />
@@ -132,7 +131,8 @@ const useStyles = (forPrint) => ({
     height: forPrint ? '25%' : null
   },
   websites: {
-    height: forPrint ? '25%' : null
+    height: forPrint ? '25%' : null,
+    
   },
   personalInterests: {
     height: forPrint ? '25%' : null

@@ -7,6 +7,10 @@ import SettingsInputComponentIcon from '@mui/icons-material/SettingsInputCompone
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import CodeIcon from '@mui/icons-material/Code';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import FestivalIcon from '@mui/icons-material/Festival';
+import AdjustIcon from '@mui/icons-material/Adjust';
+import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import { v4 as uuid } from 'uuid';
 
 const bottomEvents = [
@@ -24,6 +28,11 @@ const bottomEvents = [
     year: 2020,
     event: 'Started Pursing Software',
     icon: CodeIcon
+  },
+  {
+    year: 2021,
+    event: 'Udemy Bootcamps and Classes',
+    icon: CastForEducationIcon
   },
   {
     year: 2022,
@@ -48,6 +57,16 @@ const topEvents = [
     event: 'Justin Moore: Stage Manager',
     icon: AssignmentIndIcon
   },
+  {
+    year: 2019,
+    event: 'Special Event Services: Festival Audio',
+    icon: FestivalIcon
+  },
+  {
+    year: 2020,
+    event: 'Orange Thread Media: Corporate Events',
+    icon: LocalActivityIcon
+  }
 ]
 
 export default function Timeline({ numOfYears = 10, multiple = 1 }) {
@@ -109,7 +128,10 @@ export default function Timeline({ numOfYears = 10, multiple = 1 }) {
                   {
                     event &&
                       <>
-                        {< event.icon sx={{ color: 'primary.main' }} />}
+                        { event.icon ?
+                          < event.icon sx={{ color: 'primary.main' }} /> :
+                          <AdjustIcon sx={{ color: 'primary.main' }} />
+                        }
                         <Typography
                           sx={{
                             fontSize: '.5rem',

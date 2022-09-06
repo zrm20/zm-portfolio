@@ -101,7 +101,7 @@ const useStyles = (forPrint) => ({
   paper: {
     width: forPrint ? '8.5in' : '93vw',
     height: forPrint ? '11in' : null,
-    maxWidth: '8.5in',
+    maxWidth: 1200,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

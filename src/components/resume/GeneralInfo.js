@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Box, Grid } from '@mui/material';
+import { Container, Typography, Grid } from '@mui/material';
 import genInfo from '../../assets/data/genInfo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';

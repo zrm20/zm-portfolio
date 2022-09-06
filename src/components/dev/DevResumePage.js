@@ -34,8 +34,10 @@ export default function DevResumePage() {
         <CloseIcon />
       </Fab>
 
-      <DevResume />
+      <ThemeProvider theme={resumeTheme}>
 
+      <DevResume />
+</ThemeProvider>
       <ReactToPrint
         trigger={() => (
           <Fab

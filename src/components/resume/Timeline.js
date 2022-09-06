@@ -168,26 +168,31 @@ export default function Timeline({ numOfYears = 10, multiple = 1, forPrint }) {
       <Container
         sx={{
           width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
           overflowX: {
             xs: forPrint ? 'hidden' : 'scroll',
             md: 'hidden'
           }
         }}
       >
-        {renderTimeline(topTimeline, true)}
+        <div>
+          {renderTimeline(topTimeline, true)}
 
-        {/* BASE TIMELINE */}
-        <Stepper alternativeLabel >
-          {
-            years.reverse().map(year => (
-              <Step key={year} completed >
-                <StepLabel StepIconComponent={() => <YearIcon year={year} />} />
-              </Step>
-            ))
-          }
-        </Stepper>
+          {/* BASE TIMELINE */}
+          <Stepper alternativeLabel >
+            {
+              years.reverse().map(year => (
+                <Step key={year} completed >
+                  <StepLabel StepIconComponent={() => <YearIcon year={year} />} />
+                </Step>
+              ))
+            }
+          </Stepper>
 
-        {renderTimeline(bottomTimeline)}
+          {renderTimeline(bottomTimeline)}
+        </div>
 
       </Container>
 
@@ -197,5 +202,8 @@ export default function Timeline({ numOfYears = 10, multiple = 1, forPrint }) {
 
 const styles = {
   root: {
+    '& MuiStepper-root': {
+      width: '100%'
+    }
   },
 }

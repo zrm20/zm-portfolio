@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 function ProjectItem({ project, index }) {
   return (
     <>
-      <ListItem button component={RouterLink} to={`/dev/project/${index}`} /* TODO ADD LINK*/ >
+      <ListItem button component={RouterLink} to={`/dev/project/${index}`} >
         <ListItemAvatar>
         <Avatar
             src={project.image ? project.image : ''}

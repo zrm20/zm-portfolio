@@ -38,7 +38,7 @@ export default function Websites() {
         </Grid>
         <Grid item xs={12}>
           <Typography variant='body2' gutterBottom>
-            This resume is interactive. Check it out at <Link component={RouterLink} to='/dev' color='textSecondary'>zachmccoy.dev</Link>
+            This resume is interactive. Check it out at <Link component={RouterLink} to='/dev' color='textSecondary'>zachrmccoy.com</Link>
           </Typography>
           <Typography variant='body2' color='secondary'>
             Built with React.js <i className='devicon-react-original' ></i>

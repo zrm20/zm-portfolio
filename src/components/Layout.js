@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   return (
     <main style={styles.root}>
       <AppBar position='static'>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1000, width: '100%', ml: 'auto', mr: 'auto' }}>
           <Typography
             variant='h3'
             sx={styles.miniTitle}

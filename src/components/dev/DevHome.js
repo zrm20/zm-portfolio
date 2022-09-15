@@ -38,11 +38,21 @@ const sectionList = [
 ];
 
 export default function DevHome() {
-  const [searchParams] = useSearchParams();
-  useEffect(() => { document.title = 'ZM Software' }, []);
-  const [openSection, setOpenSection] = useState(searchParams.get('section'));
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [openSection, setOpenSection] = useState('');
+  
+  useEffect(() => { 
+    document.title = 'ZM Software';
+    
+    const newSectionParam = searchParams.get('section');
+
+    if(newSectionParam) {
+      setOpenSection(newSectionParam);
+    }
+  }, [searchParams]);
 
   function handleChangeSection(sectionName) {
+    setSearchParams('');
     if(openSection === sectionName) {
       setOpenSection('');
     } else {

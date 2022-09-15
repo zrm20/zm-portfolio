@@ -26,20 +26,24 @@ export default function Home() {
       <Grid container spacing={1}>
         <Grid item xs={12} md={6}>
           <Link component={RouterLink} to="/dev">Software Developer</Link>
-          <img
-            src={codeImgUrl}
-            width='90%'
-            alt='MERN Stack Software Engineer'
-          />
+          <Link component={RouterLink} to="/dev">
+            <img
+              src={codeImgUrl}
+              width='90%'
+              alt='MERN Stack Software Engineer'
+            />
+          </Link>
         </Grid>
 
         <Grid item xs={12} md={6}>
           <Link component={RouterLink} to="/audio">Audio Engineer</Link>
-          <img
-            src={audioImg}
-            width='90%'
-            alt='Monitor Engineer'
-          />
+          <Link component={RouterLink} to="/audio">
+            <img
+              src={audioImg}
+              width='90%'
+              alt='Monitor Engineer'
+            />
+          </Link>
         </Grid>
       </Grid>
     </Container>

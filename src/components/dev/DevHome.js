@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography, Grid, Container } from '@mui/material';
 import devBio from '../../assets/data/devBio';
 import Education from '../atoms/Education';
@@ -38,15 +38,15 @@ const sectionList = [
 ];
 
 export default function DevHome() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   useEffect(() => { document.title = 'ZM Software' }, []);
-  const sectionParam = searchParams.get('section');
+  const [openSection, setOpenSection] = useState(searchParams.get('section'));
 
   function handleChangeSection(sectionName) {
-    if (sectionName === sectionParam) {
-      setSearchParams('');
+    if(openSection === sectionName) {
+      setOpenSection('');
     } else {
-      setSearchParams({ section: sectionName })
+      setOpenSection(sectionName);
     };
   };
 
@@ -72,7 +72,7 @@ export default function DevHome() {
             <Section
               key={section.name}
               section={section}
-              sectionParam={sectionParam}
+              isOpen={openSection === section.name}
               handleChangeSection={handleChangeSection}
             />
           ))

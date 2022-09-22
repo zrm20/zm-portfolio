@@ -3,10 +3,10 @@ import { Divider, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typograp
 import devExperiences from '../../assets/data/devExperiences';
 import { Link as RouterLink } from 'react-router-dom';
 
-function DevExperienceItem({ experience }) {
+function DevExperienceItem({ experience, index }) {
   return (
     <>
-      <ListItem button component={RouterLink} to='/' /* TODO ADD LINK*/ >
+      <ListItem button component={RouterLink} to={`/dev/experience/${index}`} /* TODO ADD LINK*/ >
         <ListItemAvatar>
           <Avatar
             src={experience.image ? experience.image : ''}
@@ -39,8 +39,8 @@ export default function DevExperience() {
   return (
     <List>
       {
-        devExperiences.map(experience => (
-          <DevExperienceItem key={experience.name} experience={experience} />
+        devExperiences.map((experience, i) => (
+          <DevExperienceItem key={experience.name} experience={experience} index={i}/>
         ))
       }
     </List>

@@ -10,7 +10,10 @@ const techStack =
             'Reel Rock Climber',
             'Nomi Travel',
             'Yelp Camp (Udemy Project)'
-          ]
+          ],
+          classes: {
+            
+          }
         },
         {
           name: 'Express',

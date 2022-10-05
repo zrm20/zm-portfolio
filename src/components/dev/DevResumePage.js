@@ -12,7 +12,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import { Link as RouterLink } from 'react-router-dom';
 
 export default function DevResumePage() {
-  const [iconMode, setIconMode] = useState(false);
+  const [iconMode, setIconMode] = useState(true);
   const printResumeRef = useRef();
   const handlePrint = useReactToPrint(
     {

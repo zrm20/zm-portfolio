@@ -4,14 +4,14 @@ import contactInfo from '../../assets/data/contactInfo';
 import QRCode from 'qrcode.react';
 import { Link as RouterLink } from 'react-router-dom';
 
-export default function Websites() {
+export default function Websites({ stacked = false}) {
   return (
     <div style={styles.root}>
       <Typography variant='h6' >
         Websites
       </Typography>
-      <Grid container >
-        <Grid item xs={6}>
+      <Grid container spacing={stacked ? 1 : 0}>
+        <Grid item xs={stacked ? 12 : 6}>
           <Container sx={styles.qrContainer}>
             <Typography variant='body2'>Portfolio</Typography>
             <RouterLink to='/dev'>
@@ -23,7 +23,7 @@ export default function Websites() {
             </RouterLink>
           </Container>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={stacked ? 12 : 6}>
           <Container sx={styles.qrContainer}>
 
             <Typography variant='body2'>LinkedIn</Typography>
@@ -61,7 +61,7 @@ const styles = {
     justifyContent: 'center',
     borderWeight: 2,
     borderStyle: 'solid',
-    borderColor: 'primary.dark',
+    borderColor: 'primary.main',
     borderRadius: 2,
     width: '90%',
     mb: 1

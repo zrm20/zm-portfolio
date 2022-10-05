@@ -1,5 +1,5 @@
 import { faApple } from "@fortawesome/free-brands-svg-icons";
-import { faGraduationCap, faHouseUser, faIdCard, faMapLocationDot, faMicrophone } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faHouseUser, faIdCard, faMapLocationDot, faCertificate } from "@fortawesome/free-solid-svg-icons";
 
 const genInfo = [
   {
@@ -10,22 +10,26 @@ const genInfo = [
   {
     title: 'Hometown',
     value: 'Marshall, MN',
-    icon: faMapLocationDot
+    icon: faMapLocationDot,
+    includeInTraditional: true,
+  },
+  {
+    title: 'Current Home',
+    value: 'Nashville, TN',
+    includeInTraditional: true,
+    icon: faHouseUser,
   },
   {
     title: 'Education',
     value: 'Belmont University 2014',
-    icon: faGraduationCap
+    icon: faGraduationCap,
+    includeInTraditional: true,
   },
   {
-    title: 'Bachelor of Science',
-    value: 'Audio Engineering Technology',
-    icon: faMicrophone
-  },
-  {
-    title: 'Current Home',
-    value: 'Pleasant View, TN',
-    icon: faHouseUser
+    title: 'Degree',
+    value: 'Bachelor of Science in Audio Engineering',
+    icon: faCertificate,
+    includeInTraditional: true,
   },
   {
     title: 'Mac',

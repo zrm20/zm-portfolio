@@ -4,7 +4,7 @@ import { useTheme, } from '@emotion/react';
 import Chart from 'react-apexcharts';
 
 
-export default function PersonalSkills({ forPrint }) {
+export default function PersonalSkills({ forPrint, size = 100 }) {
   const { palette } = useTheme();
  
   const chartOptions = {
@@ -42,7 +42,7 @@ export default function PersonalSkills({ forPrint }) {
         Personal Skills
       </Typography>
       <Container sx={{ 
-        height: 200, 
+        height: size * 2, 
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -50,7 +50,7 @@ export default function PersonalSkills({ forPrint }) {
       }}>
         <Chart
           type='radar'
-          width={forPrint ? 300 : 400}
+          width={forPrint ? size * 3 : size * 4}
           options={chartOptions}
           series={chartSeries}
         />

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Fab, SpeedDial, SpeedDialIcon, SpeedDialAction } from '@mui/material';
+import { Fab, SpeedDial, SpeedDialIcon, SpeedDialAction, ToggleButtonGroup, ToggleButton, Box } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import resumeTheme from '../../styles/resumeTheme';
 import { useReactToPrint } from 'react-to-print';
@@ -20,10 +20,14 @@ export default function DevResumePage() {
     }
   );
 
-  useEffect(() => {document.title = 'Zach McCoy Resume'}, []);
+  useEffect(() => { document.title = 'Zach McCoy Resume' }, []);
 
   function toggleView() {
     setIconMode(!iconMode);
+  };
+
+  function handleViewChange(evt, value) {
+    setIconMode(value);
   };
 
 
@@ -38,6 +42,15 @@ export default function DevResumePage() {
       justifyContent: 'center',
 
     }}>
+
+      <ThemeProvider theme={resumeTheme}>
+        {
+          iconMode ?
+            <DevResume /> :
+            <DevResumeTraditional />
+        }
+      </ThemeProvider>
+
       <Fab
         sx={{
           position: 'fixed',
@@ -50,17 +63,31 @@ export default function DevResumePage() {
         <CloseIcon />
       </Fab>
 
-      <ThemeProvider theme={resumeTheme}>
-        {
-          iconMode ?
-            <DevResume /> :
-            <DevResumeTraditional />
-        }
-      </ThemeProvider>
+      <Box
+        sx={{
+          position: 'fixed',
+          bottom: '3%',
+          p: 1,
+          backgroundColor: 'background.default',
+          borderRadius: '4px'
+        }}
+      >
+        <ToggleButtonGroup
+          color='primary'
+          value={iconMode}
+          variant
+          onChange={handleViewChange}
+          exclusive
+        >
+          <ToggleButton value={false} >Traditional</ToggleButton>
+          <ToggleButton value={true} >Infographic</ToggleButton>
+        </ToggleButtonGroup>
+      </Box>
+
 
       <SpeedDial
         ariaLabel='speed dial'
-        sx={{ position: 'fixed', bottom: '5%', right: '3%' }}
+        sx={{ position: 'fixed', bottom: '3%', right: '5%' }}
         icon={<SpeedDialIcon />}
       >
 

@@ -67,6 +67,7 @@ const useStyles = (forPrint) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     textAlign: 'center',
+    marginBottom: '75px'
   },
   container: {
     mt: 2,

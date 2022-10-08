@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Fab, SpeedDial, SpeedDialIcon, SpeedDialAction, ToggleButtonGroup, ToggleButton, Box } from '@mui/material';
+import { Fab, SpeedDial, SpeedDialIcon, SpeedDialAction, ToggleButtonGroup, ToggleButton, Box, useMediaQuery, useTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import resumeTheme from '../../styles/resumeTheme';
 import { useReactToPrint } from 'react-to-print';
@@ -13,6 +13,8 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export default function DevResumePage() {
   const [iconMode, setIconMode] = useState(true);
+  const theme = useTheme();
+  const isSmScreen = useMediaQuery(theme.breakpoints.up('sm'));
   const printResumeRef = useRef();
   const handlePrint = useReactToPrint(
     {
@@ -79,8 +81,12 @@ export default function DevResumePage() {
           onChange={handleViewChange}
           exclusive
         >
-          <ToggleButton value={false} >Traditional</ToggleButton>
-          <ToggleButton value={true} >Infographic</ToggleButton>
+          <ToggleButton value={false} >
+            {isSmScreen ? 'Traditional' : <NotesIcon />}
+          </ToggleButton>
+          <ToggleButton value={true} >
+            {isSmScreen ? 'Infographic' : <ImageIcon />}
+          </ToggleButton>
         </ToggleButtonGroup>
       </Box>
 

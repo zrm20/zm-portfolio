@@ -30,7 +30,8 @@ const DevResumeTraditional = React.forwardRef((props, ref) => {
 
           <Grid
             item
-            xs={3}
+            xs={forPrint ? 3 : 12}
+            md={3}
             sx={styles.sidebar}
           >
             <GeneralInfoTraditional />
@@ -38,17 +39,18 @@ const DevResumeTraditional = React.forwardRef((props, ref) => {
 
           <Grid
             item
-            xs={9}
+            xs={forPrint ? 9 : 12}
+            md={9}
             sx={styles.content}
           >
             <HistoryTraditional />
           </Grid>
 
-          <Grid item xs={5} >
+          <Grid item xs={forPrint ? 5 : 12} md={5} >
             <Websites />
           </Grid>
 
-          <Grid item xs={6} >
+          <Grid item xs={forPrint ? 6 : 12} md={6} >
             <DeveloperSkills forPrint/>
           </Grid>
 

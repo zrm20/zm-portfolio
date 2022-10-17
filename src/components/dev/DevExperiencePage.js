@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Typography, Container, Toolbar, IconButton, Grid, Paper } from '@mui/material';
+import { Button, Typography, Container, Toolbar, IconButton, Grid } from '@mui/material';
 import devExperiences from '../../assets/data/devExperiences';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
@@ -28,19 +28,24 @@ export default function DevExperiencePage() {
 
   document.title = experience.name;
 
+  let descriptionParagraphs;
+  if(experience.description){
+    descriptionParagraphs = experience.description.split('\n');
+  };
+
   function prevIndex() {
     if (indexNum === 0) {
-      return devExperiences.length
+      return devExperiences.length - 1;
     } else {
-      return indexNum - 1
+      return indexNum - 1;
     }
   };
 
   function nextIndex() {
     if (indexNum === (devExperiences.length - 1)) {
-      return 0
+      return 0;
     } else {
-      return indexNum + 1
+      return indexNum + 1;
     }
   };
 
@@ -60,20 +65,33 @@ export default function DevExperiencePage() {
         </IconButton>
       </Toolbar>
 
-      <Grid container sx={styles.content}>
+      <Grid container sx={styles.content} spacing={1}>
         {
           experience.image &&
           <Grid item sx={styles.image} xs={12}>
             <img
               src={experience.image}
+              alt={experience.name}
             />
           </Grid>
         }
 
         {
           experience.range &&
-          <Grid item component={Paper}>
-            <Typography>{experience.range}</Typography>
+          <Grid item xs={12}>
+            <Typography align='center' variant='h5'>{experience.range}</Typography>
+          </Grid>
+        }
+        {
+          experience.description &&
+          <Grid item xs={12}>
+            {
+              descriptionParagraphs.map((paragraph, i) => (
+                <Typography key={'bio-' + i} align='left' sx={{ mb: 2, width: '90%' }}>
+                  {paragraph}
+                </Typography>
+              ))
+            }
           </Grid>
         }
       </Grid>

@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AppBar, IconButton, Toolbar, Typography, Button, Menu, MenuItem } from '@mui/material';
+import { AppBar, IconButton, Toolbar, Typography, Button, Menu, MenuItem, Box } from '@mui/material';
 import React, { useState } from 'react';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Link as RouterLink } from 'react-router-dom';
+import zmLogo from '../assets/images/zm_logo_orange_white_name.PNG';
 
 export default function Layout({ children }) {
   const [anchorAudioNav, setAnchorAudioNav] = useState(null);
@@ -28,15 +29,12 @@ export default function Layout({ children }) {
     <main style={styles.root}>
       <AppBar position='static'>
         <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1000, width: '100%', ml: 'auto', mr: 'auto' }}>
-          <Typography
-            variant='h3'
-            sx={styles.miniTitle}
-            component={RouterLink}
-            to='/'
-          >
-            <sup>Z</sup>
-            <sub>M</sub>
-          </Typography>
+          <Box component={RouterLink} to='/' sx={styles.logo}>
+            <img
+              src={zmLogo}
+              alt='ZM Logo'
+            />
+          </Box>
           <Typography
             variant='h3'
             sx={styles.title}
@@ -150,18 +148,17 @@ const styles = {
     display: 'flex',
     justifyContent: 'center'
   },
-  miniTitle: {
+  logo: {
     textDecoration: 'none',
-    display: {
-      xs: 'inline',
-      sm: 'none'
-    },
-    '& sup': {
-      color: 'primary.light'
-    },
-    '& sub': {
-      color: 'primary.main'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    mr: 2,
+    '& img': {
+      width: 60
     }
+
   },
   title: {
     textDecoration: 'none',

@@ -17,14 +17,14 @@ export default function DevProject() {
   const project = devProjects[index];
 
   useEffect(() => {
-    document.title = project ? project.name : 'No Project Found'
+    document.title = project ? project.name : 'No Project Found';
   }, [project]);
 
   if (!project) {
     return (
-      <Container sx={{ pt: 2, width: '100%', display:'flex', flexDirection: 'column', alignItems: 'center' }} >
+      <Container sx={{ pt: 2, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
         <Typography align='center'>No project with that id : (</Typography>
-        <Skeleton variant='rect' animation='wave'/>
+        <Skeleton variant='rect' animation='wave' />
         <Button component={RouterLink} to='/dev?section=projects' >Back to Projects</Button>
       </Container>
     )
@@ -60,7 +60,7 @@ export default function DevProject() {
 
   return (
     <Container sx={styles.root} >
-      <Fab sx={{ position: 'fixed', bottom: '5%'}} component={RouterLink} to='/dev?section=projects'>
+      <Fab sx={{ position: 'fixed', bottom: '5%' }} component={RouterLink} to='/dev?section=projects'>
         <FormatListBulletedIcon />
       </Fab>
       <Toolbar sx={styles.toolbar}>
@@ -124,6 +124,16 @@ export default function DevProject() {
             ))
           }
         </Grid>
+        {
+          project.website &&
+          <Grid xs={12} sx={styles.demo}>
+            <Typography variant='h4' align='center'>Demo</Typography>
+            <iframe
+              title='Project Demo'
+              src={project.website}
+            />
+          </Grid>
+        }
       </Grid>
     </Container>
   )
@@ -158,6 +168,17 @@ const styles = {
     '& svg': {
       color: 'secondary.main',
       fontSize: '2rem'
+    }
+  },
+  demo: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '& iframe': {
+      width: '95%',
+      maxWidth: '400',
+      height: 1000
     }
   }
 };

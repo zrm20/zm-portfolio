@@ -14,7 +14,8 @@ const devProjects =
       'React Native',
       'Redux'
     ],
-    image: trailPackProLogo
+    image: trailPackProLogo,
+    repo: 'https://github.com/zrm20/packplanner'
   },
   {
     name: 'Reel Rock Climber',

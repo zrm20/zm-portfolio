@@ -1,9 +1,10 @@
-import { Avatar, Container, Grid, IconButton, Typography } from '@mui/material'
+import { Avatar, Container, Grid, IconButton, Typography, Link } from '@mui/material'
 import React from 'react';
 import headshot from '../../assets/images/headshot.jpeg';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailRounded from '@mui/icons-material/EmailRounded';
 
 export default function Header({ forPrint = false }) {
   const styles = useStyles(forPrint)
@@ -47,6 +48,14 @@ export default function Header({ forPrint = false }) {
           xs={forPrint ? 3 : 12}
           md={3}
         >
+          <div>
+            <Link href='mailto:zach@zachrmccoy.com' target='_blank'>
+              zach@zachrmccoy.com
+            </Link>
+            <IconButton size='small' disabled>
+              <EmailRounded />
+            </IconButton>
+          </div>
           <div>
             <Typography>Nashville, TN</Typography>
             <IconButton size='small' disabled>

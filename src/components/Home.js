@@ -4,6 +4,7 @@ import { Container } from '@mui/system';
 import headshot from '../assets/images/headshot.jpeg';
 import audioImg from '../assets/images/audio2.JPG';
 import { Link as RouterLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const codeImgUrl = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80';
 export default function Home() {
@@ -12,7 +13,13 @@ export default function Home() {
   return (
     <Container align='center'>
 
-      <Container sx={{ m: 2 }}>
+      <Container 
+        sx={{ m: 2 }} 
+        component={motion.div}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.2 }}
+      >
         <img
           src={headshot}
           alt='Zach McCoy Headshot'
@@ -24,7 +31,15 @@ export default function Home() {
       </Container>
 
       <Grid container spacing={1}>
-        <Grid item xs={12} md={6}>
+        <Grid 
+          item 
+          xs={12} 
+          md={6}
+          component={motion.div}
+          initial={{ x: '-100vw' }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1.1 }}
+        >
           <Link component={RouterLink} to="/dev">Software Developer</Link>
           <Link component={RouterLink} to="/dev">
             <img
@@ -35,7 +50,15 @@ export default function Home() {
           </Link>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid 
+          item 
+          xs={12} 
+          md={6}
+          component={motion.div}
+          initial={{ x: '100vw' }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1.3 }}
+        >
           <Link component={RouterLink} to="/audio">Audio Engineer</Link>
           <Link component={RouterLink} to="/audio">
             <img

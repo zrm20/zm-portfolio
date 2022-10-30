@@ -1,5 +1,5 @@
 import React from 'react';
-import { Backdrop, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import AnimatedLogo from './AnimatedLogo';
 
@@ -26,10 +26,10 @@ const styles = {
     width: '100vw',
     height: '100vh',
     position: 'static',
-    top: 0
-
   },
   logo: {
-    marginTop: 'auto'
+    margin: 'auto',
+    width: '60vw',
+    height: '60vw',
   }
 };

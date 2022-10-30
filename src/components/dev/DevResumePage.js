@@ -10,6 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import NotesIcon from '@mui/icons-material/Notes';
 import ImageIcon from '@mui/icons-material/Image';
 import { Link as RouterLink } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function DevResumePage() {
   const [iconMode, setIconMode] = useState(true);
@@ -32,6 +33,27 @@ export default function DevResumePage() {
     setIconMode(value);
   };
 
+  const animationVariants = {
+    leftHidden: {
+      x: '-100vw',
+      transition: {
+        duration: .5
+      }
+    },
+    rightHidden: {
+      x: '100vw',
+      transition: {
+        duration: .5
+      }
+    },
+    visible: {
+      x: 0,
+      transition: {
+        duration: .5
+      }
+    }
+  };
+
 
   return (
     <div style={{
@@ -46,11 +68,30 @@ export default function DevResumePage() {
     }}>
 
       <ThemeProvider theme={resumeTheme}>
-        {
-          iconMode ?
-            <DevResume /> :
-            <DevResumeTraditional />
-        }
+        <AnimatePresence exitBeforeEnter >
+          {
+            iconMode ?
+              <motion.div
+                key="DevResume"
+                variants={animationVariants}
+                initial="rightHidden"
+                animate="visible"
+                exit="rightHidden"
+              >
+                <DevResume />
+              </motion.div>
+              :
+              <motion.div
+                key="TraditionResume"
+                variants={animationVariants}
+                initial="leftHidden"
+                animate="visible"
+                exit="leftHidden"
+              >
+                <DevResumeTraditional />
+              </motion.div>
+          }
+        </AnimatePresence>
       </ThemeProvider>
 
       <Fab

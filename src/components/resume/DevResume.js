@@ -114,10 +114,10 @@ const useStyles = (forPrint) => ({
     justifyContent: 'space-evenly',
   },
   header: {
-    mb: 1
+    mb: 0
   },
   genInfo: {
-    mb: 1
+    mb: 0
   },
   timeline: {
     mb: 1

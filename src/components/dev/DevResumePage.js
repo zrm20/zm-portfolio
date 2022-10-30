@@ -36,18 +36,21 @@ export default function DevResumePage() {
   const animationVariants = {
     leftHidden: {
       x: '-100vw',
+      rotate: -45,
       transition: {
         duration: .5
       }
     },
     rightHidden: {
       x: '100vw',
+      rotate: 45,
       transition: {
         duration: .5
       }
     },
     visible: {
       x: 0,
+      rotate: 0,
       transition: {
         duration: .5
       }

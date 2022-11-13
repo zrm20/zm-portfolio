@@ -10,6 +10,7 @@ import { allTech } from '../../assets/data/techStack';
 import { Link as RouterLink } from 'react-router-dom';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import { v4 as uuid } from 'uuid';
+import InstallMobileIcon from '@mui/icons-material/InstallMobile';
 
 export default function DevProject() {
   const { index } = useParams();
@@ -75,6 +76,12 @@ export default function DevProject() {
 
       <Grid container spacing={2}>
         <Grid item xs={12} sx={styles.links}>
+          {
+            project.appStore &&
+            <IconButton component='a' href={project.appStore} target='_blank' >
+              <InstallMobileIcon />
+            </IconButton>
+          }
           {
             project.website &&
             <IconButton component='a' href={project.website} target='_blank' >

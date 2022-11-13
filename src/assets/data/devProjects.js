@@ -15,7 +15,8 @@ const devProjects =
       'Redux'
     ],
     image: trailPackProLogo,
-    repo: 'https://github.com/zrm20/packplanner'
+    repo: 'https://github.com/zrm20/packplanner',
+    appStore: 'https://testflight.apple.com/join/c5UJiM4i'
   },
   {
     name: 'Reel Rock Climber',

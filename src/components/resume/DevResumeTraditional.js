@@ -77,10 +77,10 @@ const useStyles = (forPrint) => ({
     justifyContent: 'space-evenly',
   },
   header: {
-    mb: 2
+    mb: 0
   },
   genInfo: {
-    mb: 1
+    mb: 0
   },
   sidebar: {
     flex: 1,

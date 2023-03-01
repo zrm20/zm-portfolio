@@ -11,12 +11,14 @@ interface Skill {
 interface Project {
   id: string;
   title: string;
+  subtitle: string;
   url?: string;
   description: string;
-  date: Date;
+  date?: Date;
   skills: string[];
   experienceId?: string | null;
   images: string[];
+  repo?: string;
 }
 
 interface Experience {

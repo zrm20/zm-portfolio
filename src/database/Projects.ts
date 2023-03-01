@@ -45,6 +45,17 @@ const projects: Project[] = [
   },
 ];
 
+function getProject(projectId: string): Project | null {
+  const index = projects.findIndex(project => project.id === projectId);
+
+  if (index === -1) {
+    return null;
+  };
+
+  return projects[index];
+};
+
 export {
-  projects
+  projects,
+  getProject
 };

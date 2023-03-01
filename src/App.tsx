@@ -25,12 +25,12 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
 
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           {
             backdropOpen ?
               <IntroBackdrop />
               :
-              <motion.div 
+              <motion.div
                 style={styles.root}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -38,7 +38,7 @@ export default function App() {
               >
                 <Layout>
                   <Routes>
-                    <Route exact path='/' element={<Home />} />
+                    <Route path='/' element={<Home />} />
                     <Route path='/dev/*' element={<DevRouter />} />
                     <Route path='/audio/*' element={<AudioRouter />} />
                     <Route path='/*' element={<Home />} />

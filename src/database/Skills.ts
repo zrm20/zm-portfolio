@@ -144,7 +144,7 @@ function getSkill(skillId: string): Skill | null {
   return skills[index];
 };
 
-function getSkills(filterFn?: (SkillData) => Boolean): Skill[] {
+function getSkills(filterFn?: (skill: Skill) => Boolean): Skill[] {
   if (!filterFn) {
     return skills;
   };

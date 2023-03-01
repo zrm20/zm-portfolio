@@ -38,6 +38,7 @@ interface Experience {
 
 interface Education {
   type: "degree" | "certificate";
+  id: string;
   details: Degree | Certificate;
 }
 

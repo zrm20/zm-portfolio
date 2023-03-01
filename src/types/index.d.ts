@@ -1,4 +1,4 @@
-interface SkillData {
+interface Skill {
   id: string; // URL encoded
   name: string;
   icon: string;
@@ -8,11 +8,7 @@ interface SkillData {
   group?: "primary" | "secondary"
 }
 
-interface Skill extends SkillData {
-  getRelatedEducation(): Education[];
-}
-
-interface ProjectData {
+interface Project {
   id: string;
   title: string;
   url?: string;
@@ -23,7 +19,7 @@ interface ProjectData {
   images: string[];
 }
 
-interface ExperienceData {
+interface Experience {
   // a job instance
   id: string;
   company: string;
@@ -40,10 +36,10 @@ interface ExperienceData {
 
 interface Education {
   type: "degree" | "certificate";
-  details: DegreeData | CertificateData;
+  details: Degree | Certificate;
 }
 
-interface DegreeData {
+interface Degree {
   school: School;
   logo: string;
   degree: string;
@@ -53,7 +49,7 @@ interface DegreeData {
   endDate: Date;
 }
 
-interface CertificateData {
+interface Certificate {
   issuer: string;
   courseName: string;
   description: string;

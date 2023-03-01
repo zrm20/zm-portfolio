@@ -1,4 +1,4 @@
-const experiences: ExperienceData[] = [
+const experiences: Experience[] = [
   {
     id: 'justin_moore',
     company: "Justin Moore",
@@ -25,7 +25,7 @@ const experiences: ExperienceData[] = [
   }
 ];
 
-function getExperience(experienceId: string): ExperienceData | null {
+function getExperience(experienceId: string): Experience | null {
   const index = experiences.findIndex(experience => experience.id === experienceId);
 
   if (index === -1) {

@@ -1,4 +1,4 @@
-const skills: SkillData[] = [
+const skills: Skill[] = [
   // programming languages
   {
     id: "javascript",
@@ -134,7 +134,7 @@ const skills: SkillData[] = [
   // audio
 ];
 
-function getSkill(skillId: string): SkillData | null {
+function getSkill(skillId: string): Skill | null {
   const index = skills.findIndex(skill => skill.id === skillId);
 
   if (index === -1) {
@@ -144,7 +144,7 @@ function getSkill(skillId: string): SkillData | null {
   return skills[index];
 };
 
-function getSkills(filterFn?: (SkillData) => Boolean): SkillData[] {
+function getSkills(filterFn?: (SkillData) => Boolean): Skill[] {
   if (!filterFn) {
     return skills;
   };

@@ -1,13 +1,13 @@
 import React from "react";
-import { IconButton, IconButtonProps } from "@mui/material";
-import { LinkProps } from "react-router-dom";
+import { IconButton, IconButtonProps, LinkProps } from "@mui/material";
+import { Link } from "react-router-dom";
 
 type IconLinkProps = IconButtonProps & LinkProps;
 
 export default function IconLink(props: IconLinkProps): JSX.Element {
 
   return (
-    <IconButton {...props}>
+    <IconButton component={Link} {...props as any}>
       {props.children}
     </IconButton>
   );

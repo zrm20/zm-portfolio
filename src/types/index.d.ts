@@ -67,3 +67,7 @@ interface School {
   state: string;
   type: string;
 }
+
+declare module '*.jpg';
+declare module '*.PNG';
+declare module '*.png';

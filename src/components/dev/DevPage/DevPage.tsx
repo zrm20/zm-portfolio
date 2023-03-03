@@ -13,7 +13,7 @@ interface DevPageProps {
 
 export default function DevPage(props: DevPageProps): JSX.Element {
   const styles = useStyles();
-  useUpdateTitle("ZM - Software")
+  useUpdateTitle("ZM - Software");
 
   return (
     <Box sx={styles.root} >

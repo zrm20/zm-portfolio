@@ -14,12 +14,13 @@ export default function useStyles(): Style {
     },
     tabs: {
       width: '100%',
+      mb: 1,
       '& .MuiTabs-flexContainer': {
         overflowX: 'scroll'
       }
     },
     container: {
-
+      justifyContent: 'center'
     }
   }
 };

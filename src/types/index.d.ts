@@ -1,8 +1,12 @@
+type DevSkillCategory = "Front End" | "Back End" | "Language" | "CI/CD" | "Database" | "Testing";
+type AudioSkillCategory = "Audio";
+
 interface Skill {
   id: string; // URL encoded
   name: string;
   icon: string;
-  category: "Audio" | "Front End" | "Back End" | "Language" | "Development" | "Database" | "Testing"
+  category: "Audio" | "Dev" | "Personal"
+  subcategory: AudioSkillCategory | DevSkillCategory
   notes?: string;
   relatedEducation: string[];
   group?: "primary" | "secondary"

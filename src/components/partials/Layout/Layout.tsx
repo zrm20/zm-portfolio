@@ -1,37 +1,33 @@
-import React from 'react';
-import { Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, useTheme, useMediaQuery } from '@mui/material';
 
 import styles from './Layout.styles';
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
+import NavDrawer from '../NavDrawer/NavDrawer';
 
 export default function Layout(props: { children?: JSX.Element[] }): JSX.Element {
-  // const [anchorAudioNav, setAnchorAudioNav] = useState(null);
-  // const [anchorSoftwareNav, setAnchorSoftwareNav] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const theme = useTheme();
+  const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
 
-  // function handleOpenSoftwareMenu(evt: MouseEventHandler<HTMLAnchorElement>): void {
-  //   setAnchorSoftwareNav(evt.currentTarget);
-  // }
-
-  // function handleOpenAudioMenu(evt: MouseEventHandler<HTMLAnchorElement>) {
-  //   setAnchorAudioNav(evt.currentTarget)
-  // };
-
-  // function handleCloseSoftwareMenu(evt: MouseEventHandler<HTMLAnchorElement>) {
-  //   setAnchorSoftwareNav(null);
-  // }
-
-  // function handleCloseAudioMenu(evt: MouseEventHandler<HTMLAnchorElement>) {
-  //   setAnchorAudioNav(null)
-  // };
+  function toggleDrawer(): void {
+    setDrawerOpen(!drawerOpen);
+  };
 
   return (
     <main style={styles.root}>
-      <section style={styles.content}>
-        {props.children}
-      </section>
+      <NavBar toggleDrawer={toggleDrawer} isMobileView={isMobileView} />
+      {
+        isMobileView &&
+        <NavDrawer open={drawerOpen} toggleDrawer={toggleDrawer} />
+      }
 
-      <footer style={styles.footer}>
-        <Typography>{'\u00A9'} Zach McCoy</Typography>
-      </footer>
+      <Box sx={styles.content} component="section">
+        {props.children}
+      </Box>
+
+      <Footer />
     </main>
-  )
+  );
 };

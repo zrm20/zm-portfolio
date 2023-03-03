@@ -37,7 +37,7 @@ export default function NavDrawer(props: NavDrawerProps): JSX.Element {
                 { component: RouterLink, to: link.to };
 
               return (
-                <ListItemButton {...buttonProps} key={i}>
+                <ListItemButton {...buttonProps} key={i} onClick={props.toggleDrawer}>
                   {link.label}
                 </ListItemButton>
               )

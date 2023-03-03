@@ -14,8 +14,9 @@ export default function useStyles(): Style {
       mb: 2
     },
     title: {
-      textAlign: 'center',
-      mb: 1
+      mb: 1,
+      ml: 2,
+      color: 'text.secondary'
     },
     container: {
       mt: 1

@@ -5,6 +5,7 @@ import useStyles from "./DevPage.styles";
 import { useUpdateTitle } from "../../../hooks";
 import { SectionContainer } from "../../ui";
 import DevBio from "../DevBio/DevBio";
+import TechStack from "../TechStack/TechStack";
 
 interface DevPageProps {
 
@@ -23,8 +24,8 @@ export default function DevPage(props: DevPageProps): JSX.Element {
           <DevBio />
         </SectionContainer>
 
-        <SectionContainer title="" id="" >
-
+        <SectionContainer title="Tech Stack" id="tech_stack" >
+          <TechStack />
         </SectionContainer>
       </Paper>
     </Box>

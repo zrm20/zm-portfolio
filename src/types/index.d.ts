@@ -69,5 +69,7 @@ interface School {
 }
 
 declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.JPG';
 declare module '*.PNG';
 declare module '*.png';

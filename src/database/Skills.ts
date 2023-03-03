@@ -39,7 +39,7 @@ const skills: Skill[] = [
   {
     id: "react",
     name: "React",
-    icon: "react",
+    icon: "devicon-react-original-wordmark",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
@@ -48,7 +48,7 @@ const skills: Skill[] = [
   {
     id: "react_native",
     name: "React Native",
-    icon: "react",
+    icon: "devicon-react-original",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
@@ -57,7 +57,7 @@ const skills: Skill[] = [
   {
     id: "html",
     name: "HTML",
-    icon: "language-html5",
+    icon: "devicon-html5-plain-wordmark",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
@@ -65,7 +65,7 @@ const skills: Skill[] = [
   {
     id: "css",
     name: "CSS",
-    icon: "language-css3",
+    icon: "devicon-css3-plain-wordmark",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
@@ -73,7 +73,7 @@ const skills: Skill[] = [
   {
     id: "redux",
     name: "Redux",
-    icon: "code-braces-box",
+    icon: "devicon-redux-original",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
@@ -113,6 +113,14 @@ const skills: Skill[] = [
     category: "Dev",
     subcategory: "Database",
     relatedEducation: [],
+  },
+  {
+    id: "sql_lite",
+    name: "SQLite",
+    icon: "devicon-sqlite-plain",
+    category: "Dev",
+    subcategory: "Database",
+    relatedEducation: []
   },
   //testing
   {

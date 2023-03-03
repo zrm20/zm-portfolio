@@ -16,6 +16,8 @@ const styles: Style = {
   content: {
     width: '100%',
     flex: 1,
+    display: 'flex',
+    flexDirection: 'column'
   }
 };
 

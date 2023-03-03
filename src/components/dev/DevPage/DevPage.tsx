@@ -1,8 +1,10 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 
 import useStyles from "./DevPage.styles";
 import { useUpdateTitle } from "../../../hooks";
+import { SectionContainer } from "../../ui";
+import DevBio from "../DevBio/DevBio";
 
 interface DevPageProps {
 
@@ -14,7 +16,17 @@ export default function DevPage(props: DevPageProps): JSX.Element {
 
   return (
     <Box sx={styles.root} >
-      DEV
+      <Paper sx={styles.container} >
+        <Typography variant="h2" sx={styles.title}>Software Developer</Typography>
+
+        <SectionContainer title="About Zach" id="about">
+          <DevBio />
+        </SectionContainer>
+
+        <SectionContainer title="" id="" >
+
+        </SectionContainer>
+      </Paper>
     </Box>
   );
 };

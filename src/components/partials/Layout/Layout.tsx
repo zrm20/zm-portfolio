@@ -6,7 +6,7 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import NavDrawer from '../NavDrawer/NavDrawer';
 
-export default function Layout(props: { children?: JSX.Element[] }): JSX.Element {
+export default function Layout(props: { children?: JSX.Element }): JSX.Element {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobileView = useMediaQuery(theme.breakpoints.down('md'));

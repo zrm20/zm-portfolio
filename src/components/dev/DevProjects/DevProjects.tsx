@@ -4,7 +4,7 @@ import { ViewCarousel, ViewList } from "@mui/icons-material";
 
 import useStyles from "./DevProjects.styles";
 import { getProject } from "../../../database/Projects";
-import { ProjectCard } from "../../ui";
+import { ProjectCard } from "../../projects";
 
 interface DevProjectsProps {
 

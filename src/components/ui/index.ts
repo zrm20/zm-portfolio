@@ -4,6 +4,7 @@ import ListItemLink from "./ListItemLink/ListItemLink";
 import ZMTitle from "./ZMTitle/ZMTitle";
 import SectionContainer from "./SectionContainer/SectionContainer";
 import SkillItem from "./SkillItem/SkillItem";
+import ProjectCard from "./ProjectCard/ProjectCard";
 
 export {
   IconLink,
@@ -11,5 +12,6 @@ export {
   ListItemLink,
   ZMTitle,
   SectionContainer,
-  SkillItem
+  SkillItem,
+  ProjectCard
 };

@@ -6,6 +6,7 @@ interface Style {
   root: SxProps;
   container: SxProps;
   title: SxProps;
+  links: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -32,7 +33,15 @@ export default function useStyles(): Style {
     },
     title: {
       textAlign: 'center',
-      mb: 2
+      mb: 1
+    },
+    links: {
+      width: '100%',
+      justifyContent: 'space-evenly',
+      '& a': {
+        color: "text.secondary",
+        textDecoration: "none",
+      }
     }
   }
 };

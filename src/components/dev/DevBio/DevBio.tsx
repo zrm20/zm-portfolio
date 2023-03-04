@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Collapse } from "@mui/material";
 
 const devBioText =
   `As a software developer, I bring a unique background to the table. With a degree in Audio Engineering Technology and 8 years of experience touring as an audio tech, monitor engineer, and stage manager, I developed an eye for detail and a passion for problem-solving. When the pandemic shut down the touring industry in 2020, I turned to programming to explore a new career path.
@@ -14,21 +14,19 @@ export default function DevBio(): JSX.Element {
     setShowMore(!showMore);
   };
 
+  const paragraphs = devBioText.split('\n');
+
   return (
     <>
-      {
-        showMore ?
-          <>
-            {
-              devBioText.split('\n').map(p => <Typography gutterBottom >{p}</Typography>)
-            }
-            <Button onClick={toggleShowMore} color="secondary">Show Less</Button>
-          </> :
-          <>
-            <Typography gutterBottom>{devBioText.split('\n')[0]}</Typography>
-            <Button onClick={toggleShowMore} color="secondary">...Read More</Button>
-          </>
-      }
+      <Typography gutterBottom>{paragraphs[0]}</Typography>
+      <Collapse in={showMore} collapsedSize={0}>
+        {
+          paragraphs.slice(1).map(p => <Typography gutterBottom>{p}</Typography>)
+        }
+      </Collapse>
+      <Button color="secondary" onClick={toggleShowMore}>
+        {showMore ? "Show Less" : "...Read More"}
+      </Button>
     </>
   );
 };

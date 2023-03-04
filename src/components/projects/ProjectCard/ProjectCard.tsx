@@ -25,7 +25,7 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
       <CardHeader
         title={project.title}
         subheader={project.subtitle}
-        avatar={<Avatar src={project.logo} />}
+        avatar={<Avatar src={project.logo}>{project.title[0]}</Avatar>}
         action={ // TODO Add open modal action
           <IconButton>
             <Info />
@@ -33,7 +33,7 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
         }
       />
       {
-        project.images.length &&
+        Boolean(project.images.length) &&
         <CardMedia
           component="img"
           height={150}

@@ -2,6 +2,7 @@ import { SxProps } from "@mui/material";
 
 interface Style {
   root: SxProps;
+  cardScroller: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -16,5 +17,10 @@ export default function useStyles(): Style {
         mb: 1
       }
     },
+    cardScroller: {
+      display: 'flex',
+      width: '100%',
+      overflowX: "scroll"
+    }
   }
 };

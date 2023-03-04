@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { ViewCarousel, ViewList } from "@mui/icons-material";
 
 import useStyles from "./DevProjects.styles";
-import { getProject } from "../../../database/Projects";
+import { getProject, getProjects } from "../../../database/Projects";
 import { ProjectCard } from "../../projects";
 
 interface DevProjectsProps {
@@ -13,7 +13,7 @@ interface DevProjectsProps {
 export default function DevProjects(props: DevProjectsProps): JSX.Element {
   const styles = useStyles();
   const [isList, setIsList] = useState<boolean>(true);
-  const project = getProject("trail_pack_pro")!;
+  const projects = getProjects(proj => proj.category === 'Dev');
 
   function handleChangeView(evt: React.MouseEvent<HTMLElement, MouseEvent>, value: boolean): void {
     setIsList(value);
@@ -31,7 +31,15 @@ export default function DevProjects(props: DevProjectsProps): JSX.Element {
         </ToggleButton>
       </ToggleButtonGroup>
 
-      <ProjectCard project={project} />
+      {
+        isList ?
+          null :
+          <Box sx={styles.cardScroller}>
+            {
+              projects.map(project => <ProjectCard project={project} />)
+            }
+          </Box>
+      }
     </Box>
   );
 };

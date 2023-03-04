@@ -1,9 +1,11 @@
 import { SxProps } from "@mui/material";
+import { CSSProperties } from "react";
 
 interface Style {
   root: SxProps;
   tabs: SxProps;
-  container: SxProps;
+  list: SxProps;
+  transitionContainer: CSSProperties;
 };
 
 export default function useStyles(): Style {
@@ -19,8 +21,13 @@ export default function useStyles(): Style {
         overflowX: 'scroll'
       }
     },
-    container: {
+    list: {
+      width: '100%',
+      display: 'flex',
+      flexWrap: 'wrap',
       justifyContent: 'center'
+    },
+    transitionContainer: {
     }
   }
 };

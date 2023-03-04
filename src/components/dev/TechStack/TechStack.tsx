@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Box, Tab, Tabs, Grid } from "@mui/material";
+import { Box, Tab, Tabs, List } from "@mui/material";
+import { AnimatePresence } from "framer-motion";
 
 import useStyles from "./TechStack.styles";
 import { getSkills } from "../../../database/Skills";
 import { SkillItem } from "../../ui";
+import { FadeIn } from "../../animations";
 
 interface TechStackProps {
 
@@ -33,17 +35,19 @@ export default function TechStack(props: TechStackProps): JSX.Element {
         <Tab value="CI/CD" label="CI/CD" />
       </Tabs>
 
-      <Grid container sx={styles.container}>
-        {
-          devSkills
-            .filter(skill => skill.subcategory === tab)
-            .map(skill => (
-              <Grid item>
-                <SkillItem skill={skill} size={75} />
-              </Grid>
-            ))
-        }
-      </Grid>
+      <AnimatePresence mode="wait">
+        <List sx={styles.list}>
+          {
+            devSkills
+              .filter(skill => skill.subcategory === tab)
+              .map((skill, i) => (
+                <FadeIn key={skill.id} delay={i * .15}>
+                  <SkillItem skill={skill} size={75} />
+                </FadeIn>
+              ))
+          }
+        </List>
+      </AnimatePresence>
     </Box>
   );
 };

@@ -16,13 +16,17 @@ interface Project {
   id: string;
   title: string;
   subtitle: string;
-  url?: string;
   description: string;
   date?: Date;
   skills: string[];
   experienceId?: string | null;
+  logo?: string;
   images: string[];
+  website?: string;
   repo?: string;
+  appStore?: string;
+  testFlight?: string;
+  playStore?: string;
 }
 
 interface Experience {

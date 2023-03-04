@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, List, Stack } from "@mui/material";
+import { Button, List, Stack, Typography } from "@mui/material";
 
 import useStyles from "./ProjectList.styles";
 import ProjectListItem from "./ProjectListItem";
@@ -13,7 +13,7 @@ export default function ProjectList(props: ProjectListProps): JSX.Element {
   const styles = useStyles();
   const [pageNum, setPageNum] = useState<number>(1);
 
-  const { projects, length = 2 } = props;
+  const { projects, length = 3 } = props;
 
   const numResults = pageNum * length;
 
@@ -36,6 +36,9 @@ export default function ProjectList(props: ProjectListProps): JSX.Element {
         <Button disabled={pageNum <= 1} onClick={showLess} color='secondary'>
           Show Less
         </Button>
+        <Typography variant="caption">
+          {numResults <= projects.length ? numResults : projects.length} of {projects.length}
+        </Typography>
         <Button disabled={numResults >= projects.length} onClick={showMore} color='secondary'>
           Show More
         </Button>

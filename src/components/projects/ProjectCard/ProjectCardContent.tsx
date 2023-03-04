@@ -5,7 +5,7 @@ import {
   Typography,
   Button
 } from "@mui/material";
-
+import { v4 as uuid } from "uuid";
 
 interface ProjectCardContentProps {
   project: Project;
@@ -24,7 +24,7 @@ export default function ProjectCardContent(props: ProjectCardContentProps): JSX.
       <Collapse collapsedSize={75} in={showFullDescription}>
         {
           project.description.split('\n').map(p => (
-            <Typography variant="body2" gutterBottom>{p}</Typography>
+            <Typography variant="body2" gutterBottom key={uuid()}>{p}</Typography>
           ))
         }
       </Collapse>

@@ -10,9 +10,9 @@ interface Skill {
   notes?: string;
   relatedEducation: string[];
   group?: "primary" | "secondary"
-}
+};
 
-type ProjectCategory = "Audio" | "Dev"
+type ProjectCategory = "Audio" | "Dev";
 
 interface Project {
   id: string;
@@ -30,11 +30,14 @@ interface Project {
   appStore?: string;
   testFlight?: string;
   playStore?: string;
-}
+};
+
+type ExperienceCategory = "Audio" | "Dev";
 
 interface Experience {
   // a job instance
   id: string;
+  category: ExperienceCategory;
   company: string;
   titles: string[];
   startDate: Date;
@@ -45,13 +48,13 @@ interface Experience {
   images: string[];
   skills: string[];
   projects: string[];
-}
+};
 
 interface Education {
   type: "degree" | "certificate";
   id: string;
   details: Degree | Certificate;
-}
+};
 
 interface Degree {
   school: School;
@@ -61,7 +64,7 @@ interface Degree {
   minor?: string;
   startDate: Date;
   endDate: Date;
-}
+};
 
 interface Certificate {
   issuer: string;
@@ -70,14 +73,14 @@ interface Certificate {
   url?: string;
   logo?: string;
   endDate?: Date;
-}
+};
 
 interface School {
   name: string;
   city: string;
   state: string;
   type: string;
-}
+};
 
 declare module '*.jpg';
 declare module '*.jpeg';

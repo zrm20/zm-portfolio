@@ -1,6 +1,7 @@
 const experiences: Experience[] = [
   {
     id: 'justin_moore',
+    category: "Audio",
     company: "Justin Moore",
     titles: ["Stage Manager", "Monitor Engineer", "Audio Tech"],
     startDate: new Date("May 1, 2013"),
@@ -12,6 +13,7 @@ const experiences: Experience[] = [
   },
   {
     id: 'nomi_travel',
+    category: "Dev",
     company: "Nomi Travel",
     titles: ["Software Developer"],
     startDate: new Date("May 1, 2022"),

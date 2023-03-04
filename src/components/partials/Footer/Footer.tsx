@@ -11,6 +11,7 @@ interface FooterProps {
 
 export default function Footer(props: FooterProps): JSX.Element {
   const styles = useStyles();
+  const today = new Date(Date.now());
 
   return (
     <Box sx={styles.root} component="footer">
@@ -18,7 +19,7 @@ export default function Footer(props: FooterProps): JSX.Element {
         <GitHub />
       </IconButton>
 
-      <Typography sx={styles.copyright}>{'\u00A9'} Zach McCoy</Typography>
+      <Typography sx={styles.copyright}>{'\u00A9'} Zach McCoy {today.getFullYear()}</Typography>
 
       <IconButton component="a" href={LINKEDIN_URL}>
         <LinkedIn />

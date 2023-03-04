@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Box, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { ViewCarousel, ViewList } from "@mui/icons-material";
 
 import useStyles from "./DevProjects.styles";
-import { getProject, getProjects } from "../../../database/Projects";
+import { getProjects } from "../../../database/Projects";
 import { ProjectCard } from "../../projects";
 
 interface DevProjectsProps {

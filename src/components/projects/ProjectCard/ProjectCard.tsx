@@ -2,6 +2,7 @@ import React from "react";
 import {
   Avatar,
   Card,
+  CardActions,
   CardHeader,
   CardMedia,
   IconButton,
@@ -9,8 +10,8 @@ import {
 import { Info } from "@mui/icons-material";
 
 import useStyles from "./ProjectCard.styles";
-import ProjectCardLinks from "./ProjectCardLinks";
 import ProjectCardContent from "./ProjectCardContent";
+import ProjectLinks from "../ProjectLinks/ProjectLinks";
 
 interface ProjectCardProps {
   project: Project;
@@ -42,7 +43,10 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
         />
       }
       <ProjectCardContent project={project} />
-      <ProjectCardLinks project={project} />
+
+      <CardActions>
+        <ProjectLinks project={project} />
+      </CardActions>
     </Card>
   );
 };

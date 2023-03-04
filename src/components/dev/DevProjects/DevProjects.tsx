@@ -4,7 +4,7 @@ import { ViewCarousel, ViewList } from "@mui/icons-material";
 
 import useStyles from "./DevProjects.styles";
 import { getProjects } from "../../../database/Projects";
-import { ProjectCard } from "../../projects";
+import { ProjectCard, ProjectList } from "../../projects";
 
 interface DevProjectsProps {
 
@@ -33,10 +33,10 @@ export default function DevProjects(props: DevProjectsProps): JSX.Element {
 
       {
         isList ?
-          null :
+          <ProjectList projects={projects} /> :
           <Box sx={styles.cardScroller}>
             {
-              projects.map(project => <ProjectCard project={project} />)
+              projects.map(project => <ProjectCard project={project} key={project.id} />)
             }
           </Box>
       }

@@ -12,7 +12,7 @@ interface DevProjectsProps {
 
 export default function DevProjects(props: DevProjectsProps): JSX.Element {
   const styles = useStyles();
-  const [isList, setIsList] = useState<boolean>(true);
+  const [isList, setIsList] = useState<boolean>(false);
   const projects = getProjects(proj => proj.category === 'Dev');
 
   function handleChangeView(evt: React.MouseEvent<HTMLElement, MouseEvent>, value: boolean): void {
@@ -23,11 +23,11 @@ export default function DevProjects(props: DevProjectsProps): JSX.Element {
   return (
     <Box sx={styles.root}>
       <ToggleButtonGroup onChange={handleChangeView} value={isList} exclusive >
-        <ToggleButton value={true}>
-          <ViewList />
-        </ToggleButton>
         <ToggleButton value={false}>
           <ViewCarousel />
+        </ToggleButton>
+        <ToggleButton value={true}>
+          <ViewList />
         </ToggleButton>
       </ToggleButtonGroup>
 

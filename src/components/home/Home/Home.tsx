@@ -4,6 +4,7 @@ import { Grid } from "@mui/material"
 import useStyles from "./Home.styles";
 import AboutCard from "../AboutCard/AboutCard";
 import { useUpdateTitle } from "../../../hooks";
+import { FadeIn } from "../../animations";
 
 interface HomeProps {
 };
@@ -13,7 +14,7 @@ export default function Home(props: HomeProps): JSX.Element {
   useUpdateTitle("Zach McCoy")
 
   return (
-    <Grid container sx={styles.root}>
+    <Grid container sx={styles.root} component={FadeIn}>
       <AboutCard />
     </Grid>
   );

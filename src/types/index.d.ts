@@ -12,8 +12,11 @@ interface Skill {
   group?: "primary" | "secondary"
 }
 
+type ProjectCategory = "Audio" | "Dev"
+
 interface Project {
   id: string;
+  category: ProjectCategory;
   title: string;
   subtitle: string;
   description: string;

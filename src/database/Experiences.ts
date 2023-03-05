@@ -1,5 +1,6 @@
 import jmLogo from "../assets/images/experienceImages/jm_logo.png";
 import nomiLogo from "../assets/images/experienceImages/nomi_logo.png";
+import zmLogo from "../assets/images/zm_logo_orange_black.PNG";
 
 const experiences: Experience[] = [
   {
@@ -11,7 +12,7 @@ const experiences: Experience[] = [
     description: "I started working for country artist Justin Moore as an intern in 2013 and was later hired on as an audio tech. In 2015 I was promoted to monitor engineer. As the monitor enginer I was responsible for RF coordination, stage patch and mixing IEM's for band, artist and guests. In 2018 I was promoted to stage manager where I managed a crew of 5-12 people and coordinated with local labor unions of up to 30. I was responsible for the day-to-day operations of loading in and out 1-4 semi trucks to the stage.",
     logo: jmLogo,
     images: [], // TODO
-    skills: [], // TODO
+    skills: ["monitors", "rf", "stage_management", "ableton", "midi"],
     projects: [] // TODO
   },
   {
@@ -27,6 +28,18 @@ const experiences: Experience[] = [
     skills: ["react", "javascript", "express", "node", "mongodb", "heroku", "react_native"],
     projects: []
 
+  },
+  {
+    id: 'freelance_audio',
+    category: "Audio",
+    company: "ZM Engineering",
+    titles: ["Audio Engineer"],
+    startDate: new Date("September 1, 2011"),
+    description: "In my freelance work as an audio engineer, I have been contracted through many companies including CTS Audio, Special Event Services, OrangeThread Media and more. Most commonly my role has been either FOH engineer or monitor engineer but I have also been hired for patch, systems and RF coordination. With CTS and SES I have worked various concerts, festivals and other musical events. With OrangeThread I have worked many corporate events both in Nashville and in surrounding areas.",
+    logo: zmLogo,
+    images: [],
+    skills: ["foh", "monitors", "production_management"],
+    projects: []
   }
 ];
 

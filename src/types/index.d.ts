@@ -1,5 +1,5 @@
 type DevSkillCategory = "Front End" | "Back End" | "Language" | "CI/CD" | "Database" | "Testing";
-type AudioSkillCategory = "Audio";
+type AudioSkillCategory = "Live" | "Playback" | "Management" | "Studio";
 
 interface Skill {
   id: string; // URL encoded

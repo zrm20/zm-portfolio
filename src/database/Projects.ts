@@ -69,7 +69,45 @@ const projects: Project[] = [
     images: [],
     repo: "https://github.com/zrm20/MealsToGo",
     logo: mealsToGoLogo
+  },
+
+  // AUDIO PROJECTS (shows, events... etc)
+  {
+    id: "otbp",
+    category: "Audio",
+    title: "Justin Moore: Off The Beaten Path Tour",
+    subtitle: "My first full production tour as a monitor tech",
+    description: "", // TODO
+    skills: ["monitors", "rf"],
+    images: []
+  },
+  {
+    id: "miranda",
+    category: "Audio",
+    title: "Miranda Lambert Platinum Tour",
+    subtitle: "Monitor engineer for Justin Moore as direct support for Miranda Lambert",
+    description: "", // TODO,
+    skills: ["monitors", "rf"],
+    images: []
+  },
+  {
+    id: "paisley",
+    category: "Audio",
+    title: "Brad Paisley Crushin It Tour",
+    subtitle: "Monitor engineer for Justin Moore as direct support for Brad Paisley",
+    description: "", // TODO,
+    skills: ["monitors", "rf"],
+    images: []
   }
+  // {
+  //   id: "brantly",
+  //   category: "Audio",
+  //   title: "Brad Paisley Crushin It Tour",
+  //   subtitle: "Monitor engineer for Justin Moore as direct support for Brad Paisley",
+  //   description: "", // TODO,
+  //   skills: ["monitors", "rf"],
+  //   images: []
+  // }
 ];
 
 function getProject(projectId: string): Project | null {

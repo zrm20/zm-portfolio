@@ -156,7 +156,89 @@ const skills: Skill[] = [
     subcategory: "CI/CD",
     relatedEducation: [],
   },
-  // audio
+
+  // AUDIO
+  {
+    id: "monitors",
+    name: "Monitors",
+    icon: "",
+    category: "Audio",
+    subcategory: "Live",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "rf", 
+    name: "RF Coordination",
+    icon: "",
+    category: "Audio",
+    subcategory: "Live",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "foh",
+    name: "Front of House",
+    icon: "",
+    category: "Audio",
+    subcategory: "Live",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "live_capture",
+    name: "Live Capture",
+    icon: "",
+    category: "Audio",
+    subcategory: "Live",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "stage_management",
+    name: "Stage Management",
+    icon: "",
+    category: "Audio",
+    subcategory: "Management",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "production_management",
+    name: "Production Management",
+    icon: "",
+    category: "Audio",
+    subcategory: "Management",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "ableton",
+    name: "Ableton Live Programming",
+    icon: "",
+    category: "Audio",
+    subcategory: "Playback",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "midi",
+    name: "Midi Controll Systems",
+    icon: "",
+    category: "Audio",
+    subcategory: "Playback",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "recording",
+    name: "Recording",
+    icon: "",
+    category: "Audio",
+    subcategory: "Studio",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "studio_mixing",
+    name: "Recording",
+    icon: "",
+    category: "Audio",
+    subcategory: "Studio",
+    relatedEducation: ["belmont"]
+  },
+
 ];
 
 function getSkill(skillId: string): Skill | null {

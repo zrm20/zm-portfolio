@@ -1,10 +1,13 @@
 import React from "react";
-import { SwipeableDrawer, Box, List, ListItemButton, Divider } from "@mui/material";
+import { SwipeableDrawer, Box, List, ListItemButton, Divider, IconButton } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 import useStyles from "./NavDrawer.styles";
 import { ZMTitle } from "../../ui";
-import { navLinks } from "../../../navigation";
+import { primaryLinks, secondaryLinks } from "../../../navigation";
+import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GITHUB_URL, LINKEDIN_URL } from "../../../constants/urls";
 
 interface NavDrawerProps {
   open: boolean;
@@ -31,19 +34,41 @@ export default function NavDrawer(props: NavDrawerProps): JSX.Element {
         <Divider />
         <List component="nav">
           {
-            navLinks.map((link, i) => {
+            primaryLinks.map((link, i) => {
               const buttonProps = link.isExternalLink ?
                 { component: "a", href: link.to } :
                 { component: RouterLink, to: link.to };
 
               return (
-                <ListItemButton {...buttonProps} key={i} onClick={props.toggleDrawer}>
+                <ListItemButton {...buttonProps} key={uuid()} onClick={props.toggleDrawer}>
+                  {link.label}
+                </ListItemButton>
+              )
+            })
+          }
+          <Divider />
+          {
+            secondaryLinks.map((link, i) => {
+              const buttonProps = link.isExternalLink ?
+                { component: "a", href: link.to } :
+                { component: RouterLink, to: link.to };
+
+              return (
+                <ListItemButton {...buttonProps} key={uuid()} onClick={props.toggleDrawer}>
                   {link.label}
                 </ListItemButton>
               )
             })
           }
         </List>
+        <Box sx={styles.bottomLinks}>
+          <IconButton href={LINKEDIN_URL} target="_blank" >
+            <LinkedIn />
+          </IconButton>
+          <IconButton href={GITHUB_URL} target="_blank" >
+            <GitHub />
+          </IconButton>
+        </Box>
       </Box>
     </SwipeableDrawer>
   )

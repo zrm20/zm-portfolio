@@ -4,6 +4,7 @@ interface Style {
   root: SxProps;
   container: SxProps;
   titleContainer: SxProps;
+  bottomLinks: SxProps;
 };
 
 export default function useStyles(styleProp: { width: number }): Style {
@@ -17,7 +18,10 @@ export default function useStyles(styleProp: { width: number }): Style {
       }
     },
     container: {
+      height: '100%',
       width,
+      display: 'flex',
+      flexDirection: 'column'
     },
     titleContainer: {
       display: 'flex',
@@ -25,6 +29,13 @@ export default function useStyles(styleProp: { width: number }): Style {
       alignItems: "center",
       justifyContent: "center",
       py: 1
+    },
+    bottomLinks: {
+      mt: 'auto',
+      mb: 1,
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-evenly'
     }
   }
 };

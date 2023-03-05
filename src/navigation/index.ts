@@ -1,7 +1,9 @@
-import navLinks from "./NavLinks/NavLinks";
+import navLinks, { primaryLinks, secondaryLinks} from "./NavLinks/NavLinks";
 import AppNavigator from "./AppNavigator/AppNavigator";
 
 export {
   navLinks,
-  AppNavigator
+  AppNavigator,
+  primaryLinks,
+  secondaryLinks
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { AudioPage } from "../../components/audio";
 import { DevPage } from "../../components/dev";
 import DevResumePage from "../../components/dev/DevResumePage";
 
@@ -11,8 +12,8 @@ export default function AppNavigator(): JSX.Element {
 
   return (
     <Routes>
-      <Route path="/audio/*" />
-      <Route path="/dev/*" element={<DevPage />} />
+      <Route path="/audio" element={<AudioPage />}/>
+      <Route path="/dev" element={<DevPage />} />
       <Route path="/resume" element={<DevResumePage />} />
       <Route path="/projects" />
       <Route path="/projects/:id" />

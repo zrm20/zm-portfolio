@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
+  Button,
   Box,
   Link,
-  IconButton
+  IconButton,
+  Menu,
+  MenuItem
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import { Menu } from "@mui/icons-material"
+import { Menu as MenuIcon } from "@mui/icons-material";
+import { v4 as uuid } from "uuid";
+import { ExpandMore } from "@mui/icons-material";
 
 import useStyles from "./NavBar.styles";
 import zmLogo from "../../../assets/images/zm_logo_orange_white_name.PNG";
 import { ZMTitle } from "../../ui";
-import { navLinks } from "../../../navigation";
+import { primaryLinks, secondaryLinks } from "../../../navigation";
 
 interface NavBarProps {
   toggleDrawer(): void;
@@ -21,6 +26,15 @@ interface NavBarProps {
 
 export default function NavBar(props: NavBarProps): JSX.Element {
   const styles = useStyles();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <AppBar position='static' >
@@ -39,25 +53,57 @@ export default function NavBar(props: NavBarProps): JSX.Element {
             !props.isMobileView &&
             <>
               {
-                navLinks.map((link, i) => {
+                primaryLinks.map(link => {
                   const buttonProps = link.isExternalLink ?
                     { component: "a", href: link.to } :
                     { component: RouterLink, to: link.to };
 
                   return (
-                    <Link {...buttonProps} key={i} underline="hover" >
+                    <Link {...buttonProps} key={uuid()} underline="hover" >
                       {link.label}
                     </Link>
                   )
                 })
               }
+              <Button
+                sx={styles.navLink}
+                endIcon={<ExpandMore />}
+                id="secondary-links"
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                aria-controls={open ? 'secondary-linkks' : undefined}
+                onClick={handleClick}
+              >
+                More
+              </Button>
+              <Menu
+                id="secondary-links"
+                aria-labelledby="secondary-links"
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+              >
+                {
+                  secondaryLinks.map(link => {
+                    const buttonProps = link.isExternalLink ?
+                      { component: "a", href: link.to } :
+                      { component: RouterLink, to: link.to };
+
+                    return (
+                      <MenuItem {...buttonProps} key={uuid()} onClick={handleClose} >
+                        {link.label}
+                      </MenuItem>
+                    )
+                  })
+                }
+              </Menu>
             </>
           }
         </Box>
         {
           props.isMobileView &&
           <IconButton onClick={props.toggleDrawer}>
-            <Menu />
+            <MenuIcon />
           </IconButton>
         }
       </Toolbar>

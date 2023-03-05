@@ -8,12 +8,6 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   {
-    label: "Home",
-    to: "/",
-    isExternalLink: false,
-    isPrimary: true
-  },
-  {
     label: "Audio",
     to: "/audio",
     isExternalLink: false,

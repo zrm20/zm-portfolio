@@ -6,6 +6,7 @@ interface Style {
   logoContainer: SxProps;
   logo: CSSProperties;
   linkContainer: SxProps;
+  navLink: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -35,6 +36,10 @@ export default function useStyles(): Style {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-evenly'
+    },
+    navLink: {
+      textTransform: "none"
     }
+    
   }
 };

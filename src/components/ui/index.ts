@@ -4,6 +4,7 @@ import ListItemLink from "./ListItemLink/ListItemLink";
 import ZMTitle from "./ZMTitle/ZMTitle";
 import SectionContainer from "./SectionContainer/SectionContainer";
 import SkillItem from "./SkillItem/SkillItem";
+import RouterLink from "./RouterLink/RouterLink";
 
 export {
   IconLink,
@@ -12,4 +13,5 @@ export {
   ZMTitle,
   SectionContainer,
   SkillItem,
+  RouterLink
 };

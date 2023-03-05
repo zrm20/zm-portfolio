@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Link, Paper, Toolbar, Typography } from "@mui/material";
+import { Box, Paper, Toolbar, Typography } from "@mui/material";
 
 import useStyles from "./DevPage.styles";
 import { useUpdateTitle } from "../../../hooks";
-import { SectionContainer } from "../../ui";
+import { SectionContainer, RouterLink } from "../../ui";
 import DevBio from "../DevBio/DevBio";
 import TechStack from "../TechStack/TechStack";
 import { FadeIn } from "../../animations";
@@ -24,10 +24,10 @@ export default function DevPage(props: DevPageProps): JSX.Element {
         <Typography variant="h2" sx={styles.title}>Software Developer</Typography>
 
         <Toolbar sx={styles.links}>
-          <Link>About</Link>
-          <Link>Tech Stack</Link>
-          <Link>Projects</Link>
-          <Link>Experience</Link>
+          <RouterLink to="#about">About</RouterLink>
+          <RouterLink to="#tech_stack">Tech Stack</RouterLink>
+          <RouterLink to="#projects">Projects</RouterLink>
+          <RouterLink to="#experience">Experience</RouterLink>
         </Toolbar>
 
         <SectionContainer title="About Zach" id="about">

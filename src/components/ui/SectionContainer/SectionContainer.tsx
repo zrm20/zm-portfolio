@@ -13,7 +13,7 @@ export default function SectionContainer(props: SectionContainerProps): JSX.Elem
   const styles = useStyles();
 
   return (
-    <Box sx={styles.root} >
+    <Box sx={styles.root} component="section" id={props.id}>
       <Typography sx={styles.title} variant="h4">{props.title}</Typography>
       <Divider />
       <Box sx={styles.container}>

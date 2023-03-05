@@ -3,8 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import { DevPage } from "../../components/dev";
 
 import { Home } from "../../components/home";
+import { useScrollToSection } from "../../hooks";
 
 export default function AppNavigator(): JSX.Element {
+    useScrollToSection();
 
   return (
     <Routes>

@@ -19,6 +19,7 @@ export default function useStyles(): Style {
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundBlendMode: "overlay",
+      scrollBehavior: "smooth"
     },
     container: {
       mx: 'auto',

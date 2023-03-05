@@ -4,6 +4,7 @@ import { Box, Paper, Typography } from "@mui/material";
 import useStyles from "./AudioPage.styles";
 import { FadeIn } from "../../animations";
 import { SectionContainer } from "../../ui";
+import { useUpdateTitle } from "../../../hooks";
 
 interface AudioHomeProps {
 
@@ -11,6 +12,7 @@ interface AudioHomeProps {
 
 export default function AudioHome(props: AudioHomeProps): JSX.Element {
   const styles = useStyles();
+  useUpdateTitle("ZM - Audio");
 
   return (
     <Box sx={styles.root} component={FadeIn} >

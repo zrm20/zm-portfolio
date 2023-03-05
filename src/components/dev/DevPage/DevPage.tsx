@@ -8,6 +8,7 @@ import DevBio from "../DevBio/DevBio";
 import TechStack from "../TechStack/TechStack";
 import { FadeIn } from "../../animations";
 import DevProjects from "../DevProjects/DevProjects";
+import DevExperience from "../DevExperience/DevExperience";
 
 interface DevPageProps {
 
@@ -42,7 +43,7 @@ export default function DevPage(props: DevPageProps): JSX.Element {
         </SectionContainer>
 
         <SectionContainer title="Experience" id="experience">
-
+          <DevExperience />
         </SectionContainer>
       </Paper>
     </Box>

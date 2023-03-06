@@ -35,10 +35,14 @@ export default function useStyles(): Style {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
-      justifyContent: 'space-evenly'
+      justifyContent: 'space-evenly',
+      '& .MuiLink-root': {
+        color: "text.secondary"
+      }
     },
     navLink: {
-      textTransform: "none"
+      textTransform: "none",
+      color: "text.secondary"
     }
     
   }

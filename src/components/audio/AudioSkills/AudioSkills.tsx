@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, Button, List, ListItem, ListItemText, Stack, Typography } from "@mui/material";
-import { audioSkills } from "../../../database/Skills";
+import { Box, Button, Divider, List, ListItem, ListItemText, Stack, Typography } from "@mui/material";
+import { v4 as uuid } from "uuid";
 
+import { audioSkills } from "../../../database/Skills";
 import useStyles from "./AudioSkills.styles";
 
 interface AudioSkillsProps {
@@ -26,14 +27,15 @@ export default function AudioSkills(props: AudioSkillsProps): JSX.Element {
 
   return (
     <Box sx={styles.root}>
-      <List>
+      <List sx={styles.list}>
         {
           audioSkills.slice(0, numItemsShown)
             .map(skill => (
             <>
-              <ListItem>
+              <ListItem key={uuid()}>
                 <ListItemText primary={skill.name}/>
               </ListItem>
+              <Divider key={uuid()}/>
             </>
           ))
         }

@@ -1,3 +1,6 @@
+import abletonIcon from "../assets/images/icons/abletonIcon.svg";
+import proToolsIcon from "../assets/images/icons/proToolsIcon.svg";
+
 const skills: Skill[] = [
   // programming languages
   {
@@ -183,14 +186,6 @@ const skills: Skill[] = [
     relatedEducation: ["belmont"]
   },
   {
-    id: "live_capture",
-    name: "Live Capture",
-    icon: "",
-    category: "Audio",
-    subcategory: "Live",
-    relatedEducation: ["belmont"]
-  },
-  {
     id: "stage_management",
     name: "Stage Management",
     icon: "",
@@ -209,14 +204,14 @@ const skills: Skill[] = [
   {
     id: "ableton",
     name: "Ableton Live Programming",
-    icon: "",
+    icon: abletonIcon,
     category: "Audio",
     subcategory: "Playback",
     relatedEducation: ["belmont"]
   },
   {
     id: "midi",
-    name: "Midi Controll Systems",
+    name: "Midi Control Systems",
     icon: "",
     category: "Audio",
     subcategory: "Playback",
@@ -231,6 +226,22 @@ const skills: Skill[] = [
     relatedEducation: ["belmont"]
   },
   {
+    id: "pro_tools",
+    name: "Pro Tools",
+    icon: proToolsIcon,
+    category: "Audio",
+    subcategory: "Studio",
+    relatedEducation: ["belmont"]
+  },
+  {
+    id: "logic",
+    name: "Logic",
+    icon: "",
+    category: "Audio",
+    subcategory: "Studio",
+    relatedEducation: ["belmont"]
+  },
+  {
     id: "studio_mixing",
     name: "Recording",
     icon: "",
@@ -238,7 +249,14 @@ const skills: Skill[] = [
     subcategory: "Studio",
     relatedEducation: ["belmont"]
   },
-
+  {
+    id: "live_capture",
+    name: "Live Capture",
+    icon: "",
+    category: "Audio",
+    subcategory: "Live",
+    relatedEducation: ["belmont"]
+  },
 ];
 
 function getSkill(skillId: string): Skill | null {
@@ -259,8 +277,15 @@ function getSkills(filterFn?: (skill: Skill) => Boolean): Skill[] {
   return skills.filter(filterFn);
 };
 
+const devSkills = skills.filter(skill => skill.category === "Dev");
+const audioSkills = skills.filter(skill => skill.category === 'Audio');
+const personalSkills = skills.filter(skill => skill.category === "Personal");
+
 export {
   skills,
   getSkill,
-  getSkills
+  getSkills,
+  devSkills,
+  audioSkills,
+  personalSkills
 };

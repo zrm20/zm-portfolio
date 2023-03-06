@@ -6,6 +6,7 @@ import { FadeIn } from "../../animations";
 import { SectionContainer } from "../../ui";
 import { useUpdateTitle } from "../../../hooks";
 import AudioBio from "../AudioBio/AudioBio";
+import AudioSkills from "../AudioSkills/AudioSkills";
 
 interface AudioHomeProps {
 
@@ -25,7 +26,7 @@ export default function AudioHome(props: AudioHomeProps): JSX.Element {
         </SectionContainer>
         
         <SectionContainer title="Skills & Services" id="skills">
-
+          <AudioSkills />
         </SectionContainer>
         
         <SectionContainer title="Experience" id="experience">

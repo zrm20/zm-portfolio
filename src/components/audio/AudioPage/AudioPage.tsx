@@ -5,6 +5,7 @@ import useStyles from "./AudioPage.styles";
 import { FadeIn } from "../../animations";
 import { SectionContainer } from "../../ui";
 import { useUpdateTitle } from "../../../hooks";
+import AudioBio from "../AudioBio/AudioBio";
 
 interface AudioHomeProps {
 
@@ -20,7 +21,7 @@ export default function AudioHome(props: AudioHomeProps): JSX.Element {
         <Typography variant="h2" sx={styles.title}>Audio Engineer</Typography>
 
         <SectionContainer title="About Zach" id="about_zach">
-
+          <AudioBio />
         </SectionContainer>
         
         <SectionContainer title="Skills & Services" id="skills">

@@ -9,13 +9,14 @@ import { FadeIn } from './components/animations';
 import { AppNavigator } from './navigation';
 
 export default function App() {
+  const introAnimationDuration = 3
   const [backdropOpen, setBackdropOpen] = useState(true);
 
   useEffect(() => {
 
     setTimeout(() => {
       setBackdropOpen(false)
-    }, 6000);
+    }, introAnimationDuration * 1000);
 
   }, [setBackdropOpen]);
 
@@ -27,7 +28,7 @@ export default function App() {
         <AnimatePresence mode="wait">
           {
             backdropOpen ?
-              <IntroBackdrop />
+              <IntroBackdrop duration={introAnimationDuration}/>
               :
               <FadeIn style={styles.root}>
                 <Layout>

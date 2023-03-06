@@ -68,6 +68,7 @@ interface Degree {
 
 interface Certificate {
   issuer: string;
+  issuerLogo: string;
   courseName: string;
   description: string;
   url?: string;

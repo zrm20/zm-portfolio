@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Box } from "@mui/material";
+import { Paper, Typography, Box, Link } from "@mui/material";
 
 import useStyles from "./EducationCard.styles";
 import { getMonthAndYearString } from "../../../utils/dateStrings";
@@ -60,7 +60,7 @@ function CertificateCard(props: { certificate: Certificate }): JSX.Element {
           alt={certificate.issuer}
         />
       </Box>
-      <Typography variant="h6">{certificate.courseName}</Typography>
+      <Typography variant="h6" sx={styles.certTitle}>{certificate.courseName}</Typography>
 
       {
         Boolean(certificate.url) &&
@@ -70,6 +70,10 @@ function CertificateCard(props: { certificate: Certificate }): JSX.Element {
             alt={certificate.courseName}
           />
         </Box>
+      }
+      {
+        Boolean(certificate.courseLink) &&
+        <Link href={certificate.courseLink} target="_blank" >Visit Course</Link>
       }
     </Paper>
   )

@@ -74,6 +74,7 @@ interface Certificate {
   url?: string;
   logo?: string;
   endDate?: Date;
+  courseLink?: string;
 };
 
 interface School {

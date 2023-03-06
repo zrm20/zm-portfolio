@@ -7,6 +7,7 @@ interface Style {
   logoContainer: SxProps;
   certLogoContainer: SxProps;
   certUrlContainer: SxProps;
+  certTitle: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -53,7 +54,6 @@ export default function useStyles(): Style {
       width: '50%',
       p: 1,
       borderRadius: '5%',
-      mb: 1,
       bgcolor: palette.grey[400],
       '& img': {
         width: '100%',
@@ -66,6 +66,9 @@ export default function useStyles(): Style {
         width: '100%',
         borderRadius: 3
       }
+    },
+    certTitle: {
+      my: 1
     }
   }
 };

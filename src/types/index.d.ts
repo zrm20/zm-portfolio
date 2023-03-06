@@ -80,6 +80,7 @@ interface School {
   city: string;
   state: string;
   type: string;
+  logo: string;
 };
 
 declare module '*.jpg';

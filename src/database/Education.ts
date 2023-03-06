@@ -1,3 +1,5 @@
+import belmontLogo from "../assets/images/educationImages/belmont_logo.jpeg";
+
 const educations: Education[] = [
   {
     type: "degree",
@@ -7,7 +9,8 @@ const educations: Education[] = [
         name: "Belmont University",
         type: "University",
         city: "Nashville",
-        state: "Tennessee"
+        state: "Tennessee",
+        logo: belmontLogo
       },
       logo: "", // TODO
       degree: "Bachelor of Science",
@@ -28,6 +31,11 @@ const educations: Education[] = [
   }
 ];
 
+const degrees = educations.filter(ed => ed.type === "degree");
+const certificates = educations.filter(ed => ed.type === "certificate");
+
 export {
-  educations
+  educations,
+  degrees,
+  certificates
 };

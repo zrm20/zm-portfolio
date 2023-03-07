@@ -25,30 +25,30 @@ const navLinks: NavLink[] = [
     isExternalLink: false,
     isPrimary: true
   },
-  {
-    label: "Skills",
-    to: "/skills",
-    isExternalLink: false,
-    isPrimary: false,
-  },
-  {
-    label: "Projects",
-    to: "/projects",
-    isExternalLink: false,
-    isPrimary: false,
-  },
-  {
-    label: "Experience",
-    to: "/experience",
-    isExternalLink: false,
-    isPrimary: false,
-  },
-  {
-    label: "Education",
-    to: "/education",
-    isExternalLink: false,
-    isPrimary: false
-  }
+  // {
+  //   label: "Skills",
+  //   to: "/skills",
+  //   isExternalLink: false,
+  //   isPrimary: false,
+  // },
+  // {
+  //   label: "Projects",
+  //   to: "/projects",
+  //   isExternalLink: false,
+  //   isPrimary: false,
+  // },
+  // {
+  //   label: "Experience",
+  //   to: "/experience",
+  //   isExternalLink: false,
+  //   isPrimary: false,
+  // },
+  // {
+  //   label: "Education",
+  //   to: "/education",
+  //   isExternalLink: false,
+  //   isPrimary: false
+  // }
 ];
 
 export const primaryLinks = navLinks.filter(link => link.isPrimary);

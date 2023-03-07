@@ -65,38 +65,43 @@ export default function NavBar(props: NavBarProps): JSX.Element {
                   )
                 })
               }
-              <Button
-                sx={styles.navLink}
-                endIcon={<ExpandMore />}
-                id="secondary-links"
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                aria-controls={open ? 'secondary-linkks' : undefined}
-                onClick={handleClick}
-              >
-                More
-              </Button>
-              <Menu
-                id="secondary-links"
-                aria-labelledby="secondary-links"
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-              >
-                {
-                  secondaryLinks.map(link => {
-                    const buttonProps = link.isExternalLink ?
-                      { component: "a", href: link.to } :
-                      { component: RouterLink, to: link.to };
+              {
+                secondaryLinks.length > 0 &&
+                <>
+                  <Button
+                    sx={styles.navLink}
+                    endIcon={<ExpandMore />}
+                    id="secondary-links"
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    aria-controls={open ? 'secondary-linkks' : undefined}
+                    onClick={handleClick}
+                  >
+                    More
+                  </Button>
+                  <Menu
+                    id="secondary-links"
+                    aria-labelledby="secondary-links"
+                    open={open}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                  >
+                    {
+                      secondaryLinks.map(link => {
+                        const buttonProps = link.isExternalLink ?
+                          { component: "a", href: link.to } :
+                          { component: RouterLink, to: link.to };
 
-                    return (
-                      <MenuItem {...buttonProps} key={uuid()} onClick={handleClose} >
-                        {link.label}
-                      </MenuItem>
-                    )
-                  })
-                }
-              </Menu>
+                        return (
+                          <MenuItem {...buttonProps} key={uuid()} onClick={handleClose} >
+                            {link.label}
+                          </MenuItem>
+                        )
+                      })
+                    }
+                  </Menu>
+                </>
+              }
             </>
           }
         </Box>

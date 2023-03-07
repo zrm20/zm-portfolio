@@ -28,7 +28,7 @@ export default function NavDrawer(props: NavDrawerProps): JSX.Element {
     >
       <Box sx={styles.container}>
         <Box sx={styles.titleContainer}>
-          <ZMTitle />
+          <ZMTitle onClick={props.toggleDrawer}/>
         </Box>
 
         <Divider />

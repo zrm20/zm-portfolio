@@ -41,9 +41,21 @@ export default function AudioSkills(props: AudioSkillsProps): JSX.Element {
         }
       </List>
       <Stack sx={styles.pageStack}>
-        <Button onClick={showLess} disabled={page <= 1} color="secondary">Show Less</Button>
+        <Button 
+          onClick={showLess} 
+          disabled={page <= 1} 
+          color="secondary"
+        >
+          Show Less
+        </Button>
         <Typography variant="caption">{numItemsShown} of {audioSkills.length}</Typography>
-        <Button onClick={showMore} disabled={numItemsShown >= audioSkills.length} >Show More</Button>
+        <Button 
+          onClick={showMore} 
+          disabled={numItemsShown >= audioSkills.length} 
+          color="secondary"
+        >
+          Show More
+        </Button>
       </Stack>
     </Box>
   );

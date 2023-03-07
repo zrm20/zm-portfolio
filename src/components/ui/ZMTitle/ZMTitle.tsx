@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 import useStyles from "./ZMTitle.styles";
 
-export default function ZMTitle(): JSX.Element {
+export default function ZMTitle(props: { onClick?: () => void}): JSX.Element {
   const styles = useStyles();
 
   return (
@@ -13,6 +13,7 @@ export default function ZMTitle(): JSX.Element {
       component={RouterLink}
       to='/'
       sx={styles.root}
+      onClick={props.onClick}
     >
       <sup>Zach</sup>
       <sub>McCoy</sub>

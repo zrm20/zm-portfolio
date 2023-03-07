@@ -8,6 +8,7 @@ import { useUpdateTitle } from "../../../hooks";
 import AudioBio from "../AudioBio/AudioBio";
 import AudioSkills from "../AudioSkills/AudioSkills";
 import AudioExperience from "../AudioExperience/AudioExperience";
+import AudioProjects from "../AudioProjects/AudioProjects";
 
 interface AudioHomeProps {
 
@@ -35,7 +36,7 @@ export default function AudioHome(props: AudioHomeProps): JSX.Element {
         </SectionContainer>
 
         <SectionContainer title="Shows & Events" id="projects">
-
+          <AudioProjects />
         </SectionContainer>
       </Paper>
     </Box> 

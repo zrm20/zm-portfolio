@@ -4,17 +4,17 @@ const personalInterests = [
   {
     name: 'Fishing',
     icon: faFish,
-    popoverText: 'One of favorite hobbies has always been fishing. Growing up in Minnesota fishing was a big part of my childhood. As an adult it has become both entertainment and thereputic for me. I enjoy any and all freshwater fish, but my addiction is muskie fishing.'
+    popoverText: 'One of favorite hobbies has always been fishing. Growing up in Minnesota fishing was a big part of my childhood. As an adult it has become both entertainment and therapeutic for me. I enjoy any and all freshwater fish, but my addiction is muskie fishing.'
   },
   {
     name: 'Boating',
     icon: faShip,
-    popoverText: 'While I primarily boat for fishing, I do enjoy just taking a boat on the lake and cruising. I own a simple 16 foot fishing boat, but it is perfet for what I need. I also enjoy kayaking and canoing.'
+    popoverText: 'While I primarily boat for fishing, I do enjoy just taking a boat on the lake and cruising. I own a simple 16 foot fishing boat, but it is perfect for what I need. I also enjoy kayaking and canoeing.'
   },
   {
     name: 'Hiking',
     icon: faPersonHiking,
-    popoverText: 'Hking has always been a hobby of mine but in recent years I have also taken on backpacking. Backpacking has been a big challenge and has also been incredibly rewarding. I have enjoyed many upbelievable views because I was willing to put in the work to get there.'
+    popoverText: 'Hiking has always been a hobby of mine but in recent years I have also taken on backpacking. Backpacking has been a big challenge and has also been incredibly rewarding. I have enjoyed many unbelievable views because I was willing to put in the work to get there.'
   },
   {
     name: 'Gaming',

@@ -29,7 +29,7 @@ const events = [
     event: 'Graduated from Belmont',
     icon: School,
     popover: {
-      content: "I graduated in Decemeber of 2014 from Belmont University with a degree in Audio Engineering Technology. In my 3.5 semesters at Belmont I maintained a 3.5 GPA and took part in multiple extra curricular activities, particularly the Showcase Series. Showcase was a series of concerts put on entirely by students. As a junior in college, I held a leadership role in 4 out of the 5 concerts that year."
+      content: "I graduated in December of 2014 from Belmont University with a degree in Audio Engineering Technology. In my 3.5 semesters at Belmont I maintained a 3.5 GPA and took part in multiple extra curricular activities, particularly the Showcase Series. Showcase was a series of concerts put on entirely by students. As a junior in college, I held a leadership role in 4 out of the 5 concerts that year."
     }
   },
   {
@@ -51,7 +51,7 @@ const events = [
     event: 'Udemy Bootcamps and Classes',
     icon: CastForEducationIcon,
     popover: {
-      content: "By 2021 I had fully committed to pursuing software and decided to take an organized approach to learning. Traditional education like Nashville Software School was difficult due to the cost, so I spent the year replicating the curriclum of their bootcamp through Udemy online courses."
+      content: "By 2021 I had fully committed to pursuing software and decided to take an organized approach to learning. Traditional education like Nashville Software School was difficult due to the cost, so I spent the year replicating the curriculum of their bootcamp through Udemy online courses."
     }
   },
   {
@@ -64,7 +64,7 @@ const events = [
     event: 'Nomi Travel: Software Developer',
     company: 'Nomi Travel',
     position: 'Software Developer',
-    description: 'Nomi Travel was a start up tech company in Nashville and my first software development position. At Nomi I was responsible for building the web app using React, as well as back-end REST services for the web app. I also built an internal database management app using a full MERN stack that managed database CRUD operations for 3 environments. I also gained experience in test driven developement, CI/CD, Heroku deployment and Git actions. Nomi was an excellent start-up with tremendous potential. The company is currently on hold, awaiting further capital.',
+    description: 'Nomi Travel was a start up tech company in Nashville and my first software development position. At Nomi I was responsible for building the web app using React, as well as back-end REST services for the web app. I also built an internal database management app using a full MERN stack that managed database CRUD operations for 3 environments. I also gained experience in test driven development, CI/CD, Heroku deployment and Git actions. Nomi was an excellent start-up with tremendous potential. The company is currently on hold, awaiting further capital.',
     icon: DeveloperModeIcon,
     popover: {
       content: "In 2022 I was hired for my first software role with a Nashville start-up called Nomi Travel. I worked part time at Nomi while continuing my full time touring job with Justin Moore. At Nomi I was responsible for building their web-app as well as an internal database management app."
@@ -152,7 +152,7 @@ traditionalHistory.push(
     company: 'Justin Moore',
     position: 'Stage Manager, Monitor Engineer',
     icon: MicExternalOnIcon,
-    description: "I started working for country artist Justin Moore as an intern in 2013 and was later hired on as an audio tech. In 2015 I was promoted to monitor engineer. As the monitor enginer I was responsible for RF coordination, stage patch and mixing IEM's for band, artist and guests. In 2018 I was promoted to stage manager where I managed a crew of 5-12 people and coordinated with local labor unions of up to 30. I was responsible for the day-to-day operations of loading in and out 1-4 semi trucks to the stage.",
+    description: "I started working for country artist Justin Moore as an intern in 2013 and was later hired on as an audio tech. In 2015 I was promoted to monitor engineer. As the monitor engineer I was responsible for RF coordination, stage patch and mixing IEM's for band, artist and guests. In 2018 I was promoted to stage manager where I managed a crew of 5-12 people and coordinated with local labor unions of up to 30. I was responsible for the day-to-day operations of loading in and out 1-4 semi trucks to the stage.",
   }
 );
 

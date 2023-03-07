@@ -47,7 +47,7 @@ const educations: Education[] = [
       issuerLogo: udemyLogo,
       courseLink: "https://www.udemy.com/course/nodejs-the-complete-guide/",
       courseName: "NodeJS - The Complete Guide (MVC, RET APIs, GraphQL, Deno)",
-      description: "The primary goal of this course was to improve on my back end development particulary when it came to REST API development and design.",
+      description: "The primary goal of this course was to improve on my back end development particularly when it came to REST API development and design.",
     }
   },
   {
@@ -58,7 +58,7 @@ const educations: Education[] = [
       issuerLogo: udemyLogo,
       courseName: "JavaScript Unit Testing - The Practical Guide",
       courseLink: "https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/",
-      description: "Unit testing used to be something I struggled with. I could understand the benefits and the purpose but I struggled with what to test, and what not to test. Completeing this course not only helped my fix that, but it helped my write better code. Because it turns out, if your code is difficult to unit test, it could probably be split and written in a more granular way to imporove testing.",
+      description: "Unit testing used to be something I struggled with. I could understand the benefits and the purpose but I struggled with what to test, and what not to test. Completing this course not only helped my fix that, but it helped my write better code. Because it turns out, if your code is difficult to unit test, it could probably be split and written in a more granular way to improve testing.",
       url: jsUnitTestingCert
     }
   },
@@ -70,7 +70,7 @@ const educations: Education[] = [
       issuerLogo: udemyLogo,
       courseName: "React, NodeJS, Express & MongoDB - The MERN Fullstack Guide",
       courseLink: "https://www.udemy.com/course/react-nodejs-express-mongodb-the-mern-fullstack-guide/",
-      description: "When I enrolled in this course, I already had experience with each piece of the MERN stack. However I wanted to improve on those skillss and also see the approach of another instructor. My previous React courses were taught by Colt Steel and The Net Ninja, who are excellent. However after my NodeJS course I realized I really enjoy Academinds approach to code. It is very organized and fits my style. This course was an excellent skill refiner.",
+      description: "When I enrolled in this course, I already had experience with each piece of the MERN stack. However I wanted to improve on those skills and also see the approach of another instructor. My previous React courses were taught by Colt Steel and The Net Ninja, who are excellent. However after my NodeJS course I realized I really enjoy Academind's approach to code. It is very organized and fits my style. This course was an excellent skill refiner.",
       url: mernCert
     }
   },
@@ -82,7 +82,7 @@ const educations: Education[] = [
       issuerLogo: udemyLogo,
       courseName: "Clean Code",
       courseLink: "https://www.udemy.com/course/writing-clean-code/",
-      description: "This was possibly my favorite Udemy course I've taken. I've gained plenty of knowledge from the bootcamp courses and code along courses but often times, these courses teach you how to do something, but not best practices. This course forced my to rethink all of the code I had written previously and ask myself and important question: Is this code readable? Now everytime I write a class, function or component I ask myself if someone could read this quickly and easily to understand what is happening.",
+      description: "This was possibly my favorite Udemy course I've taken. I've gained plenty of knowledge from the bootcamp courses and code along courses but often times, these courses teach you how to do something, but not best practices. This course forced my to rethink all of the code I had written previously and ask myself and important question: Is this code readable? Now every time I write a class, function or component I ask myself if someone could read this quickly and easily to understand what is happening.",
       url: cleanCodeCert
     }
   },
@@ -107,7 +107,7 @@ const educations: Education[] = [
       courseName: "Complete React Native",
       courseLink: "https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/",
       url: reactNativeCert,
-      description: "This course was not my favorite. While I love working with React Native, I just didn't like the instructors approach to file structure, naming and general teaching philosophies. However, the course content was usefull and I was still able to refine my React Native skills and pickup some usefull tools along the way like Stripe."
+      description: "This course was not my favorite. While I love working with React Native, I just didn't like the instructors approach to file structure, naming and general teaching philosophies. However, the course content was useful and I was still able to refine my React Native skills and pickup some useful tools along the way like Stripe."
     }
   },
   {
@@ -117,7 +117,7 @@ const educations: Education[] = [
       issuer: "Udemy",
       issuerLogo: udemyLogo,
       courseName: "The Git & Github Bootcamp",
-      description: "I wish I had taken this couse so much earlier in my coding journey. Git is such a universally required tool in software and after learning to use it properly I felt so much more comfortable in my ability to work with a team and maintain a full CI/CD workflow.",
+      description: "I wish I had taken this course so much earlier in my coding journey. Git is such a universally required tool in software and after learning to use it properly I felt so much more comfortable in my ability to work with a team and maintain a full CI/CD workflow.",
       courseLink: "https://www.udemy.com/course/git-and-github-bootcamp/"
     }
   }

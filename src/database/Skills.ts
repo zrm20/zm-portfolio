@@ -142,7 +142,7 @@ const skills: Skill[] = [
     subcategory: "Testing",
     relatedEducation: [],
   },
-  // gengeral development
+  // general development
   {
     id: "github",
     name: "GitHub",

@@ -72,7 +72,7 @@ const tours =
     image: ''
   },
   {
-    artist: 'Justin Moore (direct support for Mirandla Lambert)',
+    artist: 'Justin Moore (direct support for Miranda Lambert)',
     name: 'Platinum',
     time: '2014-15',
     description: '',

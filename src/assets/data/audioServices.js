@@ -19,7 +19,7 @@ const audioServices =
     name: 'Studio Tracking'
   },
   {
-    name: 'Studio Maintinance'
+    name: 'Studio Maintenance'
   },
 ];
 

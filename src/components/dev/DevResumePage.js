@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { Fab, SpeedDial, SpeedDialIcon, SpeedDialAction, ToggleButtonGroup, ToggleButton, Box, useMediaQuery, useTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import resumeTheme from '../../styles/resumeTheme';
@@ -11,9 +11,10 @@ import NotesIcon from '@mui/icons-material/Notes';
 import ImageIcon from '@mui/icons-material/Image';
 import { Link as RouterLink } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useUpdateTitle } from '../../hooks';
 
 export default function DevResumePage() {
-  const [iconMode, setIconMode] = useState(true);
+  const [iconMode, setIconMode] = useState(false);
   const theme = useTheme();
   const isSmScreen = useMediaQuery(theme.breakpoints.up('sm'));
   const printResumeRef = useRef();
@@ -23,7 +24,7 @@ export default function DevResumePage() {
     }
   );
 
-  useEffect(() => { document.title = 'Zach McCoy Resume' }, []);
+  useUpdateTitle("Zach McCoy Resume");
 
   function toggleView() {
     setIconMode(!iconMode);
@@ -71,7 +72,7 @@ export default function DevResumePage() {
     }}>
 
       <ThemeProvider theme={resumeTheme}>
-        <AnimatePresence exitBeforeEnter >
+        <AnimatePresence mode="wait" >
           {
             iconMode ?
               <motion.div

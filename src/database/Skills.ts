@@ -164,7 +164,7 @@ const skills: Skill[] = [
   {
     id: "monitors",
     name: "Monitors",
-    icon: "",
+    icon: "fa-solid fa-headphones",
     category: "Audio",
     subcategory: "Live",
     relatedEducation: ["belmont"]
@@ -172,7 +172,7 @@ const skills: Skill[] = [
   {
     id: "rf", 
     name: "RF Coordination",
-    icon: "",
+    icon: "fa-solid fa-tower-broadcast",
     category: "Audio",
     subcategory: "Live",
     relatedEducation: ["belmont"]
@@ -180,7 +180,7 @@ const skills: Skill[] = [
   {
     id: "foh",
     name: "Front of House",
-    icon: "",
+    icon: "fa-solid fa-sliders",
     category: "Audio",
     subcategory: "Live",
     relatedEducation: ["belmont"]
@@ -188,7 +188,7 @@ const skills: Skill[] = [
   {
     id: "stage_management",
     name: "Stage Management",
-    icon: "",
+    icon: "fa-solid fa-clipboard-list",
     category: "Audio",
     subcategory: "Management",
     relatedEducation: ["belmont"]
@@ -196,7 +196,7 @@ const skills: Skill[] = [
   {
     id: "production_management",
     name: "Production Management",
-    icon: "",
+    icon: "fa-solid fa-people-roof",
     category: "Audio",
     subcategory: "Management",
     relatedEducation: ["belmont"]
@@ -204,7 +204,7 @@ const skills: Skill[] = [
   {
     id: "ableton",
     name: "Ableton Live Programming",
-    icon: abletonIcon,
+    icon: "fa-solid fa-circle-play",
     category: "Audio",
     subcategory: "Playback",
     relatedEducation: ["belmont"]
@@ -212,7 +212,7 @@ const skills: Skill[] = [
   {
     id: "midi",
     name: "Midi Control Systems",
-    icon: "",
+    icon: "fa-solid fa-gamepad",
     category: "Audio",
     subcategory: "Playback",
     relatedEducation: ["belmont"]
@@ -220,7 +220,7 @@ const skills: Skill[] = [
   {
     id: "recording",
     name: "Recording",
-    icon: "",
+    icon: "fa-solid fa-record-vinyl",
     category: "Audio",
     subcategory: "Studio",
     relatedEducation: ["belmont"]
@@ -228,7 +228,7 @@ const skills: Skill[] = [
   {
     id: "pro_tools",
     name: "Pro Tools",
-    icon: proToolsIcon,
+    icon: "fa-solid fa-file-audio",
     category: "Audio",
     subcategory: "Studio",
     relatedEducation: ["belmont"]
@@ -236,15 +236,15 @@ const skills: Skill[] = [
   {
     id: "logic",
     name: "Logic",
-    icon: "",
+    icon: "fa-brands fa-apple",
     category: "Audio",
     subcategory: "Studio",
     relatedEducation: ["belmont"]
   },
   {
     id: "studio_mixing",
-    name: "Recording",
-    icon: "",
+    name: "Studio Mixing",
+    icon: "fa-solid fa-music",
     category: "Audio",
     subcategory: "Studio",
     relatedEducation: ["belmont"]
@@ -252,7 +252,7 @@ const skills: Skill[] = [
   {
     id: "live_capture",
     name: "Live Capture",
-    icon: "",
+    icon: "fa-solid fa-microphone",
     category: "Audio",
     subcategory: "Live",
     relatedEducation: ["belmont"]

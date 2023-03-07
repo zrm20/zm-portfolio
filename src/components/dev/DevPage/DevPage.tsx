@@ -23,7 +23,7 @@ export default function DevPage(props: DevPageProps): JSX.Element {
       <Paper sx={styles.container} >
         <Typography variant="h2" sx={styles.title}>Software Developer</Typography>
 
-        <Toolbar sx={styles.links}>
+        <Toolbar sx={styles.links} component="nav">
           <RouterLink to="#about">About</RouterLink>
           <RouterLink to="#tech_stack">Tech Stack</RouterLink>
           <RouterLink to="#projects">Projects</RouterLink>

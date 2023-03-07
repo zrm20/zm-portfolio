@@ -2,6 +2,7 @@ import { SxProps } from "@mui/material";
 
 interface Style {
   root: SxProps;
+  imgContainer: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -17,6 +18,9 @@ export default function useStyles(): Style {
       '& .MuiCardHeader-action': {
         my: 'auto'
       }
+    },
+    imgContainer: {
+      objectFit: 'contain'
     }
   }
 };

@@ -40,6 +40,7 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
           height={150}
           image={project.images[0]}
           alt={project.title}
+          sx={styles.imgContainer}
         />
       }
       <ProjectCardContent project={project} />

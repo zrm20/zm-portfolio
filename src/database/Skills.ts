@@ -1,6 +1,3 @@
-import abletonIcon from "../assets/images/icons/abletonIcon.svg";
-import proToolsIcon from "../assets/images/icons/proToolsIcon.svg";
-
 const skills: Skill[] = [
   // programming languages
   {

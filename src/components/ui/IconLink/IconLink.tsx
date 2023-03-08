@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, IconButtonProps, LinkProps } from "@mui/material";
+import { IconButton, IconButtonProps } from "@mui/material";
 import { Link } from "react-router-dom";
 
 interface IconLinkProps extends IconButtonProps {

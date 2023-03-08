@@ -6,7 +6,7 @@ const skills: Skill[] = [
     icon: "devicon-javascript-plain",
     category: "Dev",
     subcategory: "Language",
-    relatedEducation: [],
+    relatedEducation: ["web_development_bootcamp", "nodejs", "js_unit_testing", "mern", "react_native"],
     group: "primary"
   },
   {
@@ -15,7 +15,7 @@ const skills: Skill[] = [
     icon: "devicon-typescript-plain",
     category: "Dev",
     subcategory: "Language",
-    relatedEducation: [],
+    relatedEducation: ["typescript"],
     group: "primary"
   },
   {
@@ -42,7 +42,7 @@ const skills: Skill[] = [
     icon: "devicon-react-original-wordmark",
     category: "Dev",
     subcategory: "Front End",
-    relatedEducation: [],
+    relatedEducation: ["mern"],
     group: "primary"
   },
   {
@@ -51,7 +51,7 @@ const skills: Skill[] = [
     icon: "devicon-react-original",
     category: "Dev",
     subcategory: "Front End",
-    relatedEducation: [],
+    relatedEducation: ["react_native"],
     group: "primary"
   },
   {
@@ -60,7 +60,7 @@ const skills: Skill[] = [
     icon: "devicon-html5-plain-wordmark",
     category: "Dev",
     subcategory: "Front End",
-    relatedEducation: [],
+    relatedEducation: ["web_development_bootcamp"],
   },
   {
     id: "css",
@@ -68,7 +68,7 @@ const skills: Skill[] = [
     icon: "devicon-css3-plain-wordmark",
     category: "Dev",
     subcategory: "Front End",
-    relatedEducation: [],
+    relatedEducation: ["web_development_bootcamp"],
   },
   {
     id: "redux",
@@ -87,7 +87,7 @@ const skills: Skill[] = [
     icon: "devicon-nodejs-plain",
     category: "Dev",
     subcategory: "Back End",
-    relatedEducation: [],
+    relatedEducation: ["web_development_bootcamp", "nodejs"],
   },
   {
     id: "express",
@@ -95,7 +95,7 @@ const skills: Skill[] = [
     icon: "devicon-express-original",
     category: "Dev",
     subcategory: "Back End",
-    relatedEducation: [],
+    relatedEducation: ["web_development_bootcamp", "nodejs", "mern"],
   },
   // database
   {
@@ -104,7 +104,7 @@ const skills: Skill[] = [
     icon: "devicon-mongodb-plain",
     category: "Dev",
     subcategory: "Database",
-    relatedEducation: [],
+    relatedEducation: ["web_development_bootcamp", "nodejs", "mern"],
   },
   {
     id: "firebase_firestore",
@@ -112,7 +112,7 @@ const skills: Skill[] = [
     icon: "devicon-firebase-plain",
     category: "Dev",
     subcategory: "Database",
-    relatedEducation: [],
+    relatedEducation: ["react_native"],
   },
   {
     id: "sql_lite",
@@ -129,7 +129,7 @@ const skills: Skill[] = [
     icon: "devicon-jest-plain",
     category: "Dev",
     subcategory: "Testing",
-    relatedEducation: [],
+    relatedEducation: ["js_unit_testing"],
   },
   {
     id: "mocha",
@@ -137,7 +137,7 @@ const skills: Skill[] = [
     icon: "devicon-mocha-plain",
     category: "Dev",
     subcategory: "Testing",
-    relatedEducation: [],
+    relatedEducation: ["js_unit_testing", "nodejs"],
   },
   // general development
   {
@@ -146,7 +146,7 @@ const skills: Skill[] = [
     icon: "devicon-github-original",
     category: "Dev",
     subcategory: "CI/CD",
-    relatedEducation: [],
+    relatedEducation: ["git"],
   },
   {
     id: "heroku",
@@ -264,7 +264,11 @@ const skills: Skill[] = [
   },
 ];
 
-function getSkill(skillId: string): Skill | null {
+function getSkill(skillId: string | undefined): Skill | null {
+  if(!skillId) {
+    return null;
+  };
+
   const index = skills.findIndex(skill => skill.id === skillId);
 
   if (index === -1) {

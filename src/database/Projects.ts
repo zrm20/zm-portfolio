@@ -41,7 +41,7 @@ const projects: Project[] = [
     repo: "https://www.github.com/zrm20/zm-portfolio",
     description: "This is the site you are looking at right now. I wanted to use my online portfolio to demonstrate some of my styles and practices when it comes to React apps. This site uses a lot of Material UI components as well as plenty of custom built components. On the server-side it utilizes Firebase for hosting as well as serverless functions.",
     website: "https://www.zachrmccoy.com",
-    skills: ["javascript", "typescript", "firebase"],
+    skills: ["react", "javascript", "typescript", "firebase_hosting"],
     images: [zmPortfolio1],
     logo: zmLogo
   },
@@ -53,7 +53,8 @@ const projects: Project[] = [
     description: "At Nomi Travel, my primary responsibility was to build the web based front-end. Nomi is a SMS based service that personalizes local search. Starting in Nashville, TN users could text Nomi with \"Where can I get coffee\" and rather than sifting through traditional chain companies, they would receive a local and personal recommendation.\nNomi's website was built in React and is primarily a landing page for new users and company information. Users can sign up for the service with just a phone number and a verification code and receive their first recommendation in just minutes.\nThe backend of Nomi involved connecting to multiple external API's such as Twilio, Google and others.",
     skills: ["react", "redux", "javascipt", "node", "express", "mongo_db"],
     images: [nomiLogo],
-    logo: nomiLogo
+    logo: nomiLogo,
+    experienceId: "nomi"
   },
   {
     id: "nomi_activity_manager",
@@ -63,7 +64,8 @@ const projects: Project[] = [
     description: "At Nomi, I also was responsible for building an internal app for database management. A major part of Nomi is the refined list of restaurants and nightlife activities. It was critical for our team that all members could add and modify these places in our database, without needing to understand MongoDB or any code.\nThe database management app offered full CRUD functionality for multiple data resources across three environments using a full MERN stack.",
     skills: ["react", "redux", "javascipt", "node", "express", "mongo_db"],
     images: [nomiLogo],
-    logo: nomiLogo
+    logo: nomiLogo,
+    experienceId: "nomi"
   },
   {
     id: "nomi_mobile_app",
@@ -73,7 +75,8 @@ const projects: Project[] = [
     description: "The Nomi mobile app is a cross platform mobile app with a full dashboard of personalized recommendations. Users register and participate in a 3 question personality survey and then receive restaurant recommendations tailored for them.",
     skills: ["react_native", "firebase", "javascript"],
     images: [nomiLogo],
-    logo: nomiLogo
+    logo: nomiLogo,
+    experienceId: "nomi"
   },
   {
     id: "meals_to_go",
@@ -96,7 +99,8 @@ const projects: Project[] = [
     description: "While touring was shutdown in all of 2020 artists looked to other avenues to bring music to fans. For this even we did a live stream concert with full 4k video production.",
     skills: ["monitors", "live_capture", "rf"],
     images: [mooTaping],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
   {
     id: "sba",
@@ -106,7 +110,8 @@ const projects: Project[] = [
     description: "This show had a lot of moving parts to it, but by far the most complex part was mixing FOH for a live orchestra along with a church band.",
     skills: ["foh", "rf"],
     images: [southernBaptist],
-    logo: zmLogo
+    logo: zmLogo,
+    experienceId: "freelance_audio"
   },
   {
     id: "memorial_day",
@@ -118,6 +123,7 @@ const projects: Project[] = [
     skills: ["stage_management"],
     logo: jmLogo,
     website: "https://www.youtube.com/watch?v=AZIQI3pnAEw",
+    experienceId: "justin_moore" 
   },
   {
     id: "fox_and_friends",
@@ -128,7 +134,8 @@ const projects: Project[] = [
     skills: ["monitors", "stage_management"],
     images: [foxAndFriends],
     logo: jmLogo,
-    website: "https://www.youtube.com/watch?v=TyUQypfs3TY"
+    website: "https://www.youtube.com/watch?v=TyUQypfs3TY",
+    experienceId: "justin_moore" 
   },
   {
     id: "playback_rig",
@@ -138,7 +145,8 @@ const projects: Project[] = [
     description: "As part of the \"Kinda Don't Care\" album, the band needed several electronic parts added to supplement the songs. This meant putting together a live playback system. Because it was considered show critical, it was important that this system have a fully redundant backup. I built and programmed this rig with (2) 2013 MacBook Pros, Ableton Live 8 and a Radial SW-8 switcher. It handles playback of 3 stereo pairs, a click track, plus a timecode track. The timecode is used for automating the light show along with the song.",
     images: [playbackRig],
     logo: jmLogo,
-    skills: ["ableton"]
+    skills: ["ableton"],
+    experienceId: "justin_moore" 
   },
   {
     id: "jimmy_kimmel",
@@ -148,7 +156,8 @@ const projects: Project[] = [
     description: "As \"Somebody Else Will\" approached #1 on the charts, Justin performed on Jimmy Kimmel Live in Hollywood, CA. A large part of making htis perfomance happen was the use of  a live playback rig using Ableton to send timecode for camera blocking.",
     skills: ["ableton"],
     images: [jimmyKimmel],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
   {
     id: "brantly",
@@ -158,7 +167,8 @@ const projects: Project[] = [
     description: "This was a fun tour to be a part of. Brantley's \"Take it Outside\" tour was a summer of sold out amphitheaters and brought me to Red Rocks and Alaska for the first time.",
     skills: ["monitors", "rf"],
     images: [brantleyTour],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
   {
     id: "today_show",
@@ -168,7 +178,8 @@ const projects: Project[] = [
     description: "As part of the release of the \"Kinda Don't Care\" album we did a number of TV appearances in NYC. We finished it off at The Today show on NBC. On TV appearances like these, my job is to serve as the middle man between our band and the Today Show's monitor engineer",
     skills: ["monitors", "rf"],
     images: [todayShow],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
   {
     id: "miranda",
@@ -178,7 +189,8 @@ const projects: Project[] = [
     description: "The Miranda Lambert tour in 2015 was my biggest tour at the time. In my first tour as the monitor engineer I had the privilege of working with some great people and was also able to do a show at Madison Square Garden for the first time.",
     skills: ["monitors", "rf"],
     images: [mirandaTour],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
   {
     id: "bella_moxi",
@@ -188,7 +200,8 @@ const projects: Project[] = [
     description: "This event was managed by Orange Thread Media who hired me as a FOH contractor. Typically on corporate shows in hotels, it usually means a couple of podium and wireless mics for keynote speakers. This one was different though. For this dance competition we had the room rockin' with 6 d&b B2 subs. The whole hotel was dancing along I'm sure.",
     skills: ["foh"],
     images: [bellaMoxi],
-    logo: zmLogo
+    logo: zmLogo,
+    experienceId: "freelance_audio"
   },
   {
     id: "houston_rodeo",
@@ -198,7 +211,8 @@ const projects: Project[] = [
     description: "The Houston Rodeo is a huge event that features a concert at the end of each day. Many artists have had the privilege of playing here and we joined that group in 2019. Mixing monitors in front of 60,000 people is a surreal feeling. The show featured a rotating stage with a massive ground supported video wall below the arena jumbotron.",
     skills: ["monitors", "rf"],
     images: [houstonRodeo],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
   {
     id: "mayor_debate",
@@ -208,7 +222,7 @@ const projects: Project[] = [
     description: "Held at Belmont University, I got the call to mix the Nashville Mayoral Debate. This was a challenge as it required 6-8 lav mics to be live on stage at once which can be difficult to avoid feedback with. It was also a last minute surprise for me that I needed to have a broadcast mix sent out to multiple TV trucks to go to air.",
     skills: ["foh", "live_capture", "rf"],
     images: [mayorDebate],
-    logo: zmLogo
+    logo: zmLogo,
   },
   {
     id: "otbp",
@@ -218,11 +232,16 @@ const projects: Project[] = [
     description: "This was my first arena tour and it was a very memorable one. I had the opportunity to take in the experience of loading 3 trucks in and out. I also got to work with some excellent opening act crews like Randy Houser, Thomas Rhett and Josh Thompson. On the second leg of tour I also had the opportunity to mix FOH for one of our opening acts, Jordan Rager.",
     skills: ["monitors", "rf", "foh"],
     images: [otbpTour],
-    logo: jmLogo
+    logo: jmLogo,
+    experienceId: "justin_moore" 
   },
 ];
 
-function getProject(projectId: string): Project | null {
+function getProject(projectId: string | undefined): Project | null {
+  if(!projectId) {
+    return null;
+  };
+  
   const index = projects.findIndex(project => project.id === projectId);
 
   if (index === -1) {

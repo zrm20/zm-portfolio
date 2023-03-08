@@ -16,7 +16,7 @@ const experiences: Experience[] = [
     projects: [] // TODO
   },
   {
-    id: 'nomi_travel',
+    id: 'nomi',
     category: "Dev",
     company: "Nomi Travel",
     titles: ["Software Developer"],

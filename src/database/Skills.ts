@@ -156,6 +156,14 @@ const skills: Skill[] = [
     subcategory: "CI/CD",
     relatedEducation: [],
   },
+  {
+    id: "firebase_hosting",
+    name: "Firebase Hosting",
+    icon: "devicon-firebase-plain",
+    category: "Dev",
+    subcategory: "CI/CD",
+    relatedEducation: [],
+  },
 
   // AUDIO
   {

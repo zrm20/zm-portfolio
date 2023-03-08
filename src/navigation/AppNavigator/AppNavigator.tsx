@@ -23,7 +23,7 @@ export default function AppNavigator(): JSX.Element {
       <Route path="/education/:id" />
       <Route path="/skills" />
       <Route path="/skills/:id" />
-      <Route path="/" element={<Home />} />
+      <Route path="/*" element={<Home />} />
     </Routes>
   );
 };

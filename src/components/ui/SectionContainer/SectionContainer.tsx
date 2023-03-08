@@ -10,6 +10,7 @@ interface SectionContainerProps {
   style?: CSSProperties
   sx?: SxProps
   titleSx?: SxProps
+  containerSx?: SxProps
 };
 
 export default function SectionContainer(props: SectionContainerProps): JSX.Element {
@@ -19,7 +20,7 @@ export default function SectionContainer(props: SectionContainerProps): JSX.Elem
     <Box sx={props.sx || styles.root} component="section" id={props.id} style={props.style}>
       <Typography sx={props.titleSx || styles.title} variant="h4">{props.title}</Typography>
       <Divider />
-      <Box sx={styles.container}>
+      <Box sx={props.containerSx || styles.container}>
         {props.children}
       </Box>
     </Box>

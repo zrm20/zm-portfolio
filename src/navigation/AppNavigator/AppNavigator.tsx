@@ -6,6 +6,7 @@ import DevResumePage from "../../components/dev/DevResumePage";
 
 import { Home } from "../../components/home";
 import { ProjectDetailsPage, ProjectsPage } from "../../components/projects";
+import { SkillDetailsPage, SkillsPage } from "../../components/skills";
 import { useScrollToSection } from "../../hooks";
 
 export default function AppNavigator(): JSX.Element {
@@ -21,9 +22,9 @@ export default function AppNavigator(): JSX.Element {
       {/* <Route path="/experiences" />
       <Route path="/experiences/:id" />
       <Route path="/education" />
-      <Route path="/education/:id" />
-      <Route path="/skills" />
-      <Route path="/skills/:id" /> */}
+      <Route path="/education/:id" /> */}
+      <Route path="/skills" element={<SkillsPage />}/>
+      <Route path="/skills/:id" element={<SkillDetailsPage />} />
       <Route path="/" element={<Home />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>

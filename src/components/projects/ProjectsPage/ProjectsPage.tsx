@@ -17,6 +17,7 @@ import {
 import { getProjects } from "../../../database/Projects";
 import useStyles from "./ProjectsPage.styles";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { FadeIn } from "../../animations";
 
 export default function ProjectsPage(): JSX.Element {
   const styles = useStyles();
@@ -52,7 +53,7 @@ export default function ProjectsPage(): JSX.Element {
   });
 
   return (
-    <Box sx={styles.root}>
+    <Box sx={styles.root} component={FadeIn} >
       <Paper sx={styles.container}>
         <Typography variant="h2">Projects</Typography>
 

@@ -18,7 +18,10 @@ export default function useStyles(): Style {
       width: '100%',
       mb: 1,
       '& .MuiTabs-flexContainer': {
-        overflowX: 'scroll'
+        overflowX: {
+          xs: "scroll",
+          md: "hidden"
+        }
       }
     },
     list: {

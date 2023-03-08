@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import "devicon"
 
 import useStyles from "./SkillItem.styles";
+import { Link } from "react-router-dom";
 
 interface SkillItemProps {
   skill: Skill;
@@ -19,7 +20,7 @@ export default function SkillItem(props: SkillItemProps): JSX.Element {
   const styles = useStyles({ size });
 
   return (
-    <Box sx={styles.root} >
+    <Box sx={styles.root} component={Link} to={`/skills/${skill.id}`}>
       <Box sx={styles.iconContainer}>
         <i className={skill.icon} />
       </Box>

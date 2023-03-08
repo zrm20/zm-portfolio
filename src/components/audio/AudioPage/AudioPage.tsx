@@ -24,7 +24,6 @@ export default function AudioHome(props: AudioHomeProps): JSX.Element {
         <Typography variant="h2" sx={styles.title}>Audio Engineer</Typography>
 
         <Toolbar sx={styles.links} component="nav">
-          <RouterLink to="#about">About</RouterLink>
           <RouterLink to="#skills">Skills & Services</RouterLink>
           <RouterLink to="#experience">Experience</RouterLink>
           <RouterLink to="#projects">Shows & Events</RouterLink>

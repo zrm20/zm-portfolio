@@ -26,7 +26,7 @@ export default function AudioHome(props: AudioHomeProps): JSX.Element {
         <Toolbar sx={styles.links} component="nav">
           <RouterLink to="#skills">Skills & Services</RouterLink>
           <RouterLink to="#experience">Experience</RouterLink>
-          <RouterLink to="#projects">Shows & Events</RouterLink>
+          <RouterLink to="#projects">Shows & Projects</RouterLink>
         </Toolbar>
 
         <SectionContainer title="About Zach" id="about_zach">
@@ -41,7 +41,7 @@ export default function AudioHome(props: AudioHomeProps): JSX.Element {
           <AudioExperience />
         </SectionContainer>
 
-        <SectionContainer title="Shows & Events" id="projects">
+        <SectionContainer title="Shows & Projects" id="projects">
           <AudioProjects />
         </SectionContainer>
       </Paper>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Card, CardContent, Collapse, Stack, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Collapse, Stack, Typography } from "@mui/material";
 import { v4 as uuid } from "uuid";
 
 import useStyles from "./ExperienceCard.styles";
@@ -26,21 +26,15 @@ export default function ExperienceCard(props: ExperienceCardProps): JSX.Element 
           style={styles.logo}
         />
         <Typography variant="h5" sx={styles.company}>{experience.company}</Typography>
-        <Stack direction="row" overflow="scroll" sx={styles.titles}>
+        <Box sx={styles.titles}>
           {
             experience.titles.map((title, i) => (
-              <>
                 <Typography key={title} variant="subtitle1">
                   {title}
                 </Typography>
-                {
-                  i + 1 < experience.titles.length &&
-                  <span>&#183;</span>
-                }
-              </>
             ))
           }
-        </Stack>
+        </Box>
         <Stack direction="row" sx={styles.dates}>
           <Typography variant="caption">Started: {experience.startDate.toLocaleDateString()}</Typography>
           {

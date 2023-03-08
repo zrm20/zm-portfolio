@@ -10,7 +10,7 @@ export default function useStyles(): Style {
     root: {
       width: '100%',
       justifyContent: 'center',
-      overflowX: "scroll",
+      flexWrap: 'wrap',
       flexDirection: 'row',
     },
   }

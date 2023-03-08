@@ -32,6 +32,8 @@ export default function useStyles(): Style {
     titles: {
       width: '100%',
       mb: 1,
+      display: 'flex',
+      flexWrap: "wrap",
       justifyContent: 'center',
       alignItems: 'center',
       "& .MuiTypography-root": {

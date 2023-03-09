@@ -5,7 +5,7 @@ import useStyles from "./Home.styles";
 import AboutCard from "../AboutCard/AboutCard";
 import { useUpdateTitle } from "../../../hooks";
 import { FadeIn } from "../../animations";
-import { EducationCard } from "../../education/EducationCard";
+import { EducationCard } from "../../education";
 import { degrees, certificates } from "../../../database/Education";
 import { SectionContainer } from "../../ui";
 

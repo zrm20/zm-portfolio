@@ -126,8 +126,23 @@ const educations: Education[] = [
 const degrees = educations.filter(ed => ed.type === "degree");
 const certificates = educations.filter(ed => ed.type === "certificate");
 
+function getEducation(educationId: string | undefined): Education | null {
+  if(!educationId) {
+    return null
+  };
+
+  const index = educations.findIndex(ed => ed.id === educationId);
+  
+  if(index === -1) {
+    return null
+  };
+
+  return educations[index];
+}
+
 export {
   educations,
   degrees,
-  certificates
+  certificates,
+  getEducation
 };

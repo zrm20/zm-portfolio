@@ -54,7 +54,6 @@ export default function useStyles(): Style {
       width: '50%',
       p: 1,
       borderRadius: '5%',
-      bgcolor: palette.grey[400],
       '& img': {
         width: '100%',
         my: 'auto'

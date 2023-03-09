@@ -51,7 +51,7 @@ const projects: Project[] = [
     title: "Nomi Web App",
     subtitle: "React web app for company landing page and user account management",
     description: "At Nomi Travel, my primary responsibility was to build the web based front-end. Nomi is a SMS based service that personalizes local search. Starting in Nashville, TN users could text Nomi with \"Where can I get coffee\" and rather than sifting through traditional chain companies, they would receive a local and personal recommendation.\nNomi's website was built in React and is primarily a landing page for new users and company information. Users can sign up for the service with just a phone number and a verification code and receive their first recommendation in just minutes.\nThe backend of Nomi involved connecting to multiple external API's such as Twilio, Google and others.",
-    skills: ["react", "redux", "javascipt", "node", "express", "mongo_db"],
+    skills: ["react", "redux", "javascript", "node", "express", "mongo_db"],
     images: [nomiLogo],
     logo: nomiLogo,
     experienceId: "nomi"
@@ -62,7 +62,7 @@ const projects: Project[] = [
     title: "Nomi Activity Manager",
     subtitle: "A web dashboard for Nomi employees offering database CRUD operations",
     description: "At Nomi, I also was responsible for building an internal app for database management. A major part of Nomi is the refined list of restaurants and nightlife activities. It was critical for our team that all members could add and modify these places in our database, without needing to understand MongoDB or any code.\nThe database management app offered full CRUD functionality for multiple data resources across three environments using a full MERN stack.",
-    skills: ["react", "redux", "javascipt", "node", "express", "mongo_db"],
+    skills: ["react", "redux", "javascript", "node", "express", "mongo_db"],
     images: [nomiLogo],
     logo: nomiLogo,
     experienceId: "nomi"

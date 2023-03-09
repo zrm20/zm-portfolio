@@ -7,6 +7,7 @@ interface Style {
   backButton: SxProps;
   icon: SxProps;
   listContainer: SxProps;
+  edList: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -66,6 +67,9 @@ export default function useStyles(): Style {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center'
+    },
+    edList: {
+      width: '100%',
     }
   }
 };

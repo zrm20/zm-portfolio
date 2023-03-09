@@ -51,7 +51,7 @@ export default function SkillDetailsPage(): JSX.Element {
         {
           skill.relatedEducation.length > 0 &&
           <SectionContainer title="Related Education" id="education" containerSx={styles.listContainer}>
-            <List>
+            <List sx={styles.edList}>
               {
                 skill.relatedEducation.map(educationId => {
                   const education = getEducation(educationId);

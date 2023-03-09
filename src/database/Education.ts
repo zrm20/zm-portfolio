@@ -46,7 +46,7 @@ const educations: Education[] = [
       issuer: "Udemy",
       issuerLogo: udemyLogo,
       courseLink: "https://www.udemy.com/course/nodejs-the-complete-guide/",
-      courseName: "NodeJS - The Complete Guide (MVC, RET APIs, GraphQL, Deno)",
+      courseName: "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
       description: "The primary goal of this course was to improve on my back end development particularly when it came to REST API development and design.",
     }
   },

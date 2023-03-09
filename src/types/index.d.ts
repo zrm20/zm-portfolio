@@ -48,7 +48,6 @@ interface Experience {
   url?: string;
   images: string[];
   skills: string[];
-  projects: string[];
 };
 
 interface Education {

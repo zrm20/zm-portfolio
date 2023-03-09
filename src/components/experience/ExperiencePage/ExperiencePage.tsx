@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Paper, Typography, List } from "@mui/material";
+import { Box, Paper, Typography, List, Divider } from "@mui/material";
+import { v4 as uuid } from "uuid";
 
 import useStyles from "./ExperiencePage.styles";
 import { useUpdateTitle } from "../../../hooks";
@@ -22,7 +23,12 @@ export default function ExperiencePage(props: ExperiencePageProps): JSX.Element 
 
         <List>
           {
-            experiences.map(exp => <ExperienceCard experience={exp} key={exp.id} />)
+            experiences.map(exp => (
+              <>
+                <ExperienceCard experience={exp} key={exp.id} />
+                <Divider key={uuid()} />
+              </>
+            ))
           }
         </List>
       </Paper>

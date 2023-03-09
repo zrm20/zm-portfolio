@@ -13,7 +13,7 @@ const experiences: Experience[] = [
     logo: jmLogo,
     images: [], // TODO
     skills: ["monitors", "rf", "stage_management", "ableton", "midi"],
-    projects: [] // TODO
+    url: "https://www.justinmooremusic.com"
   },
   {
     id: 'nomi',
@@ -26,8 +26,7 @@ const experiences: Experience[] = [
     logo: nomiLogo,
     images: [], // TODO
     skills: ["react", "javascript", "express", "node", "mongodb", "heroku", "react_native"],
-    projects: []
-
+    url: "https://www.nomitravel.com"
   },
   {
     id: 'freelance_audio',
@@ -39,11 +38,14 @@ const experiences: Experience[] = [
     logo: zmLogo,
     images: [],
     skills: ["foh", "monitors", "production_management"],
-    projects: []
   }
 ];
 
-function getExperience(experienceId: string): Experience | null {
+function getExperience(experienceId: string | undefined): Experience | null {
+  if(!experienceId) {
+    return null;
+  };
+  
   const index = experiences.findIndex(experience => experience.id === experienceId);
 
   if (index === -1) {

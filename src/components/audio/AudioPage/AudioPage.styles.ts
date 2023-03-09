@@ -44,6 +44,7 @@ export default function useStyles(): Style {
       '& a': {
         color: "text.secondary",
         textDecoration: "none",
+        textAlign: 'center'
       }
     }
   }

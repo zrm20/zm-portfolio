@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 
 import useStyles from "./TechStack.styles";
 import { getSkills } from "../../../database/Skills";
-import { SkillItem } from "../../ui";
+import { SkillItem } from "../../skills";
 import { FadeIn } from "../../animations";
 
 interface TechStackProps {

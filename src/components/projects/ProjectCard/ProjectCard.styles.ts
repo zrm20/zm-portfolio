@@ -16,7 +16,10 @@ export default function useStyles(): Style {
         pb: 0
       },
       '& .MuiCardHeader-action': {
-        my: 'auto'
+        my: 'auto',
+        '& svg': {
+          color: 'text.secondary'
+        }
       }
     },
     imgContainer: {

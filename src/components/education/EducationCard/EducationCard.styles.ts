@@ -1,4 +1,4 @@
-import { SxProps, useTheme } from "@mui/material";
+import { SxProps } from "@mui/material";
 
 interface Style {
   root: SxProps;
@@ -11,7 +11,6 @@ interface Style {
 };
 
 export default function useStyles(): Style {
-  const { palette } = useTheme();
 
   return {
     root: {
@@ -54,7 +53,6 @@ export default function useStyles(): Style {
       width: '50%',
       p: 1,
       borderRadius: '5%',
-      bgcolor: palette.grey[400],
       '& img': {
         width: '100%',
         my: 'auto'
@@ -62,9 +60,16 @@ export default function useStyles(): Style {
     },
     certUrlContainer: {
       width: '100%',
+      flex: 1,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
       '& img': {
         width: '100%',
         borderRadius: 3
+      },
+      "& .MuiTypography-root": {
+        mb: 2
       }
     },
     certTitle: {

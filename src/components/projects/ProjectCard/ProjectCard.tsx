@@ -5,13 +5,13 @@ import {
   CardActions,
   CardHeader,
   CardMedia,
-  IconButton,
 } from "@mui/material";
 import { Info } from "@mui/icons-material";
 
 import useStyles from "./ProjectCard.styles";
 import ProjectCardContent from "./ProjectCardContent";
 import ProjectLinks from "../ProjectLinks/ProjectLinks";
+import { IconLink } from "../../ui";
 
 interface ProjectCardProps {
   project: Project;
@@ -27,10 +27,10 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
         title={project.title}
         subheader={project.subtitle}
         avatar={<Avatar src={project.logo}>{project.title[0]}</Avatar>}
-        action={ // TODO Add open modal action
-          <IconButton>
+        action={
+          <IconLink to={`/projects/${project.id}`} >
             <Info />
-          </IconButton>
+          </IconLink>
         }
       />
       {

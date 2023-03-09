@@ -1,12 +1,13 @@
 type DevSkillCategory = "Front End" | "Back End" | "Language" | "CI/CD" | "Database" | "Testing";
 type AudioSkillCategory = "Live" | "Playback" | "Management" | "Studio";
+type SkillCategory = "Audio" | "Dev" | "Personal"
 
 interface Skill {
   id: string; // URL encoded
   name: string;
   icon: string;
-  category: "Audio" | "Dev" | "Personal"
-  subcategory: AudioSkillCategory | DevSkillCategory
+  category: SkillCategory;
+  subcategory: AudioSkillCategory | DevSkillCategory;
   notes?: string;
   relatedEducation: string[];
   group?: "primary" | "secondary"
@@ -47,7 +48,6 @@ interface Experience {
   url?: string;
   images: string[];
   skills: string[];
-  projects: string[];
 };
 
 interface Education {

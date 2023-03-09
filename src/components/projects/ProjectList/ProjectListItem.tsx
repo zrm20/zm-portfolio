@@ -7,12 +7,12 @@ import {
   Collapse,
   Divider,
   Box,
-  Button,
 } from "@mui/material";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
 
 import useStyles from "./ProjectList.styles";
 import ProjectLinks from "../ProjectLinks/ProjectLinks";
+import { ButtonLink } from "../../ui";
 
 interface ProjectListItemProps {
   project: Project;
@@ -39,7 +39,7 @@ export default function ProjectListItem(props: ProjectListItemProps): JSX.Elemen
       <Collapse in={showMore} unmountOnExit collapsedSize={0}>
         <Box sx={styles.collapse}>
           <ProjectLinks project={project} />
-          <Button color="secondary">Details</Button>
+          <ButtonLink color="secondary" to={`/projects/${project.id}`}>Details</ButtonLink>
         </Box>
       </Collapse>
       <Divider />

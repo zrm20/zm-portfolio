@@ -17,7 +17,9 @@ export default function useStyles(styleProps: { size: number }): Style {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      m: 1
+      m: 1,
+      color: "text.primary",
+      textDecoration: 'none'
     },
     iconContainer: {
       width: size,

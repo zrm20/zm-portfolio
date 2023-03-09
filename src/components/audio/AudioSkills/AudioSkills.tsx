@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Divider, List, ListItem, ListItemAvatar, ListItemText, Stack, Typography } from "@mui/material";
+import { Box, Button, List, ListItem, ListItemAvatar, ListItemText, Stack, Typography } from "@mui/material";
 import { v4 as uuid } from "uuid";
 
 import { audioSkills } from "../../../database/Skills";
@@ -31,15 +31,12 @@ export default function AudioSkills(props: AudioSkillsProps): JSX.Element {
         {
           audioSkills.slice(0, numItemsShown)
             .map(skill => (
-              <>
                 <ListItem key={uuid()}>
                   <ListItemAvatar>
                     <i className={skill.icon}></i>
                   </ListItemAvatar>
                   <ListItemText primary={skill.name} />
                 </ListItem>
-                <Divider key={uuid()} />
-              </>
             ))
         }
       </List>

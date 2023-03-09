@@ -7,6 +7,7 @@ interface Style {
   company: SxProps;
   titles: SxProps;
   dates: SxProps;
+  detailsBtn: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -19,11 +20,14 @@ export default function useStyles(): Style {
       '& .MuiCardContent-root': {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        '& a': {
+          width: '50%',
+        }
       }
     },
     logo: {
-      width: '50%',
+      width: '100%',
       borderRadius: 10
     },
     company: {
@@ -32,6 +36,8 @@ export default function useStyles(): Style {
     titles: {
       width: '100%',
       mb: 1,
+      display: 'flex',
+      flexWrap: "wrap",
       justifyContent: 'center',
       alignItems: 'center',
       "& .MuiTypography-root": {
@@ -43,6 +49,14 @@ export default function useStyles(): Style {
       width: '100%',
       mb: 1,
       justifyContent: 'space-between'
+    },
+    detailsBtn: {
+      position: "absolute",
+      right: 10,
+      '& svg': {
+        color: 'text.secondary',
+        fontSize: '2rem'
+      }
     }
   }
 };

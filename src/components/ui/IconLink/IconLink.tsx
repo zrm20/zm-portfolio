@@ -1,8 +1,10 @@
 import React from "react";
-import { IconButton, IconButtonProps, LinkProps } from "@mui/material";
+import { IconButton, IconButtonProps } from "@mui/material";
 import { Link } from "react-router-dom";
 
-type IconLinkProps = IconButtonProps & LinkProps;
+interface IconLinkProps extends IconButtonProps {
+ to: string;
+};
 
 export default function IconLink(props: IconLinkProps): JSX.Element {
 

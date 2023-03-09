@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import { Button, Collapse, Typography } from "@mui/material";
-import { v4 as uuid } from "uuid";
-
-interface AudioBioProps {
-
-};
+import React from "react";
+import { CollapsingText } from "../../ui";
 
 const yearsOfExperience: number = (new Date(Date.now()).getFullYear()) - 2013;
 
@@ -18,29 +13,12 @@ In December of 2014 I graduated from Belmont and accepted a role as the monitor 
 In 2018 I received a promotion to the stage manager position. While maintaining my role as monitor engineer, I was now responsible for overseeing a crew of 5-12 people, and coordinating with local labor unions of up to 30 people. As the stage manager I strive to make sure that every department is working at their full potential and the day moves along as smoothly as possible.
 As of today I have more than ${yearsOfExperience} years of experience as a touring audio engineer and freelance audio engineer.`;
 
-export default function AudioBio(props: AudioBioProps): JSX.Element {
-  const [showMore, setShowMore] = useState<boolean>(false);
-
+export default function AudioBio(): JSX.Element {
   const paragraphs = audioBio.split('\n');
 
-  function toggleShowMore(): void {
-    setShowMore(!showMore);
-  };
-
   return (
-    <>
-      <Typography gutterBottom>{paragraphs[0]}</Typography>
-      {
-        !showMore &&
-        <Typography component="span">...</Typography>
-      }
-      <Collapse in={showMore}>
-        {
-          paragraphs.slice(1)
-            .map(p => <Typography gutterBottom key={uuid()}>{p}</Typography>)
-        }
-      </Collapse>
-      <Button onClick={toggleShowMore}>{showMore ? "Show Less" : "Show More"}</Button>
-    </>
+      <CollapsingText unhiddenText={paragraphs[0]}>
+        {paragraphs.slice(1)}
+      </CollapsingText>
   );
 };

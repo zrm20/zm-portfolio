@@ -6,18 +6,18 @@ import { useParams } from "react-router-dom";
 import { getSkill } from "../../../database/Skills";
 import { ButtonLink, SectionContainer } from "../../ui";
 import { FadeIn } from "../../animations";
-
 import useStyles from "./SkillDetailsPage.styles";
 import { getProjects } from "../../../database/Projects";
 import { getEducation } from "../../../database/Education";
 import { EducationListItem } from "../../education";
 import { ProjectList } from "../../projects";
+import { useUpdateTitle } from "../../../hooks";
 
 export default function SkillDetailsPage(): JSX.Element {
   const styles = useStyles();
   const { id } = useParams();
-
   const skill = getSkill(id);
+  useUpdateTitle(skill?.name || "Oops!")
   
   if (!skill) {
     return (

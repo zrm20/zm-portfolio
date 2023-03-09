@@ -12,6 +12,7 @@ import { SkillItem } from "../../skills";
 import { getSkill } from "../../../database/Skills";
 import { getProjects } from "../../../database/Projects";
 import { ProjectList } from "../../projects";
+import { useUpdateTitle } from "../../../hooks";
 
 interface ExperienceDetailsPageProps {
 
@@ -21,6 +22,7 @@ export default function ExperienceDetailsPage(props: ExperienceDetailsPageProps)
   const styles = useStyles();
   const { id } = useParams();
   const experience = getExperience(id);
+  useUpdateTitle(experience?.company || "Oops!");
 
   if (!experience) {
     return (

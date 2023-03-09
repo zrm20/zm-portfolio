@@ -14,11 +14,13 @@ import ProjectLinks from "../ProjectLinks/ProjectLinks";
 import projectHasLinks from "../../../utils/projectHasLinks";
 import { ExperienceCard } from "../../experience";
 import { getExperience } from "../../../database/Experiences";
+import { useUpdateTitle } from "../../../hooks";
 
 export default function ProjectDetailsPage(): JSX.Element {
   const styles = useStyles();
   const { id } = useParams();
   const project = getProject(id);
+  useUpdateTitle(project?.title || "Oops!")
 
   if (!project) {
     return (

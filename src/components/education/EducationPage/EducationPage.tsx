@@ -6,6 +6,7 @@ import EducationCard from "../EducationCard/EducationCard";
 import { SectionContainer } from "../../ui";
 import { certificates, degrees } from "../../../database/Education";
 import { FadeIn } from "../../animations";
+import { useUpdateTitle } from "../../../hooks";
 
 interface EducationPageProps {
 
@@ -13,6 +14,7 @@ interface EducationPageProps {
 
 export default function EducationPage(props: EducationPageProps): JSX.Element {
   const styles = useStyles();
+  useUpdateTitle("ZM - Education");
 
   return (
     <Box sx={styles.root} component={FadeIn}>

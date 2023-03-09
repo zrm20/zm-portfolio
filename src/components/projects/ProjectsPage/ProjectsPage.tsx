@@ -18,11 +18,13 @@ import { getProjects } from "../../../database/Projects";
 import useStyles from "./ProjectsPage.styles";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { FadeIn } from "../../animations";
+import { useUpdateTitle } from "../../../hooks";
 
 export default function ProjectsPage(): JSX.Element {
   const styles = useStyles();
   const [category, setCategory] = useState<ProjectCategory | "All">("All");
   const [searchText, setSearchText] = useState<string>('');
+  useUpdateTitle("ZM - Projects");
 
   function handleChangeCategory(evt: React.MouseEvent, value: string): void {
     if (value === "All" || value === "Dev" || value === "Audio") {

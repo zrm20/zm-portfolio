@@ -6,12 +6,14 @@ import { Close } from "@mui/icons-material";
 import { FadeIn } from "../../animations";
 import { getSkills } from "../../../database/Skills";
 import SkillListItem from "../SkillListItem/SkillListItem";
+import { useUpdateTitle } from "../../../hooks";
 
 export default function SkillsPage(): JSX.Element {
   const [category, setCategory] = useState<SkillCategory | "All">("All");
   const [searchText, setSearchText] = useState<string>("");
   const styles = useStyles();
   const skills = getSkills();
+  useUpdateTitle("ZM - Skills")
 
   function handleChangeCategory(evt: React.MouseEvent<HTMLElement, MouseEvent>, value: string): void {
     if(value === "All" || value === "Dev" || value === "Audio") {

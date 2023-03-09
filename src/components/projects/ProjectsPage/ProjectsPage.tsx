@@ -57,8 +57,6 @@ export default function ProjectsPage(): JSX.Element {
       <Paper sx={styles.container}>
         <Typography variant="h2">Projects</Typography>
 
-        <Box sx={styles.categorySelector}>
-          <Typography component="label" htmlFor="category">Category</Typography>
           <ToggleButtonGroup
             id="category"
             value={category}
@@ -69,10 +67,8 @@ export default function ProjectsPage(): JSX.Element {
             <ToggleButton value="Audio">Audio</ToggleButton>
             <ToggleButton value="Dev">Dev</ToggleButton>
           </ToggleButtonGroup>
-        </Box>
 
         <TextField 
-          sx={styles.searchbar}
           placeholder="Search Projects"
           value={searchText}
           onChange={handleChangeText}

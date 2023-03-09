@@ -10,6 +10,7 @@ interface SkillItemProps {
   size?: number;
   iconStyle?: CSSProperties;
   textStyle?: CSSProperties;
+  hideLabel?: boolean;
 };
 
 export default function SkillItem(props: SkillItemProps): JSX.Element {
@@ -25,7 +26,10 @@ export default function SkillItem(props: SkillItemProps): JSX.Element {
         <i className={skill.icon} />
       </Box>
 
-      <Typography sx={styles.text} variant="caption">{skill.name}</Typography>
+      {
+        !props.hideLabel &&
+        <Typography sx={styles.text} variant="caption">{skill.name}</Typography>
+      }
     </Box>
   );
 };

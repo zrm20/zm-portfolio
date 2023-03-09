@@ -4,7 +4,6 @@ interface Style {
   root: SxProps;
   container: SxProps;
   categorySelector: SxProps;
-  searchbar: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -23,8 +22,17 @@ export default function useStyles(): Style {
       flexDirection: 'column',
       alignItems: 'center',
       width: '95%',
+      maxWidth: 900,
       '& h2': {
         textAlign: 'center'
+      },
+      "& .MuiToggleButtonGroup-root": {
+        mt: 1
+      },
+      "& .MuiTextField-root": {
+        mt: 2,
+        width: '100%',
+        maxWidth: 600
       }
     },
     categorySelector: {
@@ -32,11 +40,6 @@ export default function useStyles(): Style {
       flexDirection: 'column',
       alignItems: 'center',
       mt: 2
-    },
-    searchbar: {
-      mt: 2,
-      width: '100%',
-      maxWidth: 600,
     }
   }
 };

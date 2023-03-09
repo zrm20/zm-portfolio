@@ -1,4 +1,4 @@
-import { SxProps, useTheme } from "@mui/material";
+import { SxProps } from "@mui/material";
 
 interface Style {
   root: SxProps;
@@ -11,7 +11,6 @@ interface Style {
 };
 
 export default function useStyles(): Style {
-  const { palette } = useTheme();
 
   return {
     root: {

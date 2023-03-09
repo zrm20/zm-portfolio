@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Box, Link } from "@mui/material";
+import { Paper, Typography, Box, Link, LinearProgress } from "@mui/material";
 
 import useStyles from "./EducationCard.styles";
 import { getMonthAndYearString } from "../../../utils/dateStrings";
@@ -15,7 +15,7 @@ function DegreeCard(props: { degree: Degree, id: string }): JSX.Element {
     <Paper sx={styles.root} >
       <Typography variant="h3">{degree.school.name}</Typography>
       <Typography variant="subtitle1" sx={styles.city}>{degree.school.city}, {degree.school.state}</Typography>
-      
+
       <Box sx={styles.logoContainer}>
         <img
           src={degree.school.logo}
@@ -62,15 +62,19 @@ function CertificateCard(props: { certificate: Certificate, id: string }): JSX.E
       </Box>
       <Typography variant="h6" sx={styles.certTitle}>{certificate.courseName}</Typography>
 
-      {
-        Boolean(certificate.url) &&
-        <Box sx={styles.certUrlContainer}>
-          <img
-            src={certificate.url}
-            alt={certificate.courseName}
-          />
-        </Box>
-      }
+      <Box sx={styles.certUrlContainer}>
+        {
+          Boolean(certificate.url) ?
+            <img
+              src={certificate.url}
+              alt={certificate.courseName}
+            /> :
+            <>
+              <Typography variant="caption">Course in progress</Typography>
+              <LinearProgress />
+            </>
+        }
+      </Box>
       {
         Boolean(certificate.courseLink) &&
         <Link href={certificate.courseLink} target="_blank" >Visit Course</Link>
@@ -80,8 +84,8 @@ function CertificateCard(props: { certificate: Certificate, id: string }): JSX.E
 };
 
 export default function EducationCard(props: EducationCardProps): JSX.Element {
-  if("degree" in props.education.details) {
-    return <DegreeCard degree={props.education.details} id={props.education.id}/>
+  if ("degree" in props.education.details) {
+    return <DegreeCard degree={props.education.details} id={props.education.id} />
   }
 
   return <CertificateCard certificate={props.education.details} id={props.education.id} />

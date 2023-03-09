@@ -60,9 +60,16 @@ export default function useStyles(): Style {
     },
     certUrlContainer: {
       width: '100%',
+      flex: 1,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
       '& img': {
         width: '100%',
         borderRadius: 3
+      },
+      "& .MuiTypography-root": {
+        mb: 2
       }
     },
     certTitle: {

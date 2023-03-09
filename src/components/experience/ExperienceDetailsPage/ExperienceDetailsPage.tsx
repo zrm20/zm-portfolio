@@ -4,9 +4,13 @@ import { Box, Link, Paper, Typography } from "@mui/material";
 import { Help, List as ListIcon } from "@mui/icons-material";
 
 import { FadeIn } from "../../animations";
-import { ButtonLink, SectionContainer } from "../../ui";
+import { ButtonLink, CollapsingText, SectionContainer } from "../../ui";
 import useStyles from "./ExperienceDetailsPage.styles";
 import { getExperience } from "../../../database/Experiences";
+import { SkillItem } from "../../skills";
+import { getSkill } from "../../../database/Skills";
+import { getProjects } from "../../../database/Projects";
+import { ProjectList } from "../../projects";
 
 interface ExperienceDetailsPageProps {
 
@@ -50,15 +54,27 @@ export default function ExperienceDetailsPage(props: ExperienceDetailsPageProps)
         }
 
         <SectionContainer title="About" id="about" >
-
+          <CollapsingText sx={styles.aboutText} collapsedSize={100}>
+            {experience.description}
+          </CollapsingText>
         </SectionContainer>
 
-        <SectionContainer title="Skills Used" id="skills" >
+        <SectionContainer title="Skills Used" id="skills" containerSx={styles.skillsSection}>
+          {
+            experience.skills.map(skillId => {
+              const skill = getSkill(skillId);
+              
+              if(!skill) {
+                return <></>
+              };
 
+              return <SkillItem skill={skill} key={skill.id} size={75}/>
+            })
+          }
         </SectionContainer>
 
-        <SectionContainer title="Projects" id="projects">
-
+        <SectionContainer title="Projects" id="projects" containerSx={styles.projectsSection}>
+          <ProjectList projects={getProjects(proj => proj.experienceId === experience.id)}/>
         </SectionContainer>
 
         <ButtonLink 

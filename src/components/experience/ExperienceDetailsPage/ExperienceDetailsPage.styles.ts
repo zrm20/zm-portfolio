@@ -6,6 +6,9 @@ interface Style {
   errorContainer: SxProps;
   imgContainer: SxProps;
   backButton: SxProps;
+  aboutText: SxProps;
+  skillsSection: SxProps;
+  projectsSection: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -54,6 +57,19 @@ export default function useStyles(): Style {
       position: "fixed",
       bottom: 10,
       zIndex: 100
+    },
+    aboutText: {
+      textAlign: 'left'
+    },
+    skillsSection: {
+      display: "flex",
+      justifyContent: 'center',
+      flexWrap: 'wrap'
+    },
+    projectsSection: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
     }
   }
 };

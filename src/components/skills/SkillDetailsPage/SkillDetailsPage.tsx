@@ -18,7 +18,7 @@ export default function SkillDetailsPage(): JSX.Element {
   const { id } = useParams();
   const skill = getSkill(id);
   useUpdateTitle(skill?.name || "Oops!")
-  
+
   if (!skill) {
     return (
       <Box sx={styles.root} component={FadeIn}>
@@ -34,7 +34,7 @@ export default function SkillDetailsPage(): JSX.Element {
       </Box>
     )
   }
-  
+
   const projects = getProjects(proj => proj.skills.includes(skill.id))
 
   return (
@@ -48,24 +48,23 @@ export default function SkillDetailsPage(): JSX.Element {
           <i className={skill.icon}></i>
         </Box>
 
-        {
-          skill.relatedEducation.length > 0 &&
-          <SectionContainer title="Related Education" id="education" containerSx={styles.listContainer}>
-            <List sx={styles.edList}>
-              {
+        <SectionContainer title="Related Education" id="education" containerSx={styles.listContainer}>
+          <List sx={styles.edList}>
+            {
+              skill.relatedEducation.length > 0 ?
                 skill.relatedEducation.map(educationId => {
                   const education = getEducation(educationId);
 
-                  if(!education) {
+                  if (!education) {
                     return <></>
                   }
 
                   return <EducationListItem education={education} key={education.id} />
-                })
+                }) :
+                <Typography>No formal certificates or education related to {skill.name} yet.</Typography>
               }
-            </List>
-          </SectionContainer>
-        }
+          </List>
+        </SectionContainer>
         {
           projects.length > 0 &&
           <SectionContainer title="Projects" id="projects" containerSx={styles.listContainer}>

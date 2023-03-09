@@ -4,6 +4,7 @@ import { AudioPage } from "../../components/audio";
 import { DevPage } from "../../components/dev";
 import DevResumePage from "../../components/dev/DevResumePage";
 import EducationPage from "../../components/education/EducationPage/EducationPage";
+import { ExperienceDetailsPage, ExperiencePage } from "../../components/experience";
 
 import { Home } from "../../components/home";
 import { ProjectDetailsPage, ProjectsPage } from "../../components/projects";
@@ -20,8 +21,8 @@ export default function AppNavigator(): JSX.Element {
       <Route path="/resume" element={<DevResumePage />} />
       <Route path="/projects" element={<ProjectsPage />} />
       <Route path="/projects/:id" element={<ProjectDetailsPage />} />
-      {/* <Route path="/experiences" />
-      <Route path="/experiences/:id" /> */}
+      <Route path="/experience" element={<ExperiencePage />}/>
+      <Route path="/experience/:id" element={<ExperienceDetailsPage />}/>
       <Route path="/education" element={<EducationPage />}/>
       <Route path="/skills" element={<SkillsPage />}/>
       <Route path="/skills/:id" element={<SkillDetailsPage />} />

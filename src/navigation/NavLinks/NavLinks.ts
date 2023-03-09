@@ -37,12 +37,12 @@ const navLinks: NavLink[] = [
     isExternalLink: false,
     isPrimary: false,
   },
-  // {
-  //   label: "Experience",
-  //   to: "/experience",
-  //   isExternalLink: false,
-  //   isPrimary: false,
-  // },
+  {
+    label: "Experience",
+    to: "/experience",
+    isExternalLink: false,
+    isPrimary: false,
+  },
   {
     label: "Education",
     to: "/education",

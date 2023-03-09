@@ -16,6 +16,8 @@ import { useFormik } from "formik";
 import ReCaptcha from "react-google-recaptcha";
 
 import useStyles from "./ContactForm.styles";
+import captchaSiteKey from "../../../constants/captchaSiteKey";
+import contactFormSchema from "./ContactForm.schema";
 
 interface ContactFormProps {
   setSuccess(value: boolean): void;
@@ -32,6 +34,7 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
         body: "",
         captcha: null
       },
+      validationSchema: contactFormSchema,
       onSubmit: (values) => {
         formik.setSubmitting(true);
         formik.setStatus(null);
@@ -60,12 +63,18 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
           id="name"
           value={values["name"]}
           onChange={handleChange}
+          onBlur={formik.handleBlur}
+          error={Boolean(formik.errors["name"]) && formik.touched["name"]}
+          helperText={formik.errors["name"]}
         />
         <TextField
           label="Email"
           id="email"
           value={values["email"]}
           onChange={handleChange}
+          error={Boolean(formik.errors["email"]) && formik.touched["email"]}
+          onBlur={formik.handleBlur}
+          helperText={formik.errors["email"]}
         />
 
         <FormControl>
@@ -96,7 +105,7 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
         
         
         <ReCaptcha
-          sitekey={process.env.REACT_APP_CAPTCHA_SITEKEY!}
+          sitekey={captchaSiteKey}
           onChange={handleCaptchaChange}
           id="captcha"
           theme="dark"

@@ -26,6 +26,12 @@ const navLinks: NavLink[] = [
     isPrimary: true
   },
   {
+    label: "Contact",
+    to: "/contact",
+    isExternalLink: false,
+    isPrimary: true
+  },
+  {
     label: "Skills",
     to: "/skills",
     isExternalLink: false,

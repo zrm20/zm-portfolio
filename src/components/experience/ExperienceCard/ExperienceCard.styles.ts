@@ -7,6 +7,7 @@ interface Style {
   company: SxProps;
   titles: SxProps;
   dates: SxProps;
+  detailsBtn: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -45,6 +46,14 @@ export default function useStyles(): Style {
       width: '100%',
       mb: 1,
       justifyContent: 'space-between'
+    },
+    detailsBtn: {
+      position: "absolute",
+      right: 0,
+      '& svg': {
+        color: 'text.secondary',
+        fontSize: '2rem'
+      }
     }
   }
 };

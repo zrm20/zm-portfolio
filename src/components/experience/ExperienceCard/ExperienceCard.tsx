@@ -3,6 +3,9 @@ import { Box, Button, Card, CardContent, Collapse, Stack, Typography } from "@mu
 import { v4 as uuid } from "uuid";
 
 import useStyles from "./ExperienceCard.styles";
+import { getMonthAndYearString } from "../../../utils/dateStrings";
+import { IconLink } from "../../ui";
+import { Info } from "@mui/icons-material";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -20,6 +23,9 @@ export default function ExperienceCard(props: ExperienceCardProps): JSX.Element 
   return (
     <Card sx={styles.root}>
       <CardContent>
+        <IconLink to={`/experience/${experience.id}`} sx={styles.detailsBtn}>
+          <Info />
+        </IconLink>
         <img
           src={experience.logo}
           alt={experience.company}
@@ -36,11 +42,11 @@ export default function ExperienceCard(props: ExperienceCardProps): JSX.Element 
           }
         </Box>
         <Stack direction="row" sx={styles.dates}>
-          <Typography variant="caption">Started: {experience.startDate.toLocaleDateString()}</Typography>
+          <Typography variant="caption">Started: {getMonthAndYearString(experience.startDate)}</Typography>
           {
             experience.endDate ?
-              <Typography variant="caption">To: {experience.endDate.toLocaleDateString()}</Typography> :
-              <Typography variant="caption">To Present</Typography>
+              <Typography variant="caption">To: {getMonthAndYearString(experience.endDate)}</Typography> :
+              <Typography variant="caption">To: Present</Typography>
           }
         </Stack>
 

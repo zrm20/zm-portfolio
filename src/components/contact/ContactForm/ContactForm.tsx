@@ -90,6 +90,7 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
             <MenuItem value="General Inquiry">General Inquiry</MenuItem>
             <MenuItem value="Software Work">Software Work</MenuItem>
             <MenuItem value="Audio Work">Audio Work</MenuItem>
+            <MenuItem value="Request References">Request References</MenuItem>
             <MenuItem value="Trail Pack Pro App">Trail Pack Pro App</MenuItem>
           </Select>
         </FormControl>

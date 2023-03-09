@@ -37,7 +37,7 @@ export default function NavBar(props: NavBarProps): JSX.Element {
   };
 
   return (
-    <AppBar position='static' >
+    <AppBar position="sticky" >
       <Toolbar sx={styles.root} component="nav">
         <Box component={RouterLink} to='/' sx={styles.logoContainer}>
           <img src={zmLogo} alt='ZM Logo' style={styles.logo} />

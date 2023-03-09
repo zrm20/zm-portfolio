@@ -8,7 +8,7 @@ interface EducationCardProps {
   education: Education
 };
 
-function DegreeCard(props: { degree: Degree }): JSX.Element {
+function DegreeCard(props: { degree: Degree, id: string }): JSX.Element {
   const styles = useStyles();
   const { degree } = props;
   return (
@@ -48,7 +48,7 @@ function DegreeCard(props: { degree: Degree }): JSX.Element {
   );
 };
 
-function CertificateCard(props: { certificate: Certificate }): JSX.Element {
+function CertificateCard(props: { certificate: Certificate, id: string }): JSX.Element {
   const styles = useStyles();
   const { certificate } = props;
 
@@ -80,11 +80,9 @@ function CertificateCard(props: { certificate: Certificate }): JSX.Element {
 };
 
 export default function EducationCard(props: EducationCardProps): JSX.Element {
-  const { type } = props.education;
-
-  if(type === "degree") {
-    return <DegreeCard degree={props.education.details as Degree}/>
+  if("degree" in props.education.details) {
+    return <DegreeCard degree={props.education.details} id={props.education.id}/>
   }
 
-  return <CertificateCard certificate={props.education.details as Certificate} />
+  return <CertificateCard certificate={props.education.details} id={props.education.id} />
 };

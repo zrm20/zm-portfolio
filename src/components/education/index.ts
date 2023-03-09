@@ -3,5 +3,5 @@ import EducationListItem from "./EducationListItem/EducationListItem";
 
 export {
   EducationCard,
-  EducationListItem
+  EducationListItem,
 };

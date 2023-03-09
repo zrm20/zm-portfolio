@@ -43,12 +43,12 @@ const navLinks: NavLink[] = [
   //   isExternalLink: false,
   //   isPrimary: false,
   // },
-  // {
-  //   label: "Education",
-  //   to: "/education",
-  //   isExternalLink: false,
-  //   isPrimary: false
-  // }
+  {
+    label: "Education",
+    to: "/education",
+    isExternalLink: false,
+    isPrimary: false
+  }
 ];
 
 export const primaryLinks = navLinks.filter(link => link.isPrimary);

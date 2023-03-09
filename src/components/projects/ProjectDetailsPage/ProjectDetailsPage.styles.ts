@@ -63,7 +63,8 @@ export default function useStyles(): Style {
     },
     backButton: {
       position: "fixed",
-      bottom: 10
+      bottom: 10,
+      zIndex: 100
     },
     experienceSection: {
       display: 'flex',

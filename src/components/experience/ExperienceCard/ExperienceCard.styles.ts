@@ -20,11 +20,14 @@ export default function useStyles(): Style {
       '& .MuiCardContent-root': {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        '& a': {
+          width: '50%',
+        }
       }
     },
     logo: {
-      width: '50%',
+      width: '100%',
       borderRadius: 10
     },
     company: {
@@ -49,7 +52,7 @@ export default function useStyles(): Style {
     },
     detailsBtn: {
       position: "absolute",
-      right: 0,
+      right: 10,
       '& svg': {
         color: 'text.secondary',
         fontSize: '2rem'

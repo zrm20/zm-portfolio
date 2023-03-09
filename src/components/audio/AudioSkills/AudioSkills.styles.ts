@@ -23,7 +23,9 @@ export default function useStyles(): Style {
     list: {
       width: '100%',
       '& .MuiListItem-root': {
-        textAlign: 'center'
+        textAlign: 'center',
+        borderBottom: 1,
+        borderBottomColor: 'grey.800'
       }
     }
   }

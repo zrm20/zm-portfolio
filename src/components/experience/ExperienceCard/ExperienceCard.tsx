@@ -3,8 +3,8 @@ import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 
 import useStyles from "./ExperienceCard.styles";
 import { getMonthAndYearString } from "../../../utils/dateStrings";
-import { CollapsingText, IconLink } from "../../ui";
-import { Info } from "@mui/icons-material";
+import { CollapsingText } from "../../ui";
+import { Link } from "react-router-dom";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -14,17 +14,18 @@ export default function ExperienceCard(props: ExperienceCardProps): JSX.Element 
   const styles = useStyles();
   const { experience } = props;
 
+  const linkString = `/experience/${experience.id}`;
+
   return (
     <Card sx={styles.root}>
       <CardContent>
-        <IconLink to={`/experience/${experience.id}`} sx={styles.detailsBtn}>
-          <Info />
-        </IconLink>
-        <img
-          src={experience.logo}
-          alt={experience.company}
-          style={styles.logo}
-        />
+        <Link to={linkString}>
+          <img
+            src={experience.logo}
+            alt={experience.company}
+            style={styles.logo}
+          />
+        </Link>
         <Typography variant="h5" sx={styles.company}>{experience.company}</Typography>
         <Box sx={styles.titles}>
           {

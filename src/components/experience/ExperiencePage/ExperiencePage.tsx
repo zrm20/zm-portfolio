@@ -24,10 +24,10 @@ export default function ExperiencePage(props: ExperiencePageProps): JSX.Element 
         <List>
           {
             experiences.map(exp => (
-              <>
-                <ExperienceCard experience={exp} key={exp.id} />
-                <Divider key={uuid()} />
-              </>
+              <React.Fragment key={uuid()}>
+                <ExperienceCard experience={exp} />
+                <Divider />
+              </React.Fragment>
             ))
           }
         </List>

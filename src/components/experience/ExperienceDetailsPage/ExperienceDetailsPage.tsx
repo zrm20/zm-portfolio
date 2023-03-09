@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Box, Link, Paper, Typography } from "@mui/material";
 import { Help, List as ListIcon } from "@mui/icons-material";
+import { v4 as uuid } from "uuid";
 
 import { FadeIn } from "../../animations";
 import { ButtonLink, CollapsingText, SectionContainer } from "../../ui";
@@ -65,7 +66,7 @@ export default function ExperienceDetailsPage(props: ExperienceDetailsPageProps)
               const skill = getSkill(skillId);
               
               if(!skill) {
-                return <></>
+                return <React.Fragment key={uuid()}></React.Fragment>
               };
 
               return <SkillItem skill={skill} key={skill.id} size={75}/>

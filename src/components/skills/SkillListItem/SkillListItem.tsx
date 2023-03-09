@@ -16,7 +16,7 @@ export default function SkillListItem(props: SkillListItemProps): JSX.Element {
     <ListItem sx={styles.root}>
       <ListItemButton component={Link} to={`/skills/${skill.id}`}>
         <ListItemAvatar>
-          <SkillItem skill={skill} size={50} hideLabel />
+          <SkillItem skill={skill} size={50} hideLabel noLink />
         </ListItemAvatar>
         <ListItemText primary={skill.name} />
       </ListItemButton>

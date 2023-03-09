@@ -69,7 +69,7 @@ export default function ProjectDetailsPage(): JSX.Element {
               const skill = getSkill(skillId);
 
               if(!skill)  {
-                return <></>
+                return <React.Fragment key={uuid()} />
               };
 
               return <SkillItem skill={skill} key={uuid()} size={75} />

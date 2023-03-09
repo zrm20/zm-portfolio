@@ -1,6 +1,5 @@
-import { ListItem, ListItemAvatar, ListItemButton, ListItemText } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { ListItem, ListItemAvatar, ListItemText } from "@mui/material";
 import useStyles from "./EducationListItem.styles";
 
 interface EducationListItemProps {
@@ -15,15 +14,13 @@ export default function EducationListItem(props: EducationListItemProps): JSX.El
     // This is a degree
     return (
       <ListItem>
-        <ListItemButton component={Link} to={`/education/${education.id}`}>
-          <ListItemAvatar sx={styles.logoContainer}>
-            <img src={education.details.school.logo} alt={education.details.school.name} />
-          </ListItemAvatar>
-          <ListItemText
-            primary={education.details.school.name}
-            secondary={education.details.degree + (education.details.major ? ` - ${education.details.major}` : null)}
-          />
-        </ListItemButton>
+        <ListItemAvatar sx={styles.logoContainer}>
+          <img src={education.details.school.logo} alt={education.details.school.name} />
+        </ListItemAvatar>
+        <ListItemText
+          primary={education.details.school.name}
+          secondary={education.details.degree + (education.details.major ? ` - ${education.details.major}` : null)}
+        />
       </ListItem>
     )
   }
@@ -31,15 +28,13 @@ export default function EducationListItem(props: EducationListItemProps): JSX.El
   // This is a certificate
   return (
     <ListItem sx={styles.root}>
-      <ListItemButton component={Link} to={`/education/${education.id}`}>
-        <ListItemAvatar sx={styles.logoContainer}>
-          <img src={education.details.issuerLogo} alt={education.details.issuer} />
-        </ListItemAvatar>
-        <ListItemText
-          primary={education.details.courseName}
-          secondary={education.details.issuer}
-        />
-      </ListItemButton>
+      <ListItemAvatar sx={styles.logoContainer}>
+        <img src={education.details.issuerLogo} alt={education.details.issuer} />
+      </ListItemAvatar>
+      <ListItemText
+        primary={education.details.courseName}
+        secondary={education.details.issuer}
+      />
     </ListItem>
   );
 };

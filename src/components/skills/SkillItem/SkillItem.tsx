@@ -11,6 +11,7 @@ interface SkillItemProps {
   iconStyle?: CSSProperties;
   textStyle?: CSSProperties;
   hideLabel?: boolean;
+  noLink?: boolean;
 };
 
 export default function SkillItem(props: SkillItemProps): JSX.Element {
@@ -21,7 +22,7 @@ export default function SkillItem(props: SkillItemProps): JSX.Element {
   const styles = useStyles({ size });
 
   return (
-    <Box sx={styles.root} component={Link} to={`/skills/${skill.id}`}>
+    <Box sx={styles.root} component={!props.noLink ? Link : 'div'} to={`/skills/${skill.id}`}>
       <Box sx={styles.iconContainer}>
         <i className={skill.icon} />
       </Box>

@@ -88,10 +88,10 @@ export default function ProjectsPage(): JSX.Element {
         <List>
           {
             textFilteredProjects.map(proj => (
-              <>
-                <ProjectCard project={proj} key={uuid()}/>
-                <Divider key={uuid()} />
-              </>
+              <React.Fragment key={uuid()}>
+                <ProjectCard project={proj} />
+                <Divider />
+              </React.Fragment>
             ))
           }
         </List>

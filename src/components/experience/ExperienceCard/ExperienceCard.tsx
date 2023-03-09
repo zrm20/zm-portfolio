@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { Box, Button, Card, CardContent, Collapse, Stack, Typography } from "@mui/material";
-import { v4 as uuid } from "uuid";
+import React from "react";
+import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 
 import useStyles from "./ExperienceCard.styles";
 import { getMonthAndYearString } from "../../../utils/dateStrings";
-import { IconLink } from "../../ui";
+import { CollapsingText, IconLink } from "../../ui";
 import { Info } from "@mui/icons-material";
 
 interface ExperienceCardProps {
@@ -13,12 +12,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard(props: ExperienceCardProps): JSX.Element {
   const styles = useStyles();
-  const [showMore, setShowMore] = useState<boolean>(false);
   const { experience } = props;
-
-  function toggleShowMore(): void {
-    setShowMore(!showMore);
-  };
 
   return (
     <Card sx={styles.root}>
@@ -50,13 +44,9 @@ export default function ExperienceCard(props: ExperienceCardProps): JSX.Element 
           }
         </Stack>
 
-        <Collapse in={showMore} collapsedSize={100}>
-          {
-            experience.description.split('\n')
-              .map(p => <Typography gutterBottom key={uuid()}>{p}</Typography>)
-          }
-        </Collapse>
-        <Button color="secondary" onClick={toggleShowMore}>{showMore ? "Show Less" : "Show More"}</Button>
+        <CollapsingText collapsedSize={100}>
+          {experience.description.split('\n')}
+        </CollapsingText>
       </CardContent>
     </Card>
   );

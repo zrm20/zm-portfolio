@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Box, Collapse, Button, Paper, Typography } from "@mui/material";
+import React from "react";
+import { Box, Paper, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 
 import { getProject } from "../../../database/Projects";
 import useStyles from "./ProjectDetailsPage.styles";
 import {  Help, List } from "@mui/icons-material";
-import { ButtonLink, SectionContainer } from "../../ui";
+import { ButtonLink, CollapsingText, SectionContainer } from "../../ui";
 import { SkillItem } from "../../skills";
 import { FadeIn } from "../../animations";
 import { getSkill } from "../../../database/Skills";
@@ -17,13 +17,8 @@ import { getExperience } from "../../../database/Experiences";
 
 export default function ProjectDetailsPage(): JSX.Element {
   const styles = useStyles();
-  const [showMore, setShowMore] = useState<boolean>(false);
   const { id } = useParams();
   const project = getProject(id);
-
-  function toggleShowMore(): void {
-    setShowMore(!showMore);
-  };
 
   if (!project) {
     return (
@@ -63,14 +58,9 @@ export default function ProjectDetailsPage(): JSX.Element {
         }
 
         <SectionContainer title="Description" id="description">
-          <Collapse in={showMore} sx={styles.description} collapsedSize={100}>
-            {
-              project.description.split('\n')
-                .map(p => <Typography gutterBottom key={uuid()}>{p}</Typography>)
-            }
-          </Collapse>
-
-          <Button color="secondary" onClick={toggleShowMore}>{showMore ? "Show Less" : "Show More"}</Button>
+          <CollapsingText collapsedSize={100} textProps={{ sx: styles.description }}>
+            {project.description.split('\n')}
+          </CollapsingText>
         </SectionContainer>
 
         <SectionContainer title="Skills Utilized" id="skills" containerSx={styles.skillsSection}>

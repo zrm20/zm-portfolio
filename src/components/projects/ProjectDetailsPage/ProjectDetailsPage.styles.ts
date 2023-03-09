@@ -53,7 +53,7 @@ export default function useStyles(): Style {
       }
     },
     description: {
-      textAlign: 'left'
+      textAlign: 'left',
     },
     skillsSection: {
       display: 'flex',

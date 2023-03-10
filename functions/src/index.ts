@@ -1,18 +1,19 @@
 import * as functions from "firebase-functions";
 import axios from "axios";
+const FormData = require("form-data");
 
-export const contactZach = functions.https.onRequest(
-  async (req, res): Promise<any> => {
-    if (req.method !== "POST") {
-      return res.status(400).json({ success: false, msg: "Invalid request method" });
-    }
+interface Response {
+  success: boolean,
+  message?: string
+};
 
-    const { captcha, name, email, subject, body } = JSON.parse(req.body);
+export const submitContactForm = functions.https.onCall(
+  async (contactFormData): Promise<Response> => {
+    const { captcha, name, email, subject, body } = contactFormData;
 
     if (!captcha) {
-      return res.status(400)
-        .json({ success: false, msg: "Missing captcha field in request body" });
-    }
+      return { success: false };
+    };
 
     const captchaVerifyUrl =
       "https://www.google.com/recaptcha/api/siteverify";
@@ -26,11 +27,11 @@ export const contactZach = functions.https.onRequest(
       });
 
       if (!data.success) {
-        return res.status(400).json({ success: false, msg: "Captcha failed" });
+        return { success: false, message: "Captcha failed" };
       }
     } catch (error) {
       console.error("Error verifying captcha:", error);
-      return res.status(500).send("Internal server error");
+      return { success: false, message: "Internal server error" };
     }
 
     const formData = new FormData();
@@ -48,13 +49,13 @@ export const contactZach = functions.https.onRequest(
     try {
       const response = await axios.post(googleFormUrl, formData, { headers })
 
-      if(response.status !== 200) {
-        return res.status(response.status || 500).json({ success: false, msg: "Failed to send message" });
+      if (response.status !== 200) {
+        return { success: false, message: "Failed to send message" };
       }
     } catch (error) {
       console.error("Error posting form data", error);
-      return res.status(500).json({ success: false, msg: "Failed to send message" });
+      return { success: false, message: "Failed to send message" };
     }
 
-    return res.status(200).json({ success: true, data: formData.values.toString() });
+    return { success: true };
   });

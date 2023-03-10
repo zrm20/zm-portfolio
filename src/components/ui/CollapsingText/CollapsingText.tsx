@@ -3,12 +3,14 @@ import { Box, Collapse, CollapseProps, IconButton, IconButtonProps, SxProps, Typ
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { v4 as uuid } from "uuid";
 
+import { logEvent } from "../../../config/firebaseConfig";
 import useStyles from "./CollapsingText.styles";
 
 interface CollapsingTextProps extends CollapseProps {
   children: string | string[]
   collapsedSize?: number;
   unhiddenText?: string;
+  analyticsId?: string;
   sx?: SxProps;
   textProps?: TypographyProps;
   unhiddenTextProps?: TypographyProps;
@@ -22,6 +24,9 @@ export default function CollapsingText(props: CollapsingTextProps): JSX.Element 
   const { unhiddenText } = props;
 
   function toggleCollapse(): void {
+    if(isCollapsed) {
+      logEvent("text_expand", { id: props.analyticsId })
+    };
     setIsCollapsed(!isCollapsed);
   };
 

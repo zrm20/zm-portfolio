@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFunctions, httpsCallable } from "firebase/functions";
+import { getAnalytics, logEvent as firebaseLogEvent } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBQIuWVyC9T-o7vAr3i05jDfW9omzAnX6I",
@@ -13,12 +14,23 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 
+// functions
 const firebaseFunctions = getFunctions(firebaseApp);
-
 const submitContactForm = httpsCallable(firebaseFunctions, "submitContactForm");
+
+// analytics
+const firebaseAnalytics = getAnalytics(firebaseApp);
+
+function logEvent(eventName: string, eventParams?: { [key:string]: any }): void {
+  if(process.env.NODE_ENV === "production") {
+    firebaseLogEvent(firebaseAnalytics, eventName, eventParams);
+  };
+};
 
 export {
   firebaseApp,
   firebaseFunctions,
-  submitContactForm
+  firebaseAnalytics,
+  submitContactForm,
+  logEvent
 };

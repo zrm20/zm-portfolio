@@ -1,16 +1,16 @@
 import React from "react";
-import { 
-  Box, 
-  TextField, 
-  Button, 
-  FormControl, 
-  InputLabel, 
-  Select, 
-  MenuItem, 
-  Backdrop, 
-  CircularProgress, 
-  FormHelperText, 
-  Collapse 
+import {
+  Box,
+  TextField,
+  Button,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Backdrop,
+  CircularProgress,
+  FormHelperText,
+  Collapse
 } from "@mui/material";
 import { useFormik } from "formik";
 import ReCaptcha from "react-google-recaptcha";
@@ -18,6 +18,7 @@ import ReCaptcha from "react-google-recaptcha";
 import useStyles from "./ContactForm.styles";
 import captchaSiteKey from "../../../constants/captchaSiteKey";
 import contactFormSchema from "./ContactForm.schema";
+import { submitContactForm } from "../../../config/firebaseConfig";
 
 interface ContactFormProps {
   setSuccess(value: boolean): void;
@@ -38,12 +39,20 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
       onSubmit: (values) => {
         formik.setSubmitting(true);
         formik.setStatus(null);
-        
-        setTimeout(() => {
-          formik.setSubmitting(false);
-          console.log(values);
-          formik.setStatus("Something went wrong");
-        }, 4000);
+
+        submitContactForm(values)
+          .then((res: any) => {
+            formik.setSubmitting(false);
+            if(res.data?.success) {
+              props.setSuccess(true)
+            } else {
+              formik.setStatus(res.data?.message || "Something went wrong")
+            }
+          })
+          .catch(err => {
+            formik.setSubmitting(false);
+            formik.setStatus(err.message || "Something went wrong")
+          });
       }
     }
   );
@@ -103,8 +112,8 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
           multiline
           minRows={10}
         />
-        
-        
+
+
         <ReCaptcha
           sitekey={captchaSiteKey}
           onChange={handleCaptchaChange}
@@ -112,13 +121,13 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
           theme="dark"
           className="captcha-root"
         />
-        
+
         <Collapse in={Boolean(formik.status)}>
           <FormHelperText error>{formik.status}</FormHelperText>
         </Collapse>
 
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           variant="contained"
           disabled={!Boolean(values["captcha"]) && !formik.isSubmitting}
         >

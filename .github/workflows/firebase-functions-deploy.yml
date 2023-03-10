@@ -24,7 +24,7 @@ jobs:
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       run: |
-        firebase use <your-firebase-project-id> --token $FIREBASE_TOKEN
+        firebase use zm-portfolio-7ee5a --token $FIREBASE_TOKEN
 
     - name: Deploy Firebase Functions
       env:

@@ -10,10 +10,11 @@ import { ExperienceDetailsPage, ExperiencePage } from "../../components/experien
 import { Home } from "../../components/home";
 import { ProjectDetailsPage, ProjectsPage } from "../../components/projects";
 import { SkillDetailsPage, SkillsPage } from "../../components/skills";
-import { useScrollToSection } from "../../hooks";
+import { useAnalytics, useScrollToSection } from "../../hooks";
 
 export default function AppNavigator(): JSX.Element {
     useScrollToSection();
+    useAnalytics();
 
   return (
     <Routes>

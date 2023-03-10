@@ -11,7 +11,7 @@ export default function DevBio(): JSX.Element {
   const paragraphs = devBioText.split('\n');
 
   return (
-    <CollapsingText unhiddenText={paragraphs[0]}>
+    <CollapsingText unhiddenText={paragraphs[0]} analyticsId="devBio">
       {paragraphs.slice(1)}
     </CollapsingText>
   );

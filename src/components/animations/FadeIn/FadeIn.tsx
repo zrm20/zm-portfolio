@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from "react";
+import React, { CSSProperties } from "react";
 
 import { motion, MotionProps } from "framer-motion";
 
@@ -8,7 +8,7 @@ interface Props extends MotionProps {
   duration?: number;
   delay?: number;
   style?: CSSProperties;
-  children?: ReactElement<any>;
+  children?: JSX.Element | JSX.Element[] | string;
 };
 
 export default function FadeIn(props: Props): JSX.Element {

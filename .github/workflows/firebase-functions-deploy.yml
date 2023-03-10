@@ -1,0 +1,34 @@
+name: Deploy Firebase Functions
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+
+    - name: Install Firebase CLI
+      run: npm install -g firebase-tools
+
+    - name: Set up Firebase project
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      run: |
+        firebase use <your-firebase-project-id> --token $FIREBASE_TOKEN
+
+    - name: Deploy Firebase Functions
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        RECAPTCHA_SITEKEY: ${{ secrets.RECAPTCHA_SITEKEY }}
+      run: |
+        firebase deploy --only functions --token $FIREBASE_TOKEN --env RECAPTCHA_SITEKEY=$RECAPTCHA_SITEKEY

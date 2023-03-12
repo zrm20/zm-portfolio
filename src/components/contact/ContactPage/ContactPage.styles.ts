@@ -19,8 +19,8 @@ export default function useStyles(): Style {
       alignItems: 'center'
     },
     container: {
-      with: '95%',
-      maxWidth: 600,
+      width: '95%',
+      maxWidth: 700,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

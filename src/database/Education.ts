@@ -120,6 +120,28 @@ const educations: Education[] = [
       description: "I wish I had taken this course so much earlier in my coding journey. Git is such a universally required tool in software and after learning to use it properly I felt so much more comfortable in my ability to work with a team and maintain a full CI/CD workflow.",
       courseLink: "https://www.udemy.com/course/git-and-github-bootcamp/"
     }
+  },
+  {
+    type: "certificate",
+    id: "github_actions",
+    details: {
+      issuer: 'Udemy',
+      issuerLogo: udemyLogo,
+      courseName: "GitHub Actions - The Complete Guide",
+      courseLink: "https://www.udemy.com/course/github-actions-the-complete-guide/",
+      description: "GitHub workflows are such a useful tool when it comes to CI/CD. I found myself always stumbling through CI/CD setup and just copy and pasting YML files that I didn't fully understand. So I sought to fix that by enrolling in this course. Max Schwarzmuller continues to be one of my favorite instructors on Udemy and this course has already proven to be very useful."
+    }
+  },
+  {
+    type: "certificate",
+    id: "react_redux",
+    details: {
+      issuer: "Udemy",
+      issuerLogo: udemyLogo,
+      courseName: "React - The Complete Guide",
+      courseLink: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+      description: "I enrolled in this course already having substantial knowledge and experience with React. However I often enjoy going through courses like this to pick up on new patterns and techniques. I was particularly interested in two different sections in this course, Redux and testing. I had worked with Redux a lot, but I learned it solely off the official documentation, which is great but I really appreciate having an instructor walk through what Redux is doing \"Under-the-hood\". And with testing I had already completed Max's course on JS testing, but I wanted to see some common patterns for front-end testing specifically and this course provided that.",
+    }
   }
 ];
 

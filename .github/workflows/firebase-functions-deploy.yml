@@ -8,27 +8,27 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+      - name: Download Code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16.x'
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
 
-    - name: Install Firebase CLI
-      run: npm install -g firebase-tools
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
 
-    - name: Set up Firebase project
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-      run: |
-        firebase use zm-portfolio-7ee5a --token $FIREBASE_TOKEN
+      - name: Install Dependencies
+        run: |
+          cd ./functions
+          npm ci
 
-    - name: Deploy Firebase Functions
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        RECAPTCHA_SITEKEY: ${{ secrets.RECAPTCHA_SITEKEY }}
-      run: |
-        firebase deploy --only functions --token $FIREBASE_TOKEN --env RECAPTCHA_SITEKEY=$RECAPTCHA_SITEKEY
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with: 
+          args: deploy --only functions
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_CI_TOKEN }}
+          RECAPTCHA_SITEKEY: ${{ secrets.RECAPTCHA_SITEKEY }}

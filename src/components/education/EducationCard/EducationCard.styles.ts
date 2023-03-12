@@ -8,6 +8,7 @@ interface Style {
   certLogoContainer: SxProps;
   certUrlContainer: SxProps;
   certTitle: SxProps;
+  certDescription: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -64,6 +65,7 @@ export default function useStyles(): Style {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      mb: 2, 
       '& img': {
         width: '100%',
         borderRadius: 3
@@ -74,6 +76,10 @@ export default function useStyles(): Style {
     },
     certTitle: {
       my: 1
+    },
+    certDescription: {
+      textAlign: 'left',
+      color: 'text.secondary'
     }
   }
 };

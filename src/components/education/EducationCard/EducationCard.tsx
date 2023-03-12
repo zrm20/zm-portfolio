@@ -3,6 +3,7 @@ import { Paper, Typography, Box, Link, LinearProgress } from "@mui/material";
 
 import useStyles from "./EducationCard.styles";
 import { getMonthAndYearString } from "../../../utils/dateStrings";
+import { CollapsingText } from "../../ui";
 
 interface EducationCardProps {
   education: Education
@@ -75,6 +76,9 @@ function CertificateCard(props: { certificate: Certificate, id: string }): JSX.E
             </>
         }
       </Box>
+      <CollapsingText collapsedSize={50} textProps={{ sx: styles.certDescription }}>
+        {certificate.description}
+      </CollapsingText>
       {
         Boolean(certificate.courseLink) &&
         <Link href={certificate.courseLink} target="_blank" >Visit Course</Link>

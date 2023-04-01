@@ -1,6 +1,5 @@
-import { Avatar, Grid, GridProps, Typography, Box } from "@mui/material";
-import { EmailRounded } from "@mui/icons-material";
 import React from "react";
+import { Avatar, Grid, GridProps, Typography, Box } from "@mui/material";
 
 import useStyles from "./ResumeHeader.styles";
 import headshot from '../../../assets/images/headshot.jpeg';

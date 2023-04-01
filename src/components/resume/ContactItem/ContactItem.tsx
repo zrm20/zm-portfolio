@@ -1,6 +1,5 @@
-import { Box, Link, LinkProps } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
 import React from "react";
+import { Box, Link, LinkProps } from "@mui/material";
 
 import useStyles from "./ContactItem.styles";
 

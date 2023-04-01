@@ -84,7 +84,7 @@ const skills: Skill[] = [
     group: "secondary"
   },
   {
-    id: "material-ui",
+    id: "material_ui",
     name: "Material UI",
     icon: "devicon-materialui-plain",
     category: "Dev",

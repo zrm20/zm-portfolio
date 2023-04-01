@@ -15,37 +15,41 @@ const theme = createTheme(
       h1: {
         fontFamily: 'Aboreto',
         fontWeight: 600,
-        fontSize: '3rem',
+        fontSize: '1.5rem',
       },
       h2: {
         fontFamily: 'Aboreto',
         fontWeight: 600,
-        fontSize: '2.5rem',
+        fontSize: '1.25rem',
       },
       h3: {
         fontFamily: 'Aboreto',
         fontWeight: 600,
-        fontSize: '2rem',
+        fontSize: '1rem',
       },
       h4: {
         fontFamily: 'Aboreto',
         fontWeight: 600,
-        fontSize: '1.75rem',
+        fontSize: '.9rem',
       },
       h5: {
+        fontSize: '.8rem',
         fontFamily: 'Aboreto',
       },
       h6: {
+        fontSize: '.7rem',
         fontFamily: 'Aboreto',
       },
       subtitle1: {
         fontFamily: 'Nunito',
-        fontSize: '1.1rem',
+        fontSize: '.65rem',
       },
       subtitle2: {
+        fontSize: '.65rem',
         fontFamily: 'Nunito',
       },
       body1: {
+        fontSize: '.75rem',
         fontFamily: 'Nunito',
       },
       button: {

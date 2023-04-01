@@ -5,6 +5,7 @@ import { useUpdateTitle } from "../../../hooks";
 import useStyles from "./ResumePage.styles";
 import { FadeIn } from "../../animations";
 import theme from "../../../styles/resumeTheme";
+import Resume from "../Resume/Resume";
 
 interface ResumePageProps {
 
@@ -17,6 +18,7 @@ export default function ResumePage(props: ResumePageProps): JSX.Element {
   return (
     <Box sx={styles.root} component={FadeIn}>
       <ThemeProvider theme={theme}>
+        <Resume />
       </ThemeProvider>
     </Box>
   );

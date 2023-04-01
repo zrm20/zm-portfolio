@@ -1,3 +1,7 @@
+// Icons can be chosen from ..
+// Dev Icons: https://devicon.dev
+// Font awesome: https://fontawesome.com/search?o=r&m=free
+
 const skills: Skill[] = [
   // programming languages
   {
@@ -77,6 +81,24 @@ const skills: Skill[] = [
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
+    group: "secondary"
+  },
+  {
+    id: "material-ui",
+    name: "Material UI",
+    icon: "devicon-materialui-plain",
+    category: "Dev",
+    subcategory: "Front End",
+    relatedEducation: [],
+    group: "secondary"
+  },
+  {
+    id: 'bootstrap',
+    name: "Bootstrap",
+    icon: "devicon-bootstrap-plain",
+    category: "Dev",
+    subcategory: "Front End",
+    relatedEducation: ["web_development_bootcamp"],
     group: "secondary"
   },
 

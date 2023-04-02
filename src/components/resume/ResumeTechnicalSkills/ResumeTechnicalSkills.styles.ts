@@ -10,7 +10,9 @@ export default function useStyles(): Style {
 
   return {
     root: {
-
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between'
     },
     skillsContainer: {
       width: '100%',
@@ -22,7 +24,8 @@ export default function useStyles(): Style {
       }
     },
     footer: {
-      textAlign: 'center'
+      textAlign: 'center',
+      color: 'text.secondary'
     }
   }
 };

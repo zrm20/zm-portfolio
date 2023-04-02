@@ -2,6 +2,7 @@ import { Paper, Grid } from "@mui/material";
 import React from "react";
 import ResumeExperience from "../ResumeExperience/ResumeExperience";
 import ResumeHeader from "../ResumeHeader/ResumeHeader";
+import ResumeQRCodes from "../ResumeQRCodes/ResumeQRCodes";
 import ResumeTechnicalSkills from "../ResumeTechnicalSkills/ResumeTechnicalSkills";
 
 import useStyles from "./Resume.styles";
@@ -22,13 +23,14 @@ export default function Resume(props: ResumeProps): JSX.Element {
       <Grid sx={styles.innerContainer} container spacing={2} >
         <ResumeHeader xs={12} />
         
-        <Grid item xs={4} sx={{ border: '1px solid blue'}} />
-        <ResumeExperience xs={8} experiences={props.experiences} />
+        <Grid item xs={12} md={4} sx={{ border: '1px solid blue'}} />
+        <ResumeExperience xs={12} md={8} experiences={props.experiences} />
 
-        <Grid item xs={5} sx={{ border: '1px solid blue'}} />
+        <ResumeQRCodes xs={12} md={5}/>
 
         <ResumeTechnicalSkills 
-          xs={7} 
+          xs={12} 
+          md={7}
           primarySkills={props.skills.primary}
           secondarySkills={props.skills.secondary}
         />

@@ -28,6 +28,7 @@ export default function useStyles(props: { forPrint: boolean }): Style {
       }
     },
     textContainer: {
+      flex: 1,
       display: 'flex',
       flexDirection: "column",
       ml: {

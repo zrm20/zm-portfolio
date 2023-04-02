@@ -1,5 +1,4 @@
 import { SxProps } from "@mui/material";
-import { display } from "@mui/system";
 
 interface Style {
   root: SxProps;

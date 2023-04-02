@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 interface ResumeSectionTitleProps {
   children: string;
-  to: string;
+  to: string | undefined;
   center?: boolean;
 };
 
@@ -17,9 +17,16 @@ export default function ResumeSectionTitle(props: ResumeSectionTitleProps): JSX.
     textAlign: props.center ? "center" : "start",
   };
 
+  const linkProps = 
+  Boolean(props.to) ? 
+  {
+    component: RouterLink,
+    to: props.to
+  } : {};
+
   return (
     <>
-      <Typography variant="h2" sx={style} component={RouterLink} to={props.to} >
+      <Typography variant="h2" sx={style} {...linkProps}>
         {props.children}
       </Typography>
       <Divider sx={{ mx: 1 }} />

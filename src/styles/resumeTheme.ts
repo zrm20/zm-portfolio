@@ -42,10 +42,10 @@ const theme = createTheme(
       },
       subtitle1: {
         fontFamily: 'Nunito',
-        fontSize: '.65rem',
+        fontSize: '.8rem',
       },
       subtitle2: {
-        fontSize: '.65rem',
+        fontSize: '.7rem',
         fontFamily: 'Nunito',
       },
       body1: {
@@ -63,6 +63,7 @@ const theme = createTheme(
       },
       caption: {
         fontFamily: 'Nunito',
+        fontSize: '.7rem'
       },
     },
   }

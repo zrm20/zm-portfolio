@@ -34,8 +34,8 @@ export default function ResumeAboutMe(props: ResumeAboutMeProps): JSX.Element {
           title="Education"
         >
           <Typography variant="subtitle1"><b>{degree.school.name}</b></Typography>
-          <Typography>{degree.degree}</Typography>
-          <Typography>{degree.major}</Typography>
+          <Typography textAlign="center">{degree.degree}</Typography>
+          <Typography textAlign="center">{degree.major}</Typography>
         </ResumeAboutCardItem>
 
         <ResumeAboutCardItem

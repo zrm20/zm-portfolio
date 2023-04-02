@@ -21,9 +21,13 @@ export default function ResumeAboutCardItem(props: ResumeAboutCardItemProps): JS
         </Box>
         {
           Boolean(props.children) &&
-          <Divider />
+          <>
+            <Divider />
+            <Box sx={styles.childrenContainer}>
+              { props.children }
+            </Box>
+          </>
         }
-        { props.children }
       </CardContent>
     </Card>
   );

@@ -3,6 +3,7 @@ import { SxProps } from "@mui/material";
 interface Style {
   root: SxProps;
   header: SxProps;
+  childrenContainer: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -18,7 +19,8 @@ export default function useStyles(): Style {
         my: 1
       },
       '& .MuiCardContent-root': {
-        p: .75,
+        py: .5,
+        px: .75,
       },
     },
     header: {
@@ -28,6 +30,12 @@ export default function useStyles(): Style {
         mr: 2,
         color: 'primary.main'
       }
+    },
+    childrenContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%'
     }
   }
 };

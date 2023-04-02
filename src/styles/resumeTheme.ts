@@ -14,38 +14,42 @@ const theme = createTheme(
     typography: {
       h1: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
-        fontSize: '3rem',
+        fontWeight: 500,
+        fontSize: '1.5rem',
       },
       h2: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
-        fontSize: '2.5rem',
+        fontWeight: 500,
+        fontSize: '1.25rem',
       },
       h3: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
-        fontSize: '2rem',
+        fontWeight: 500,
+        fontSize: '1rem',
       },
       h4: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
-        fontSize: '1.75rem',
+        fontWeight: 500,
+        fontSize: '.9rem',
       },
       h5: {
+        fontSize: '.8rem',
         fontFamily: 'Aboreto',
       },
       h6: {
+        fontSize: '.7rem',
         fontFamily: 'Aboreto',
       },
       subtitle1: {
         fontFamily: 'Nunito',
-        fontSize: '1.1rem',
+        fontSize: '.8rem',
       },
       subtitle2: {
+        fontSize: '.7rem',
         fontFamily: 'Nunito',
       },
       body1: {
+        fontSize: '.75rem',
         fontFamily: 'Nunito',
       },
       button: {
@@ -59,6 +63,7 @@ const theme = createTheme(
       },
       caption: {
         fontFamily: 'Nunito',
+        fontSize: '.7rem'
       },
     },
   }

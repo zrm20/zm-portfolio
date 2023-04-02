@@ -22,7 +22,8 @@ const experiences: Experience[] = [
     titles: ["Software Developer"],
     startDate: new Date("May 1, 2022"),
     endDate: new Date("September 1, 2022"),
-    description: "Nomi Travel was a start up tech company in Nashville and my first software development position. At Nomi I was responsible for building the web app using React, as well as back-end REST services for the web app. I also built an internal database management app using a full MERN stack that managed database CRUD operations for 3 environments. I also gained experience in test driven development, CI/CD, Heroku deployment and Git actions. Nomi was an excellent start-up with tremendous potential. The company is currently on hold, awaiting further capital.",
+    description: 
+      `At Nomi Travel, I worked as a Full Stack Developer, responsible for building a web application using React and developing back-end REST services with Node.js, Express and MongoDB. I gained experience in creating reusable React components on the front-end, and a maintainable MVC architecture on the back-end.  I implemented test-driven development using Jest, ensuring acceptable code coverage. Nomi helped me develop a thorough understanding of React and its core principles as well as DevOps experience implementing CI/CD using Heroku and GitHub actions. At the fast paced startup environment we practiced Agile methodology and worked to prioritize tasks while remaining flexible.`,
     logo: nomiLogo,
     images: [], // TODO
     skills: ["react", "javascript", "express", "node", "mongodb", "heroku", "react_native"],

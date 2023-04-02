@@ -1,3 +1,7 @@
+// Icons can be chosen from ..
+// Dev Icons: https://devicon.dev
+// Font awesome: https://fontawesome.com/search?o=r&m=free
+
 const skills: Skill[] = [
   // programming languages
   {
@@ -39,7 +43,7 @@ const skills: Skill[] = [
   {
     id: "react",
     name: "React",
-    icon: "devicon-react-original-wordmark",
+    icon: "devicon-react-original",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: ["mern"],
@@ -48,7 +52,7 @@ const skills: Skill[] = [
   {
     id: "react_native",
     name: "React Native",
-    icon: "devicon-react-original",
+    icon: "devicon-react-original-wordmark",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: ["react_native"],
@@ -77,6 +81,24 @@ const skills: Skill[] = [
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: [],
+    group: "secondary"
+  },
+  {
+    id: "material_ui",
+    name: "Material UI",
+    icon: "devicon-materialui-plain",
+    category: "Dev",
+    subcategory: "Front End",
+    relatedEducation: [],
+    group: "secondary"
+  },
+  {
+    id: 'bootstrap',
+    name: "Bootstrap",
+    icon: "devicon-bootstrap-plain",
+    category: "Dev",
+    subcategory: "Front End",
+    relatedEducation: ["web_development_bootcamp"],
     group: "secondary"
   },
 
@@ -108,7 +130,7 @@ const skills: Skill[] = [
   },
   {
     id: "firebase_firestore",
-    name: "Firebase Firestore",
+    name: "Firebase",
     icon: "devicon-firebase-plain",
     category: "Dev",
     subcategory: "Database",
@@ -208,7 +230,7 @@ const skills: Skill[] = [
   },
   {
     id: "ableton",
-    name: "Ableton Live Programming",
+    name: "Ableton Live",
     icon: "fa-solid fa-circle-play",
     category: "Audio",
     subcategory: "Playback",

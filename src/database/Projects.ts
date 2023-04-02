@@ -19,7 +19,7 @@ import jmLogo from "../assets/images/experienceImages/jm_logo.png"
 import memorialDay from "../assets/images/projectImages/memorial_day.JPG";
 import trailPackProScreenshots from "../assets/images/projectImages/trail_pack_pro_screenshots.png";
 import mealsScreenshots from "../assets/images/projectImages/meals_screenshots.png";
-import { GITHUB_URL } from "../constants/urls";
+import { GITHUB_URL, PORTFOLIO_URL } from "../constants/urls";
 
 const projects: Project[] = [
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     subtitle: "React built web portfolio and resume",
     repo: GITHUB_URL + "/zm-portfolio",
     description: "This is the site you are looking at right now. I wanted to use my online portfolio to demonstrate some of my styles and practices when it comes to React apps. This site uses a lot of Material UI components as well as plenty of custom built components. On the server-side it utilizes Firebase for hosting as well as serverless functions.",
-    website: "https://www.zachrmccoy.com",
+    website: PORTFOLIO_URL,
     skills: ["react", "javascript", "typescript", "firebase_hosting", "material_ui"],
     images: [zmPortfolio1],
     logo: zmLogo

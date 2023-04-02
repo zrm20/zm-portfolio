@@ -6,6 +6,7 @@ import ResumeSectionTitle from "../ResumeSectionTitle/ResumeSectionTitle";
 import useStyles from "./ResumeTechnicalSkills.styles";
 import { getSkill } from "../../../database/Skills";
 import { SkillItem } from "../../skills";
+import { PORTFOLIO_DOMAIN } from "../../../constants/urls";
 
 interface ResumeTechnicalSkillsProps extends GridProps {
   primarySkills: string[];
@@ -51,7 +52,7 @@ export default function ResumeTechnicalSkills(props: ResumeTechnicalSkillsProps)
       </Box>
       
       <Typography sx={styles.footer}>
-        See more at <Link component={RouterLink} to="/skills">zachrmccoy.com/skills</Link>
+        See more at <Link component={RouterLink} to="/skills">{PORTFOLIO_DOMAIN}/skills</Link>
       </Typography>
     </Grid>
   );

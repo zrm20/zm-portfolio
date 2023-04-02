@@ -5,6 +5,7 @@ import { Grid, GridProps, Typography, List, Link } from "@mui/material";
 import useStyles from "./ResumeExperience.styles";
 import ResumeSectionTitle from "../ResumeSectionTitle/ResumeSectionTitle";
 import ResumeExperienceItem from "./ResumeExperienceItem";
+import { PORTFOLIO_DOMAIN } from "../../../constants/urls";
 
 interface ResumeExperienceProps extends GridProps {
   experiences: string[];
@@ -25,7 +26,7 @@ export default function ResumeExperience(props: ResumeExperienceProps): JSX.Elem
       </List>
 
       <Typography sx={styles.footer}>
-        See more at <Link component={RouterLink} to="/experience">zachrmccoy.com/experience</Link>
+        See more at <Link component={RouterLink} to="/experience">{PORTFOLIO_DOMAIN}/experience</Link>
       </Typography>
     </Grid>
   );

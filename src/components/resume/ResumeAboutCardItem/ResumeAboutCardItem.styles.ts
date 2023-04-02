@@ -18,7 +18,7 @@ export default function useStyles(): Style {
         my: 1
       },
       '& .MuiCardContent-root': {
-        p: 1,
+        p: .75,
       },
     },
     header: {

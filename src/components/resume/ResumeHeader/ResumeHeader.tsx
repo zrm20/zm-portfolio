@@ -8,11 +8,11 @@ import { GITHUB_PATH, GITHUB_URL, LINKEDIN_PATH, LINKEDIN_URL } from "../../../c
 import { EMAIL, EMAIL_LINK, PHONE, PHONE_LINK } from "../../../constants/contact";
 
 interface ResumeHeaderProps extends GridProps {
-
+  forPrint?: boolean;
 };
 
 export default function ResumeHeader(props: ResumeHeaderProps): JSX.Element {
-  const styles = useStyles();
+  const styles = useStyles({ forPrint: props.forPrint || false});
   const { ...rest } = props;
 
   return (

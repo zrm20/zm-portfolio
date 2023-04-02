@@ -14,22 +14,22 @@ const theme = createTheme(
     typography: {
       h1: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
+        fontWeight: 500,
         fontSize: '1.5rem',
       },
       h2: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
+        fontWeight: 500,
         fontSize: '1.25rem',
       },
       h3: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
+        fontWeight: 500,
         fontSize: '1rem',
       },
       h4: {
         fontFamily: 'Aboreto',
-        fontWeight: 600,
+        fontWeight: 500,
         fontSize: '.9rem',
       },
       h5: {

@@ -14,29 +14,29 @@ interface ResumeProps {
     primary: string[],
     secondary: string[]
   }
-  background: string
+  background: string;
+  forPrint?: boolean;
 };
-
-export default function Resume(props: ResumeProps): JSX.Element {
-  const styles = useStyles({ margin: 1 });
+const Resume = React.forwardRef((props: ResumeProps, ref: React.ForwardedRef<HTMLDivElement | null>): JSX.Element => {
+  const styles = useStyles({ margin: .75, forPrint: props.forPrint || false });
 
   return (
     <Paper sx={styles.root}>
-      <Grid sx={styles.innerContainer} container spacing={0} >
-        <ResumeHeader xs={12} />
+      <Grid sx={styles.innerContainer} container ref={ref}>
+        <ResumeHeader xs={12} forPrint={props.forPrint} />
         
-        <ResumeAboutMe xs={12} sm={3} />
+        <ResumeAboutMe xs={!props.forPrint ? 12 : 3} sm={3} />
 
-        <ResumeExperience xs={12} sm={9} experiences={props.experiences} />
+        <ResumeExperience xs={!props.forPrint ? 12 : 9} sm={9} experiences={props.experiences} />
 
         <ResumeBackgroundSection 
-          xs={12} 
+          xs={!props.forPrint ? 12: 5} 
           md={5} 
           background={props.background}
         />
 
         <ResumeTechnicalSkills 
-          xs={12} 
+          xs={!props.forPrint ? 12 : 7} 
           md={7}
           primarySkills={props.skills.primary}
           secondarySkills={props.skills.secondary}
@@ -46,4 +46,6 @@ export default function Resume(props: ResumeProps): JSX.Element {
       </Grid>
     </Paper>
   );
-};
+});
+
+export default Resume;

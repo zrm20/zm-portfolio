@@ -15,6 +15,7 @@ export default function useStyles(): Style {
       alignItems: 'flex-start'
     },
     title: {
+      color: 'text.primary'
     },
     dates: {
       color: 'text.secondary'

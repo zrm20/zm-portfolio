@@ -6,7 +6,7 @@ interface Style {
   footer: SxProps;
 };
 
-export default function useStyles(props: { margin: number }): Style {
+export default function useStyles(props: { margin: number, forPrint: boolean }): Style {
   const padding = `${props.margin / 2}in`;
 
   return {
@@ -16,10 +16,12 @@ export default function useStyles(props: { margin: number }): Style {
       minHeight: "11in",
       mx: "auto",
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
     },
     innerContainer: {
-      width: '100%',
+      width: props.forPrint ? '8.5in' : '100%',
+      height: props.forPrint ? '10.8in' : undefined,
+      overflow: props.forPrint ? 'hidden' : undefined,
       p: padding // provides page margins
     },
     footer: {

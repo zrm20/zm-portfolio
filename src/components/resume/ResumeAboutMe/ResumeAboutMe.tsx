@@ -46,7 +46,7 @@ export default function ResumeAboutMe(props: ResumeAboutMeProps): JSX.Element {
             <ListItem>Problem-solving</ListItem>
             <ListItem>Fast learner</ListItem>
             <ListItem>Attention to detail</ListItem>
-            <ListItem>Project Management</ListItem>
+            <ListItem>Project management</ListItem>
             <ListItem>Analytical thinking</ListItem>
             <ListItem>Time management</ListItem>
           </List>

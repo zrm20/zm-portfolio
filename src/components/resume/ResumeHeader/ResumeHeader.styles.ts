@@ -7,13 +7,13 @@ interface Style {
   contactContainer: SxProps;
 };
 
-export default function useStyles(): Style {
-
+export default function useStyles(props: { forPrint: boolean }): Style {
+  const { forPrint } = props;
   return {
     root: {
       display: 'flex',
       flexDirection: {
-        xs: "column",
+        xs: !forPrint ? "column" : "row",
         sm: "row"
       },
       alignItems: 'center',
@@ -23,7 +23,7 @@ export default function useStyles(): Style {
       height: 100,
       width: 100,
       mb: {
-        xs: 1,
+        xs: !forPrint ? 1 : 0,
         sm: 0
       }
     },
@@ -31,26 +31,27 @@ export default function useStyles(): Style {
       display: 'flex',
       flexDirection: "column",
       ml: {
-        xs: 0,
+        xs: !forPrint ? 0 : 2,
         sm: 2
       },
       alignItems: {
-        xs: "center",
+        xs: !forPrint ? "center" : 'flex-start',
         sm: 'flex-start'
       },
       textAlign: {
-        xs: 'center',
+        xs: !forPrint ? 'center' : 'start',
         sm: 'start'
       },
       '& h1': {
         mb: 1,
+        color: 'text.primary'
       },
       '& h3': {
         color: 'text.secondary',
         mb: 1
       },
       mb: {
-        xs: 1,
+        xs: !forPrint ? 1 : 0,
         sm: 0
       }
     },
@@ -60,7 +61,7 @@ export default function useStyles(): Style {
       flexDirection: 'column',
       justifyContent: 'space-evenly',
       alignItems: {
-        xs: 'center',
+        xs: !forPrint ? 'center' : 'flex-end',
         sm: 'flex-end'
       }
     }

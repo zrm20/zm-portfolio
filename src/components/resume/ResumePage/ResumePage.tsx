@@ -1,11 +1,13 @@
-import React from "react";
-import { Box, ThemeProvider } from "@mui/material";
+import React, { useRef } from "react";
+import { Box, Fab, ThemeProvider, Paper } from "@mui/material";
 
 import { useUpdateTitle } from "../../../hooks";
 import useStyles from "./ResumePage.styles";
 import { FadeIn } from "../../animations";
 import theme from "../../../styles/resumeTheme";
 import Resume from "../Resume/Resume";
+import { Print } from "@mui/icons-material";
+import { useReactToPrint } from "react-to-print";
 
 interface ResumePageProps {
 
@@ -38,17 +40,38 @@ const devBackground = "I bring a unique background to software development with 
 
 export default function ResumePage(props: ResumePageProps): JSX.Element {
   const styles = useStyles();
+  const printRef = useRef<HTMLDivElement | null>(null);
   useUpdateTitle("Zach McCoy Resume");
+  const handlePrint = useReactToPrint(
+    {
+      content: () => printRef.current,
+      documentTitle: "Zach McCoy's Resume"
+    }
+  );
 
   return (
     <Box sx={styles.root} component={FadeIn}>
       <ThemeProvider theme={theme}>
-        <Resume 
+        <Resume
           experiences={devExperiences}
           skills={devSkills}
           background={devBackground}
         />
+
+        <div style={{display: 'none'}}>
+          <Resume
+            experiences={devExperiences}
+            skills={devSkills}
+            background={devBackground}
+            forPrint
+            ref={printRef}
+          />
+        </div>
       </ThemeProvider>
+
+      <Fab sx={styles.fab} onClick={handlePrint}>
+        <Print />
+      </Fab>
     </Box>
   );
 };

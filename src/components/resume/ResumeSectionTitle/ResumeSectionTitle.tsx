@@ -10,7 +10,7 @@ interface ResumeSectionTitleProps {
 
 export default function ResumeSectionTitle(props: ResumeSectionTitleProps): JSX.Element {
   const style: SxProps = {
-    mt: .5,
+    mt: 1,
     ml: 2,
     display: 'block',
     color: 'text.secondary',

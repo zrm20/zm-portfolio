@@ -230,7 +230,7 @@ const skills: Skill[] = [
   },
   {
     id: "ableton",
-    name: "Ableton Live Programming",
+    name: "Ableton Live",
     icon: "fa-solid fa-circle-play",
     category: "Audio",
     subcategory: "Playback",

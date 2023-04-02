@@ -3,7 +3,7 @@ import { Box, Fab, ThemeProvider, ToggleButtonGroup, ToggleButton } from "@mui/m
 
 import { useUpdateTitle } from "../../../hooks";
 import useStyles from "./ResumePage.styles";
-import { FadeIn } from "../../animations";
+import { FadeIn, SlideIn } from "../../animations";
 import theme from "../../../styles/resumeTheme";
 import Resume from "../Resume/Resume";
 import { Print } from "@mui/icons-material";
@@ -91,11 +91,13 @@ export default function ResumePage(props: ResumePageProps): JSX.Element {
       </ToggleButtonGroup>
 
       <ThemeProvider theme={theme}>
-        <Resume
-          experiences={isDev ? devExperiences : audioExperiences}
-          skills={isDev ? devSkills : audioSkills}
-          background={isDev ? devBackground: audioBackground}
-        />
+        <SlideIn direction="up">
+          <Resume
+            experiences={isDev ? devExperiences : audioExperiences}
+            skills={isDev ? devSkills : audioSkills}
+            background={isDev ? devBackground: audioBackground}
+          />
+        </SlideIn>
 
         <div style={{ display: 'none' }}>
           <Resume

@@ -22,6 +22,9 @@ export default function useStyles(): Style {
         py: .5,
         px: .75,
       },
+      '& .MuiCardContent-root:last-child': {
+        pb: .5,
+      },
     },
     header: {
       display: 'flex',

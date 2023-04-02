@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { AudioPage } from "../../components/audio";
 import { ContactPage } from "../../components/contact";
 import { DevPage } from "../../components/dev";
-import DevResumePage from "../../components/dev/DevResumePage";
 import EducationPage from "../../components/education/EducationPage/EducationPage";
 import { ExperienceDetailsPage, ExperiencePage } from "../../components/experience";
 

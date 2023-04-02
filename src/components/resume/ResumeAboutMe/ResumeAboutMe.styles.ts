@@ -28,7 +28,7 @@ export default function useStyles(): Style {
       p: 0,
       '& .MuiListItem-root': {
         fontSize: '.8rem',
-        p: .5
+        p: .25
       }
     },
     qrContainer: {

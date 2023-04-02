@@ -20,7 +20,8 @@ export default function useStyles(): Style {
       color: 'text.secondary'
     },
     description: {
-      color: 'text.secondary'
+      color: 'text.secondary',
+      fontSize: '.8rem'
     }
   }
 };

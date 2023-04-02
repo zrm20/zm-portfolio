@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Grid } from "@mui/material";
+import { Paper, Grid, Typography } from "@mui/material";
 import ResumeAboutMe from "../ResumeAboutMe/ResumeAboutMe";
 import ResumeBackgroundSection from "../ResumeBackgroundSection/ResumeBackgroundSection";
 import ResumeExperience from "../ResumeExperience/ResumeExperience";
@@ -22,12 +22,12 @@ export default function Resume(props: ResumeProps): JSX.Element {
 
   return (
     <Paper sx={styles.root}>
-      <Grid sx={styles.innerContainer} container spacing={2} >
+      <Grid sx={styles.innerContainer} container spacing={0} >
         <ResumeHeader xs={12} />
         
-        <ResumeAboutMe xs={12} sm={4} />
+        <ResumeAboutMe xs={12} sm={3} />
 
-        <ResumeExperience xs={12} sm={8} experiences={props.experiences} />
+        <ResumeExperience xs={12} sm={9} experiences={props.experiences} />
 
         <ResumeBackgroundSection 
           xs={12} 
@@ -41,7 +41,8 @@ export default function Resume(props: ResumeProps): JSX.Element {
           primarySkills={props.skills.primary}
           secondarySkills={props.skills.secondary}
         />
-        
+
+        <Typography sx={styles.footer}>Resume built with React <i className="devicon-react-original"/></Typography>
       </Grid>
     </Paper>
   );

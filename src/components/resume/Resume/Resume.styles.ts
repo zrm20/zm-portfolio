@@ -2,7 +2,8 @@ import { SxProps } from "@mui/material";
 
 interface Style {
   root: SxProps;
-  innerContainer: SxProps
+  innerContainer: SxProps;
+  footer: SxProps;
 };
 
 export default function useStyles(props: { margin: number }): Style {
@@ -20,7 +21,12 @@ export default function useStyles(props: { margin: number }): Style {
     innerContainer: {
       width: '100%',
       p: padding // provides page margins
-      
+    },
+    footer: {
+      width: '100%',
+      mt: 2,
+      textAlign: 'center',
+      color: "secondary.main"
     }
   }
 };

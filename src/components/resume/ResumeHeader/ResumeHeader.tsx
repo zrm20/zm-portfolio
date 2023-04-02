@@ -4,6 +4,8 @@ import { Avatar, Grid, GridProps, Typography, Box } from "@mui/material";
 import useStyles from "./ResumeHeader.styles";
 import headshot from '../../../assets/images/headshot.jpeg';
 import ContactItem from "../ContactItem/ContactItem";
+import { GITHUB_PATH, GITHUB_URL, LINKEDIN_PATH, LINKEDIN_URL } from "../../../constants/urls";
+import { EMAIL, EMAIL_LINK, PHONE, PHONE_LINK } from "../../../constants/contact";
 
 interface ResumeHeaderProps extends GridProps {
 
@@ -29,23 +31,23 @@ export default function ResumeHeader(props: ResumeHeaderProps): JSX.Element {
 
       <Box sx={styles.contactContainer}>
         <ContactItem 
-          title="zach@zachrmccoy.com"
-          href="mailto:zach@zachrmccoy.com"
+          title={EMAIL}
+          href={EMAIL_LINK}
           iconClass="fa-solid fa-envelope"
         />
         <ContactItem 
-          title="(507) 829-2069"
-          href="tel:5078292069"
+          title={PHONE}
+          href={PHONE_LINK}
           iconClass="fa-solid fa-phone"
         />
         <ContactItem 
-          title="/in/zachmccoy"
-          href="www.linkedin.com/in/zachmccoy"
+          title={LINKEDIN_PATH}
+          href={LINKEDIN_URL}
           iconClass="fa-brands fa-linkedin"
         />
         <ContactItem 
-          title="/zrm20"
-          href="www.github.com/zrm20"
+          title={GITHUB_PATH}
+          href={GITHUB_URL}
           iconClass="fa-brands fa-github"
         />
       </Box>

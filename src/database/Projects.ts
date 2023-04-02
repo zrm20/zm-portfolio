@@ -19,6 +19,7 @@ import jmLogo from "../assets/images/experienceImages/jm_logo.png"
 import memorialDay from "../assets/images/projectImages/memorial_day.JPG";
 import trailPackProScreenshots from "../assets/images/projectImages/trail_pack_pro_screenshots.png";
 import mealsScreenshots from "../assets/images/projectImages/meals_screenshots.png";
+import { GITHUB_URL } from "../constants/urls";
 
 const projects: Project[] = [
   {
@@ -26,7 +27,7 @@ const projects: Project[] = [
     category: "Dev",
     title: "Trail Pack Pro",
     subtitle: "Mobile app for tracking camping equipment and weight",
-    repo: "https://www.github.com/zrm20/packplanner",
+    repo: GITHUB_URL + "/packplanner",
     description: "This was my first attempt at a solo project. As hobbyist backpacker, I found myself always writing out my inventory and weights for each backpacking trip. Everyone has their own target weight and I thought it would be nice to be able to know that weight, without having to pack all my gear up first. While apps that do this already existed, it seemed like a great opportunity to take on my first solo challenge.\nWith that, Trail Pack Pro was born - A React Native application that allows you to store your inventory of gear along with the weight. You can add that gear to your pack and view your total backpack weight. It also has features like a chart for viewing weight by category.\nMy favorite feature though, and the feature that sets this apart from other apps, is the water weight. Trail Pack Pro will automatically calculate the weight of the water you are carrying based on the total volume available by the items in your pack. You can adjust a slider to see how your weight will change as you consume water.\nWhile a TestFlight beta was released, I have not officially released Trail Pack Pro to the app store, however that is coming!",
     testFlight: "https://testflight.apple.com/join/c5UJiM4i",
     skills: ["react_native", "javascript", "typescript", "redux", "firebase", "material_ui"],
@@ -38,7 +39,7 @@ const projects: Project[] = [
     category: "Dev",
     title: "ZM Portfolio",
     subtitle: "React built web portfolio and resume",
-    repo: "https://www.github.com/zrm20/zm-portfolio",
+    repo: GITHUB_URL + "/zm-portfolio",
     description: "This is the site you are looking at right now. I wanted to use my online portfolio to demonstrate some of my styles and practices when it comes to React apps. This site uses a lot of Material UI components as well as plenty of custom built components. On the server-side it utilizes Firebase for hosting as well as serverless functions.",
     website: "https://www.zachrmccoy.com",
     skills: ["react", "javascript", "typescript", "firebase_hosting", "material_ui"],
@@ -86,7 +87,7 @@ const projects: Project[] = [
     description: "As part of a React Native Udemy course, this code along project built a full mobile app for restaurant search by location. Using Firebase authentication users could sign up and search for places and favorite them.\nWhile the end result is not connected to the Google Places API, a mock API call is made to return placeholder data for demo purposes. User account data is also stored locally on the device for offline use.\nWhile the UI of this app is exactly the same as the instructors app in the course, I took several liberties in the code architecture as well as the use of custom hooks.",
     skills: ["react_native", "firebase", "javascript", "material_ui"],
     images: [mealsScreenshots],
-    repo: "https://github.com/zrm20/MealsToGo",
+    repo: GITHUB_URL + "/MealsToGo",
     logo: mealsToGoLogo
   },
 

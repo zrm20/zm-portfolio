@@ -17,6 +17,23 @@ const devExperiences = [
   "freelance_audio"
 ];
 
+const devSkills = {
+  primary: [
+    "javascript",
+    "typescript",
+    "react",
+    "node"
+  ],
+  secondary: [
+    "redux",
+    "jest",
+    "express",
+    "mongo_db",
+    "firebase_firestore",
+    "material_ui",
+  ]
+};
+
 export default function ResumePage(props: ResumePageProps): JSX.Element {
   const styles = useStyles();
   useUpdateTitle("Zach McCoy Resume");
@@ -26,6 +43,7 @@ export default function ResumePage(props: ResumePageProps): JSX.Element {
       <ThemeProvider theme={theme}>
         <Resume 
           experiences={devExperiences}
+          skills={devSkills}
         />
       </ThemeProvider>
     </Box>

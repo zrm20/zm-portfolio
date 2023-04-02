@@ -43,7 +43,7 @@ const skills: Skill[] = [
   {
     id: "react",
     name: "React",
-    icon: "devicon-react-original-wordmark",
+    icon: "devicon-react-original",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: ["mern"],
@@ -52,7 +52,7 @@ const skills: Skill[] = [
   {
     id: "react_native",
     name: "React Native",
-    icon: "devicon-react-original",
+    icon: "devicon-react-original-wordmark",
     category: "Dev",
     subcategory: "Front End",
     relatedEducation: ["react_native"],
@@ -130,7 +130,7 @@ const skills: Skill[] = [
   },
   {
     id: "firebase_firestore",
-    name: "Firebase Firestore",
+    name: "Firebase",
     icon: "devicon-firebase-plain",
     category: "Dev",
     subcategory: "Database",

@@ -5,7 +5,8 @@ interface Style {
   innerContainer: SxProps
 };
 
-export default function useStyles(): Style {
+export default function useStyles(props: { margin: number }): Style {
+  const padding = `${props.margin / 2}in`;
 
   return {
     root: {
@@ -18,7 +19,7 @@ export default function useStyles(): Style {
     },
     innerContainer: {
       width: '100%',
-      p: ".375in" // provides page margins
+      p: padding // provides page margins
       
     }
   }

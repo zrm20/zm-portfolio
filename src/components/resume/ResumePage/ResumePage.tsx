@@ -45,7 +45,7 @@ export default function ResumePage(props: ResumePageProps): JSX.Element {
   const handlePrint = useReactToPrint(
     {
       content: () => printRef.current,
-      documentTitle: "Zach McCoy's Resume"
+      documentTitle: "Zach_McCoy_Resume"
     }
   );
 

@@ -11,6 +11,12 @@ interface ResumePageProps {
 
 };
 
+const devExperiences = [
+  "nomi",
+  "justin_moore",
+  "freelance_audio"
+];
+
 export default function ResumePage(props: ResumePageProps): JSX.Element {
   const styles = useStyles();
   useUpdateTitle("Zach McCoy Resume");
@@ -18,7 +24,9 @@ export default function ResumePage(props: ResumePageProps): JSX.Element {
   return (
     <Box sx={styles.root} component={FadeIn}>
       <ThemeProvider theme={theme}>
-        <Resume />
+        <Resume 
+          experiences={devExperiences}
+        />
       </ThemeProvider>
     </Box>
   );

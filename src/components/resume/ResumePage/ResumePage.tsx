@@ -34,6 +34,8 @@ const devSkills = {
   ]
 };
 
+const devBackground = "I bring a unique background to software development with a degree in Audio Engineering Technology and 10 years of experience in touring as an audio tech, monitor engineer, and stage manager. I am a self-taught developer with a passion for problem-solving, web and mobile development. With my attention to detail and experience building web and mobile apps, I am eager to contribute to a software development team."
+
 export default function ResumePage(props: ResumePageProps): JSX.Element {
   const styles = useStyles();
   useUpdateTitle("Zach McCoy Resume");
@@ -44,6 +46,7 @@ export default function ResumePage(props: ResumePageProps): JSX.Element {
         <Resume 
           experiences={devExperiences}
           skills={devSkills}
+          background={devBackground}
         />
       </ThemeProvider>
     </Box>

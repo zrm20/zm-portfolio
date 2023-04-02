@@ -1,6 +1,7 @@
-import { Paper, Grid } from "@mui/material";
 import React from "react";
+import { Paper, Grid } from "@mui/material";
 import ResumeAboutMe from "../ResumeAboutMe/ResumeAboutMe";
+import ResumeBackgroundSection from "../ResumeBackgroundSection/ResumeBackgroundSection";
 import ResumeExperience from "../ResumeExperience/ResumeExperience";
 import ResumeHeader from "../ResumeHeader/ResumeHeader";
 import ResumeTechnicalSkills from "../ResumeTechnicalSkills/ResumeTechnicalSkills";
@@ -13,6 +14,7 @@ interface ResumeProps {
     primary: string[],
     secondary: string[]
   }
+  background: string
 };
 
 export default function Resume(props: ResumeProps): JSX.Element {
@@ -23,11 +25,15 @@ export default function Resume(props: ResumeProps): JSX.Element {
       <Grid sx={styles.innerContainer} container spacing={2} >
         <ResumeHeader xs={12} />
         
-        <ResumeAboutMe xs={12} md={4} />
+        <ResumeAboutMe xs={12} sm={4} />
 
-        <ResumeExperience xs={12} md={8} experiences={props.experiences} />
+        <ResumeExperience xs={12} sm={8} experiences={props.experiences} />
 
-        <Grid item xs={12} md={5}/>
+        <ResumeBackgroundSection 
+          xs={12} 
+          md={5} 
+          background={props.background}
+        />
 
         <ResumeTechnicalSkills 
           xs={12} 

@@ -13,7 +13,7 @@ interface Props extends MotionProps {
 export default function SlideIn(props: Props): JSX.Element {
   const {
     direction = "up",
-    duration = 1,
+    duration = .5,
     delay = 0,
   } = props;
 
@@ -43,6 +43,7 @@ export default function SlideIn(props: Props): JSX.Element {
           x: 0
         }
       }
+      exit={initialPosition}
       transition={{ duration, delay }}
       {...props}
     >

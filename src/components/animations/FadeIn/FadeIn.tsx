@@ -15,13 +15,14 @@ export default function FadeIn(props: Props): JSX.Element {
   const {
     initialOpacity = 0,
     endOpacity = 1,
-    duration = 1,
+    duration = .3,
     delay = 0,
   } = props;
 
   return (
     <motion.div
       initial={{ opacity: initialOpacity }}
+      exit={{ opacity: initialOpacity }}
       animate={{ opacity: endOpacity }}
       transition={{ duration, delay }}
       {...props}

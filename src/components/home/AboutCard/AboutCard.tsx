@@ -1,5 +1,6 @@
 import React from "react";
-import { Paper, Typography } from "@mui/material";
+import { Link, Paper, Stack, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 import useStyles from "./AboutCard.styles";
 import headshot from "../../../assets/images/headshot.jpeg";
@@ -31,6 +32,11 @@ export default function AboutCard(props: AboutCardProps): JSX.Element {
       <Typography variant='h1' sx={styles.title}>
         About Zach
       </Typography>
+
+      <Stack sx={styles.links}>
+        <Link component={RouterLink} to="/audio">Audio Career</Link>
+        <Link component={RouterLink} to="/dev">Software Career</Link>
+      </Stack>
 
       <CollapsingText 
         collapsedSize={100} 

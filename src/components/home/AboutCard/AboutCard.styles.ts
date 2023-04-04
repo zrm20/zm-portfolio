@@ -5,6 +5,7 @@ interface Style {
   root: SxProps;
   image: CSSProperties;
   title: SxProps;
+  links: SxProps;
 };
 
 export default function useStyles(): Style {
@@ -25,6 +26,12 @@ export default function useStyles(): Style {
     },
     title: {
       mt: 2
+    },
+    links: {
+      flexDirection: 'row',
+      width: '100%',
+      justifyContent: 'space-evenly',
+      my: 1
     }
   }
 };

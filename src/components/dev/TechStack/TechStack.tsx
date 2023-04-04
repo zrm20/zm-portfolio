@@ -41,7 +41,7 @@ export default function TechStack(props: TechStackProps): JSX.Element {
             devSkills
               .filter(skill => skill.subcategory === tab)
               .map((skill, i) => (
-                <FadeIn key={skill.id} delay={i * .15}>
+                <FadeIn key={skill.id} delay={i * .15} duration={1}>
                   <SkillItem skill={skill} size={75} />
                 </FadeIn>
               ))

@@ -30,7 +30,7 @@ const projects: Project[] = [
     repo: GITHUB_URL + "/packplanner",
     description: "This was my first attempt at a solo project. As hobbyist backpacker, I found myself always writing out my inventory and weights for each backpacking trip. Everyone has their own target weight and I thought it would be nice to be able to know that weight, without having to pack all my gear up first. While apps that do this already existed, it seemed like a great opportunity to take on my first solo challenge.\nWith that, Trail Pack Pro was born - A React Native application that allows you to store your inventory of gear along with the weight. You can add that gear to your pack and view your total backpack weight. It also has features like a chart for viewing weight by category.\nMy favorite feature though, and the feature that sets this apart from other apps, is the water weight. Trail Pack Pro will automatically calculate the weight of the water you are carrying based on the total volume available by the items in your pack. You can adjust a slider to see how your weight will change as you consume water.\nWhile a TestFlight beta was released, I have not officially released Trail Pack Pro to the app store, however that is coming!",
     testFlight: "https://testflight.apple.com/join/c5UJiM4i",
-    skills: ["react_native", "javascript", "typescript", "redux", "firebase", "material_ui"],
+    skills: ["react_native", "javascript", "typescript", "redux", "firebase_firestore", "material_ui"],
     images: [trailPackProScreenshots],
     logo: trailPackProLogo
   },

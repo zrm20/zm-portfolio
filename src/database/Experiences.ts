@@ -1,14 +1,28 @@
 import jmLogo from "../assets/images/experienceImages/jm_logo.png";
 import nomiLogo from "../assets/images/experienceImages/nomi_logo.png";
 import zmLogo from "../assets/images/zm_logo_orange_black.PNG";
+import emboldLogo from "../assets/images/experienceImages/embold_logo.jpeg";
 
 const experiences: Experience[] = [
+  {
+    id: 'embold',
+    category: 'Dev',
+    company: "Embold Health",
+    titles: ['Software Developer'],
+    startDate: new Date("June 5, 2023"),
+    description: "At Embold Health, my role on the software development team is to primary focus on a front-end React application. The application features advanced React concepts and Redux state management. With all of my contributions to the project, I strive to write and maintain components in a modular fashion and follow all best practices for keeping code DRY and reusable. Although my starting role focused mainly on the front end, through time and experience I plan on contributing to the team in a full stack role working on a Django and Python backend.",
+    logo: emboldLogo,
+    images: [],
+    skills: ["react", "redux", "python", "material_ui"],
+    url: "https://www.emboldhealth.com"
+  },
   {
     id: 'justin_moore',
     category: "Audio",
     company: "Justin Moore",
     titles: ["Stage Manager", "Monitor Engineer", "Audio Tech"],
     startDate: new Date("May 1, 2013"),
+    endDate: new Date("June 16, 2023"),
     description: "I started working for country artist Justin Moore as an intern in 2013 and was later hired on as an audio tech. In 2015 I was promoted to monitor engineer. As the monitor engineer I was responsible for RF coordination, stage patch and mixing IEM's for band, artist and guests. In 2018 I was promoted to stage manager where I managed a crew of 5-12 people and coordinated with local labor unions of up to 30. I was responsible for the day-to-day operations of loading in and out 1-4 semi trucks to the stage.",
     logo: jmLogo,
     images: [], // TODO

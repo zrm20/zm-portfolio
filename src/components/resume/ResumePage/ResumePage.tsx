@@ -14,15 +14,15 @@ interface ResumePageProps {
 };
 
 const devExperiences = [
-  "nomi",
+  "embold",
   "justin_moore",
-  "freelance_audio"
+  "nomi",
 ];
 
 const audioExperiences = [
   "justin_moore",
   "freelance_audio",
-  "nomi"
+  "embold"
 ];
 
 const devSkills = {

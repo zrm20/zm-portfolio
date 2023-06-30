@@ -10,8 +10,8 @@ export default function useStyles(): Style {
     root: {
       width: '100%',
       display: 'flex',
-      justifyContent: 'center',
-      overflowX: 'scroll'
+      justifyContent: 'flex-start',
+      overflowX: 'scroll',
     },
   }
 };

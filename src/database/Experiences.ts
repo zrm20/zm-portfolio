@@ -10,7 +10,7 @@ const experiences: Experience[] = [
     company: "Embold Health",
     titles: ['Software Developer'],
     startDate: new Date("June 5, 2023"),
-    description: "At Embold Health, my role on the software development team is to primary focus on a front-end React application. The application features advanced React concepts and Redux state management. With all of my contributions to the project, I strive to write and maintain components in a modular fashion and follow all best practices for keeping code DRY and reusable. Although my starting role focused mainly on the front end, through time and experience I plan on contributing to the team in a full stack role working on a Django and Python backend.",
+    description: "At Embold Health, my primary role on the software development team is to focus on a front-end React application. The application features advanced React concepts and Redux state management. With all of my contributions to the project, I strive to write and maintain components in a modular fashion and follow all best practices for keeping code DRY and reusable. Although my starting role focused mainly on the front end, through time and experience I plan on contributing to the team in a full stack role working on a Django and Python backend.",
     logo: emboldLogo,
     images: [],
     skills: ["react", "redux", "python", "material_ui"],

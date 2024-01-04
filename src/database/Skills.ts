@@ -119,6 +119,14 @@ const skills: Skill[] = [
     subcategory: "Back End",
     relatedEducation: ["web_development_bootcamp", "nodejs", "mern"],
   },
+  {
+    id: "django",
+    name: "Django",
+    icon: "devicon-django-plain",
+    category: "Dev",
+    subcategory: "Back End",
+    relatedEducation: []
+  },
   // database
   {
     id: "mongo_db",
@@ -161,7 +169,7 @@ const skills: Skill[] = [
     subcategory: "Testing",
     relatedEducation: ["js_unit_testing", "nodejs"],
   },
-  // general development
+  // devops
   {
     id: "github",
     name: "GitHub",
@@ -182,6 +190,22 @@ const skills: Skill[] = [
     id: "firebase_hosting",
     name: "Firebase Hosting",
     icon: "devicon-firebase-plain",
+    category: "Dev",
+    subcategory: "CI/CD",
+    relatedEducation: [],
+  },
+  {
+    id: "azure",
+    name: "Azure Dev Ops",
+    icon: "devicon-azure-plain",
+    category: "Dev",
+    subcategory: "CI/CD",
+    relatedEducation: [],
+  },
+  {
+    id: "gitlab",
+    name: "GitLab",
+    icon: "devicon-gitlab-plain",
     category: "Dev",
     subcategory: "CI/CD",
     relatedEducation: [],

@@ -36,8 +36,8 @@ const devSkills = {
     "redux",
     "jest",
     "express",
-    "mongo_db",
-    "firebase_firestore",
+    "python",
+    "django",
     "material_ui",
   ]
 };
